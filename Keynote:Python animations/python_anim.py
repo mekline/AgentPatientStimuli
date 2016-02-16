@@ -20,7 +20,7 @@ BLUE = (0, 0, 255)
 windowSurface.fill(BLACK)
 
 #load image
-eyeCircle = pygame.image.load('3eyecopy.png').convert()
+eyeShape = pygame.image.load('3eyecopy.png').convert()
 
 windowSurface.blit(eyeShape,(30,130))
 

@@ -56,10 +56,10 @@ for a=1:length(manners)
                 withbridge = drawOnBackground(bridgeimg, backimg, 195, 295); %slow %black is greenscreen (transparent)
                 newimg = moveImg(img, withbridge, x(1)-50, y(1)-50); 
 
-                for j=1:30 %30 frames; draws all movie frames into movie file %j is an iterator
+                for j=1:30 %30 frames; draws all movie frames into movie file
                     image(newimg);
                     axis off;
-                    m(j) = getframe; %m is what's being displayed
+                    m(j) = getframe;
                     drawnow;
                 end
 
