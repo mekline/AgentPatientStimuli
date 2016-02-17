@@ -53,8 +53,10 @@ for a=1:length(manners)
                 y = y+50;
 
                 %Draw one boring second of the triangle sitting in initial position! %to give viewer a chance to see initial position
+                
                 withbridge = drawOnBackground(bridgeimg, backimg, 195, 295); %slow %black is greenscreen (transparent)
-                newimg = moveImg(img, withbridge, x(1)-50, y(1)-50); 
+                %newimg = moveImg(img, withbridge, x(1)-50, y(1)-50); 
+                newimg = drawOnBackground(img, withbridge, x(1)-50, y(1)-50); 
 
                 for j=1:30 %30 frames; draws all movie frames into movie file %j is an iterator
                     image(newimg);
@@ -73,11 +75,14 @@ for a=1:length(manners)
                     %draw triangle & bridge on background, in the correct order!
                     if bridgeFront(i)
                         nobridge = moveImg(img_rot, backimg, x(i) - round(t/2),y(i)-round(u/2));
-                        newimg = drawOnBackground(bridgeimg, nobridge, 195, 295); %bridge + triangle w/o bridge
+                        nobridge = drawOnBackground(img_rot, backimg, x(i) - round(t/2),y(i)-round(u/2));
+                        %newimg = drawOnBackground(bridgeimg, nobridge, 195, 295); %bridge + triangle w/o bridge
                     else
                         withbridge = drawOnBackground(bridgeimg, backimg, 195, 295);
-                        newimg = moveImg(img_rot, withbridge, x(i) - round(t/2),y(i)-round(u/2)); %arguments go top to bottom
-                        end
+                        %newimg = moveImg(img_rot, withbridge, x(i) - round(t/2),y(i)-round(u/2)); %arguments go top to bottom
+                        newimg = drawOnBackground(img_rot, withbridge, x(i) - round(t/2),y(i)-round(u/2)); %arguments go top to bottom
+                           
+                    end
                     m(i+30) = getframe;
                     image(newimg);
                     axis off;
