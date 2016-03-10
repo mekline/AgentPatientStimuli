@@ -101,6 +101,11 @@ while True:
     pygame.display.update()
     time.sleep(0.02)
 
+    #Ask Idan about creating paths
+    #Do a few easy, then the hardest
+    #Maybe keep arms same among shapes, since they'll be moving
+    #Also do that in stills
+
 
 
     #Make some stuff transparent
