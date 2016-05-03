@@ -1,0 +1,321 @@
+LIST_NUM,COND,COND_markingSameDiff,CONSTR,ItemNum_withinconstr,ItemNum,TYPE1,TYPE1_sameconstr,TYPE2,TYPE3,ANS,SENTENCE1,SENTENCE2
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,4,4,active,1,occ-name,verb_switch,DIF,The bystander overheard James.,The bystander questioned James.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,8,8,active,1,occ-name,verb_switch,DIF,The electrician interrogated Robert.,The electrician paid Robert.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,12,12,active,1,occ-name,noun_switch,DIF,The courier belittled William.,The intern belittled William.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,16,16,active,1,occ-name,verb_switch,DIF,The florist employed George.,The florist telephoned George.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,20,20,active,1,occ-name,noun_switch,DIF,The performer drew Joseph.,The songwriter drew Joseph.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,24,24,passive,1,occ-name,verb_switch,DIF,The prisoner was seen by Nancy.,The prisoner was saved by Nancy.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,28,28,passive,1,occ-name,verb_switch,DIF,The pop-star was rushed by Lauren.,The pop-star was painted by Lauren.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,32,32,passive,1,occ-name,noun_switch,DIF,The housekeeper was thanked by Sandra.,The speaker was thanked by Sandra.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,36,36,passive,1,occ-name,verb_switch,DIF,The repairman was chastised by Kenneth.,The repairman was enraged by Kenneth.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,40,40,passive,1,occ-name,noun_switch,DIF,The sailor was helped by Thomas.,The anchorman was helped by Thomas.
+1,ActPas_SEM,ActPas_SEM_SAME,ActPass,1,1,active,1,name-occ,noun_synon,SAME,Anna invited the composer.,Anna invited the songwriter.
+1,ActPas_SEM,ActPas_SEM_SAME,ActPass,5,5,active,1,name-occ,noun_synon,SAME,Patricia praised the magician.,Patricia praised the illusionist.
+1,ActPas_SEM,ActPas_SEM_SAME,ActPass,9,9,active,1,name-occ,verb_synon,SAME,Barbara angered the pharmacist.,Barbara enraged the pharmacist.
+1,ActPas_SEM,ActPas_SEM_SAME,ActPass,13,13,active,1,name-occ,noun_synon,SAME,Jennifer criticized the secretary.,Jennifer criticized the receptionist.
+1,ActPas_SEM,ActPas_SEM_SAME,ActPass,17,17,active,1,name-occ,verb_synon,SAME,Susan cautioned the waiter.,Susan warned the waiter.
+1,ActPas_SEM,ActPas_SEM_SAME,ActPass,21,21,passive,1,name-occ,noun_synon,SAME,Dorothy was respected by the attorney.,Dorothy was respected by the lawyer.
+1,ActPas_SEM,ActPas_SEM_SAME,ActPass,25,25,passive,1,name-occ,noun_synon,SAME,Christopher was convinced by the vocalist.,Christopher was convinced by the singer.
+1,ActPas_SEM,ActPas_SEM_SAME,ActPass,29,29,passive,1,name-occ,verb_synon,SAME,Paul was blamed by the playwright.,Paul was accused by the playwright.
+1,ActPas_SEM,ActPas_SEM_SAME,ActPass,33,33,passive,1,name-occ,noun_synon,SAME,Ruth was congratulated by the newscaster.,Ruth was congratulated by the anchorman.
+1,ActPas_SEM,ActPas_SEM_SAME,ActPass,37,37,passive,1,name-occ,verb_synon,SAME,Carol was chosen by the banker.,Carol was selected by the banker.
+1,ActPas_SYNT,ActPas_SYNT_DIFF,ActPass,2,2,active,1,occ-name,NA,DIF,The orator consulted Jack.,Jack consulted the orator.
+1,ActPas_SYNT,ActPas_SYNT_DIFF,ActPass,6,6,active,1,occ-name,NA,DIF,The comedian ridiculed John.,John ridiculed the comedian.
+1,ActPas_SYNT,ActPas_SYNT_DIFF,ActPass,10,10,active,1,occ-name,NA,DIF,The watchmaker compensated Michael.,Michael compensated the watchmaker.
+1,ActPas_SYNT,ActPas_SYNT_DIFF,ActPass,14,14,active,0,occ-name,NA,DIF,The scientist flattered David.,The scientist was flattered by David.
+1,ActPas_SYNT,ActPas_SYNT_DIFF,ActPass,18,18,active,0,occ-name,NA,DIF,The politician killed Charles.,The politician was killed by Charles.
+1,ActPas_SYNT,ActPas_SYNT_DIFF,ActPass,22,22,passive,0,occ-name,NA,DIF,The bricklayer was complimented by Sharon.,The bricklayer complimented Sharon.
+1,ActPas_SYNT,ActPas_SYNT_DIFF,ActPass,26,26,passive,0,occ-name,NA,DIF,The consultant was welcomed by Karen.,The consultant welcomed Karen.
+1,ActPas_SYNT,ActPas_SYNT_DIFF,ActPass,30,30,passive,0,occ-name,NA,DIF,The novelist was pushed by Helen.,The novelist pushed Helen.
+1,ActPas_SYNT,ActPas_SYNT_DIFF,ActPass,34,34,passive,1,occ-name,NA,DIF,The demonstrator was quoted by Donna.,Donna was quoted by the demonstrator.
+1,ActPas_SYNT,ActPas_SYNT_DIFF,ActPass,38,38,passive,1,occ-name,NA,DIF,The barber was found by Steven.,Steven was found by the barber.
+1,ActPas_SYNT,ActPas_SYNT_SAME,ActPass,3,3,active,0,name-occ,NA,SAME,Mary visited the principal.,The principal was visited by Mary.
+1,ActPas_SYNT,ActPas_SYNT_SAME,ActPass,7,7,active,0,name-occ,NA,SAME,Linda rescued the volunteer.,The volunteer was rescued by Linda.
+1,ActPas_SYNT,ActPas_SYNT_SAME,ActPass,11,11,active,0,name-occ,NA,SAME,Elizabeth disliked the proprietor.,The proprietor was disliked by Elizabeth.
+1,ActPas_SYNT,ActPas_SYNT_SAME,ActPass,15,15,active,0,name-occ,NA,SAME,Maria trusted the interpreter.,The interpreter was trusted by Maria.
+1,ActPas_SYNT,ActPas_SYNT_SAME,ActPass,19,19,active,0,name-occ,NA,SAME,Margaret misinformed the sponsor.,The sponsor was misinformed by Margaret.
+1,ActPas_SYNT,ActPas_SYNT_SAME,ActPass,23,23,passive,0,name-occ,NA,SAME,Lisa was discouraged by the spy.,The spy discouraged Lisa.
+1,ActPas_SYNT,ActPas_SYNT_SAME,ActPass,27,27,passive,0,name-occ,NA,SAME,Daniel was called by the decorator.,The decorator called Daniel.
+1,ActPas_SYNT,ActPas_SYNT_SAME,ActPass,31,31,passive,0,name-occ,NA,SAME,Mark was encouraged by the apprentice.,The apprentice encouraged Mark.
+1,ActPas_SYNT,ActPas_SYNT_SAME,ActPass,35,35,passive,0,name-occ,NA,SAME,Richard was noticed by the thief.,The thief noticed Richard.
+1,ActPas_SYNT,ActPas_SYNT_SAME,ActPass,39,39,passive,0,name-occ,NA,SAME,Mark was hugged by the cashier.,The cashier hugged Mark.
+1,DOPP_SEM,DOPP_SEM_DIFF,DOPP,4,44,DblObj,1,occ-name,obj_switch,DIF,The professor loaned Joshua a dictionary,The professor loaned Joshua a periodical.
+1,DOPP_SEM,DOPP_SEM_DIFF,DOPP,8,48,DblObj,1,occ-name,obj_switch,DIF,The woman sold Anna a dress.,The woman sold Anna a mansion.
+1,DOPP_SEM,DOPP_SEM_DIFF,DOPP,12,52,DblObj,1,occ-name,occup_switch,DIF,The chauffeur brought Frank the limousine.,The director brought Frank the limousine.
+1,DOPP_SEM,DOPP_SEM_DIFF,DOPP,16,56,DblObj,1,occ-name,obj_switch,DIF,The neighbor brought Stephen a magazine.,The neighbor brought Stephen a crate.
+1,DOPP_SEM,DOPP_SEM_DIFF,DOPP,20,60,DblObj,1,occ-name,occup_switch,DIF,The judge handed Virginia the revolver.,The cop handed Virginia the revolver.
+1,DOPP_SEM,DOPP_SEM_DIFF,DOPP,24,64,PP,1,occ-name,obj_switch,DIF,The dancer tossed the costume to Amy.,The dancer tossed the bouquet to Amy.
+1,DOPP_SEM,DOPP_SEM_DIFF,DOPP,28,68,PP,1,occ-name,obj_switch,DIF,The prosecutor delivered a message to Timothy.,The prosecutor delivered a gun to Timothy.
+1,DOPP_SEM,DOPP_SEM_DIFF,DOPP,32,72,PP,1,occ-name,occup_switch,DIF,The shepherd provided some compensation to Deborah.,The janitor provided some compensation to Deborah.
+1,DOPP_SEM,DOPP_SEM_DIFF,DOPP,36,76,PP,1,occ-name,obj_switch,DIF,The distributor shipped a box to Shirley.,The distributor shipped a car to Shirley.
+1,DOPP_SEM,DOPP_SEM_DIFF,DOPP,40,80,PP,1,occ-name,occup_switch,DIF,The visitor gave a gift to Natalie.,The chef gave a gift to Natalie.
+1,DOPP_SEM,DOPP_SEM_SAME,DOPP,1,41,DblObj,1,name-occ,occup_synon,SAME,Amanda lent the cook some money.,Amanda lent the chef some money.
+1,DOPP_SEM,DOPP_SEM_SAME,DOPP,5,45,DblObj,1,name-occ,occup_synon,SAME,Martha tossed the artist a pen.,Martha tossed the illustrator a pen.
+1,DOPP_SEM,DOPP_SEM_SAME,DOPP,9,49,DblObj,1,name-occ,obj_synon,SAME,Kathleen gave the agent a picture.,Kathleen gave the agent a photo.
+1,DOPP_SEM,DOPP_SEM_SAME,DOPP,13,53,DblObj,1,name-occ,occup_synon,SAME,Rebecca promised the runner some water.,Rebecca promised the jogger some water.
+1,DOPP_SEM,DOPP_SEM_SAME,DOPP,17,57,DblObj,1,name-occ,obj_synon,SAME,Larry offered the customer a prize.,Larry offered the customer a reward.
+1,DOPP_SEM,DOPP_SEM_SAME,DOPP,21,61,PP,1,name-occ,occup_synon,SAME,Emily passed a towel to the fighter.,Emily passed a towel to the boxer.
+1,DOPP_SEM,DOPP_SEM_SAME,DOPP,25,65,PP,1,name-occ,occup_synon,SAME,Cynthia read the request to the reporter.,Cynthia read the request to the journalist.
+1,DOPP_SEM,DOPP_SEM_SAME,DOPP,29,69,PP,1,name-occ,obj_synon,SAME,Kevin slipped the reimbursement to the photographer.,Kevin slipped the refund to the photographer.
+1,DOPP_SEM,DOPP_SEM_SAME,DOPP,33,73,PP,1,name-occ,occup_synon,SAME,Jessica offered a lollipop to the kid.,Jessica offered a lollipop to the child.
+1,DOPP_SEM,DOPP_SEM_SAME,DOPP,37,77,PP,1,name-occ,obj_synon,SAME,Sarah issued an outfit to the waitress.,Sarah issued a uniform to the waitress.
+1,DOPP_SYNT,DOPP_SYNT_DIFF,DOPP,2,42,DblObj,1,occ-name,NA,DIF,The woodworker sent James a package.,James sent the woodworker a package.
+1,DOPP_SYNT,DOPP_SYNT_DIFF,DOPP,6,46,DblObj,1,occ-name,NA,DIF,The mechanic showed Pamela the automobile.,Pamela showed the mechanic the automobile.
+1,DOPP_SYNT,DOPP_SYNT_DIFF,DOPP,10,50,DblObj,1,occ-name,NA,DIF,The analyst promised Andrew a report.,Andrew promised the analyst a report.
+1,DOPP_SYNT,DOPP_SYNT_DIFF,DOPP,14,54,DblObj,0,occ-name,NA,DIF,The filmmaker mailed Eric the script.,Eric mailed the script to the filmmaker.
+1,DOPP_SYNT,DOPP_SYNT_DIFF,DOPP,18,58,DblObj,0,occ-name,NA,DIF,The jeweler slipped Jeffrey a note.,Jeffrey slipped a note to the jeweler.
+1,DOPP_SYNT,DOPP_SYNT_DIFF,DOPP,22,62,PP,1,occ-name,NA,DIF,The bookkeeper loaned a calculator to Angela.,Angela loaned a calculator to the bookkeeper.
+1,DOPP_SYNT,DOPP_SYNT_DIFF,DOPP,26,66,PP,1,occ-name,NA,DIF,The teacher passed the homework to Frank.,Frank passed the homework to the teacher.
+1,DOPP_SYNT,DOPP_SYNT_DIFF,DOPP,30,70,PP,1,occ-name,NA,DIF,The percussionist sent an invitation to Laura.,Laura sent an invitation to the percussionist.
+1,DOPP_SYNT,DOPP_SYNT_DIFF,DOPP,34,74,PP,0,occ-name,NA,DIF,The author showed the room to Jason.,Jason showed the author the room.
+1,DOPP_SYNT,DOPP_SYNT_DIFF,DOPP,38,78,PP,0,occ-name,NA,DIF,The millionaire sold the house to Anthony.,Anthony sold the millionaire the house.
+1,DOPP_SYNT,DOPP_SYNT_SAME,DOPP,3,43,DblObj,0,name-occ,NA,SAME,Patricia handed the cleaner the keys.,Patricia handed the keys to the cleaner.
+1,DOPP_SYNT,DOPP_SYNT_SAME,DOPP,7,47,DblObj,0,name-occ,NA,SAME,Jerry provided the celebrity an airplane.,Jerry provided an airplane for the celebrity.
+1,DOPP_SYNT,DOPP_SYNT_SAME,DOPP,11,51,DblObj,0,name-occ,NA,SAME,Brenda read the expert a passage.,Brenda read a passage to the expert.
+1,DOPP_SYNT,DOPP_SYNT_SAME,DOPP,15,55,DblObj,0,name-occ,NA,SAME,Gregory issued the dressmaker a check.,Gregory issued a check to the dressmaker.
+1,DOPP_SYNT,DOPP_SYNT_SAME,DOPP,19,59,DblObj,0,name-occ,NA,SAME,Melissa shipped the dealer some merchandise.,Melissa shipped some merchandise to the dealer.
+1,DOPP_SYNT,DOPP_SYNT_SAME,DOPP,23,63,PP,0,name-occ,NA,SAME,Michelle delivered a payment to the therapist.,Michelle delivered the therapist a payment.
+1,DOPP_SYNT,DOPP_SYNT_SAME,DOPP,27,67,PP,0,name-occ,NA,SAME,Joseph lent a movie to the coach.,Joseph lent the coach a movie.
+1,DOPP_SYNT,DOPP_SYNT_SAME,DOPP,31,71,PP,0,name-occ,NA,SAME,Matthew threw some flowers to the actress.,Matthew threw the actress some flowers.
+1,DOPP_SYNT,DOPP_SYNT_SAME,DOPP,35,75,PP,0,name-occ,NA,SAME,Kimberly mailed the records to the policeman.,Kimberly mailed the policeman the records.
+1,DOPP_SYNT,DOPP_SYNT_SAME,DOPP,39,79,PP,0,name-occ,NA,SAME,Gary threw the jacket to the manager.,Gary threw the manager the jacket.
+2,ActPas_SEM,ActPas_SEM_DIFF,ActPass,1,1,active,1,name-occ,noun_switch,DIF,Anna invited the composer.,Anna invited the translator.
+2,ActPas_SEM,ActPas_SEM_DIFF,ActPass,5,5,active,1,name-occ,verb_switch,DIF,Patricia praised the magician.,Patricia mocked the magician.
+2,ActPas_SEM,ActPas_SEM_DIFF,ActPass,9,9,active,1,name-occ,noun_switch,DIF,Barbara angered the pharmacist.,Barbara angered the mason.
+2,ActPas_SEM,ActPas_SEM_DIFF,ActPass,13,13,active,1,name-occ,verb_switch,DIF,Jennifer criticized the secretary.,Jennifer hurried the secretary.
+2,ActPas_SEM,ActPas_SEM_DIFF,ActPass,17,17,active,1,name-occ,verb_switch,DIF,Susan cautioned the waiter.,Susan accused the waiter.
+2,ActPas_SEM,ActPas_SEM_DIFF,ActPass,21,21,passive,1,name-occ,noun_switch,DIF,Dorothy was respected by the attorney.,Dorothy was respected by the receptionist.
+2,ActPas_SEM,ActPas_SEM_DIFF,ActPass,25,25,passive,1,name-occ,verb_switch,DIF,Christopher was convinced by the vocalist.,Christopher was selected by the vocalist.
+2,ActPas_SEM,ActPas_SEM_DIFF,ActPass,29,29,passive,1,name-occ,noun_switch,DIF,Paul was blamed by the playwright.,Paul was blamed by the inmate.
+2,ActPas_SEM,ActPas_SEM_DIFF,ActPass,33,33,passive,1,name-occ,verb_switch,DIF,Ruth was congratulated by the newscaster.,Ruth was scolded by the newscaster.
+2,ActPas_SEM,ActPas_SEM_DIFF,ActPass,37,37,passive,1,name-occ,verb_switch,DIF,Carol was chosen by the banker.,Carol was greeted by the banker.
+2,ActPas_SEM,ActPas_SEM_SAME,ActPass,2,2,active,1,occ-name,noun_synon,SAME,The orator consulted Jack.,The speaker consulted Jack.
+2,ActPas_SEM,ActPas_SEM_SAME,ActPass,6,6,active,1,occ-name,verb_synon,SAME,The comedian ridiculed John.,The comedian mocked John.
+2,ActPas_SEM,ActPas_SEM_SAME,ActPass,10,10,active,1,occ-name,verb_synon,SAME,The watchmaker compensated Michael.,The watchmaker paid Michael.
+2,ActPas_SEM,ActPas_SEM_SAME,ActPass,14,14,active,1,occ-name,noun_synon,SAME,The scientist flattered David.,The researcher flattered David.
+2,ActPas_SEM,ActPas_SEM_SAME,ActPass,18,18,active,1,occ-name,verb_synon,SAME,The politician killed Charles.,The politician murdered Charles.
+2,ActPas_SEM,ActPas_SEM_SAME,ActPass,22,22,passive,1,occ-name,noun_synon,SAME,The bricklayer was complimented by Sharon.,The mason was complimented by Sharon.
+2,ActPas_SEM,ActPas_SEM_SAME,ActPass,26,26,passive,1,occ-name,verb_synon,SAME,The consultant was welcomed by Karen.,The consultant was greeted by Karen.
+2,ActPas_SEM,ActPas_SEM_SAME,ActPass,30,30,passive,1,occ-name,verb_synon,SAME,The novelist was pushed by Helen.,The novelist was shoved by Helen.
+2,ActPas_SEM,ActPas_SEM_SAME,ActPass,34,34,passive,1,occ-name,noun_synon,SAME,The demonstrator was quoted by Donna.,The protestor was quoted by Donna.
+2,ActPas_SEM,ActPas_SEM_SAME,ActPass,38,38,passive,1,occ-name,verb_synon,SAME,The barber was found by Steven.,The barber was located by Steven.
+2,ActPas_SYNT,ActPas_SYNT_DIFF,ActPass,3,3,active,1,name-occ,NA,DIF,Mary visited the principal.,The principal visited Mary.
+2,ActPas_SYNT,ActPas_SYNT_DIFF,ActPass,7,7,active,1,name-occ,NA,DIF,Linda rescued the volunteer.,The volunteer rescued Linda.
+2,ActPas_SYNT,ActPas_SYNT_DIFF,ActPass,11,11,active,0,name-occ,NA,DIF,Elizabeth disliked the proprietor.,Elizabeth was disliked by the proprietor.
+2,ActPas_SYNT,ActPas_SYNT_DIFF,ActPass,15,15,active,0,name-occ,NA,DIF,Maria trusted the interpreter.,Maria was trusted by the interpreter.
+2,ActPas_SYNT,ActPas_SYNT_DIFF,ActPass,19,19,active,0,name-occ,NA,DIF,Margaret misinformed the sponsor.,Margaret was misinformed by the sponsor.
+2,ActPas_SYNT,ActPas_SYNT_DIFF,ActPass,23,23,passive,0,name-occ,NA,DIF,Lisa was discouraged by the spy.,Lisa discouraged the spy.
+2,ActPas_SYNT,ActPas_SYNT_DIFF,ActPass,27,27,passive,0,name-occ,NA,DIF,Daniel was called by the decorator.,Daniel called the decorator.
+2,ActPas_SYNT,ActPas_SYNT_DIFF,ActPass,31,31,passive,1,name-occ,NA,DIF,Mark was encouraged by the apprentice.,The apprentice was encouraged by Mark.
+2,ActPas_SYNT,ActPas_SYNT_DIFF,ActPass,35,35,passive,1,name-occ,NA,DIF,Richard was noticed by the thief.,The thief was noticed by Richard.
+2,ActPas_SYNT,ActPas_SYNT_DIFF,ActPass,39,39,passive,1,name-occ,NA,DIF,Mark was hugged by the cashier.,The cashier was hugged by Mark.
+2,ActPas_SYNT,ActPas_SYNT_SAME,ActPass,4,4,active,0,occ-name,NA,SAME,The bystander overheard James.,James was overheard by the bystander.
+2,ActPas_SYNT,ActPas_SYNT_SAME,ActPass,8,8,active,0,occ-name,NA,SAME,The electrician interrogated Robert.,Robert was interrogated by the electrician.
+2,ActPas_SYNT,ActPas_SYNT_SAME,ActPass,12,12,active,0,occ-name,NA,SAME,The courier belittled William.,William was belittled by the courier.
+2,ActPas_SYNT,ActPas_SYNT_SAME,ActPass,16,16,active,0,occ-name,NA,SAME,The florist employed George.,George was employed by the florist.
+2,ActPas_SYNT,ActPas_SYNT_SAME,ActPass,20,20,active,0,occ-name,NA,SAME,The performer drew Joseph.,Joseph was drawn by the performer.
+2,ActPas_SYNT,ActPas_SYNT_SAME,ActPass,24,24,passive,0,occ-name,NA,SAME,The prisoner was seen by Nancy.,Nancy saw the prisoner.
+2,ActPas_SYNT,ActPas_SYNT_SAME,ActPass,28,28,passive,0,occ-name,NA,SAME,The pop-star was rushed by Lauren.,Lauren rushed the pop-star.
+2,ActPas_SYNT,ActPas_SYNT_SAME,ActPass,32,32,passive,0,occ-name,NA,SAME,The housekeeper was thanked by Sandra.,Sandra thanked the housekeeper.
+2,ActPas_SYNT,ActPas_SYNT_SAME,ActPass,36,36,passive,0,occ-name,NA,SAME,The repairman was chastised by Kenneth.,Kenneth chastised the repairman.
+2,ActPas_SYNT,ActPas_SYNT_SAME,ActPass,40,40,passive,0,occ-name,NA,SAME,The sailor was helped by Thomas.,Thomas helped the sailor.
+2,DOPP_SEM,DOPP_SEM_DIFF,DOPP,1,41,DblObj,1,name-occ,occup_switch,DIF,Amanda lent the cook some money.,Amanda lent the carpenter some money.
+2,DOPP_SEM,DOPP_SEM_DIFF,DOPP,5,45,DblObj,1,name-occ,obj_switch,DIF,Martha tossed the artist a pen.,Martha tossed the artist a photo.
+2,DOPP_SEM,DOPP_SEM_DIFF,DOPP,9,49,DblObj,1,name-occ,occup_switch,DIF,Kathleen gave the agent a picture.,Kathleen gave the child a picture.
+2,DOPP_SEM,DOPP_SEM_DIFF,DOPP,13,53,DblObj,1,name-occ,obj_switch,DIF,Rebecca promised the runner some water.,Rebecca promised the runner a reward.
+2,DOPP_SEM,DOPP_SEM_DIFF,DOPP,17,57,DblObj,1,name-occ,obj_switch,DIF,Larry offered the customer a prize.,Larry offered the customer some products.
+2,DOPP_SEM,DOPP_SEM_DIFF,DOPP,21,61,PP,1,name-occ,occup_switch,DIF,Emily passed a towel to the fighter.,Emily passed a towel to the jogger.
+2,DOPP_SEM,DOPP_SEM_DIFF,DOPP,25,65,PP,1,name-occ,obj_switch,DIF,Cynthia read the request to the reporter.,Cynthia read the story to the reporter.
+2,DOPP_SEM,DOPP_SEM_DIFF,DOPP,29,69,PP,1,name-occ,occup_switch,DIF,Kevin slipped the reimbursement to the photographer.,Kevin slipped the reimbursement to the journalist.
+2,DOPP_SEM,DOPP_SEM_DIFF,DOPP,33,73,PP,1,name-occ,obj_switch,DIF,Jessica offered a lollipop to the kid.,Jessica offered a present to the kid.
+2,DOPP_SEM,DOPP_SEM_DIFF,DOPP,37,77,PP,1,name-occ,obj_switch,DIF,Sarah issued an outfit to the waitress.,Sarah issued a refund to the waitress.
+2,DOPP_SEM,DOPP_SEM_SAME,DOPP,2,42,DblObj,1,occ-name,occup_synon,SAME,The woodworker sent James a package.,The carpenter sent James a package.
+2,DOPP_SEM,DOPP_SEM_SAME,DOPP,6,46,DblObj,1,occ-name,obj_synon,SAME,The mechanic showed Pamela the automobile.,The mechanic showed Pamela the car.
+2,DOPP_SEM,DOPP_SEM_SAME,DOPP,10,50,DblObj,1,occ-name,obj_synon,SAME,The analyst promised Andrew a report.,The analyst promised Andrew a story.
+2,DOPP_SEM,DOPP_SEM_SAME,DOPP,14,54,DblObj,1,occ-name,occup_synon,SAME,The filmmaker mailed Eric the script.,The producer mailed Eric the script.
+2,DOPP_SEM,DOPP_SEM_SAME,DOPP,18,58,DblObj,1,occ-name,obj_synon,SAME,The jeweler slipped Jeffrey a note.,The jeweler slipped Jeffrey a memo.
+2,DOPP_SEM,DOPP_SEM_SAME,DOPP,22,62,PP,1,occ-name,occup_synon,SAME,The bookkeeper loaned a calculator to Angela.,The accountant loaned a calculator to Angela.
+2,DOPP_SEM,DOPP_SEM_SAME,DOPP,26,66,PP,1,occ-name,obj_synon,SAME,The teacher passed the homework to Frank.,The teacher passed the assignment to Frank.
+2,DOPP_SEM,DOPP_SEM_SAME,DOPP,30,70,PP,1,occ-name,occup_synon,SAME,The percussionist sent an invitation to Laura.,The drummer sent an invitation to Laura.
+2,DOPP_SEM,DOPP_SEM_SAME,DOPP,34,74,PP,1,occ-name,occup_synon,SAME,The author showed the room to Jason.,The writer showed the room to Jason.
+2,DOPP_SEM,DOPP_SEM_SAME,DOPP,38,78,PP,1,occ-name,obj_synon,SAME,The millionaire sold the house to Anthony.,The millionaire sold the mansion to Anthony.
+2,DOPP_SYNT,DOPP_SYNT_DIFF,DOPP,3,43,DblObj,1,name-occ,NA,DIF,Patricia handed the cleaner the keys.,The cleaner handed Patricia the keys.
+2,DOPP_SYNT,DOPP_SYNT_DIFF,DOPP,7,47,DblObj,1,name-occ,NA,DIF,Jerry provided the celebrity an airplane.,The celebrity provided Jerry an airplane.
+2,DOPP_SYNT,DOPP_SYNT_DIFF,DOPP,11,51,DblObj,0,name-occ,NA,DIF,Brenda read the expert a passage.,The expert read a passage to Brenda.
+2,DOPP_SYNT,DOPP_SYNT_DIFF,DOPP,15,55,DblObj,0,name-occ,NA,DIF,Gregory issued the dressmaker a check.,The dressmaker issued a check to Gregory.
+2,DOPP_SYNT,DOPP_SYNT_DIFF,DOPP,19,59,DblObj,0,name-occ,NA,DIF,Melissa shipped the dealer some merchandise.,The dealer shipped some merchandise to Melissa.
+2,DOPP_SYNT,DOPP_SYNT_DIFF,DOPP,23,63,PP,1,name-occ,NA,DIF,Michelle delivered a payment to the therapist.,The therapist delivered a payment to Michelle.
+2,DOPP_SYNT,DOPP_SYNT_DIFF,DOPP,27,67,PP,1,name-occ,NA,DIF,Joseph lent a movie to the coach.,The coach lent a movie to Joseph.
+2,DOPP_SYNT,DOPP_SYNT_DIFF,DOPP,31,71,PP,0,name-occ,NA,DIF,Matthew threw some flowers to the actress.,The actress threw Matthew some flowers.
+2,DOPP_SYNT,DOPP_SYNT_DIFF,DOPP,35,75,PP,0,name-occ,NA,DIF,Kimberly mailed the records to the policeman.,The policeman mailed Kimberly the records.
+2,DOPP_SYNT,DOPP_SYNT_DIFF,DOPP,39,79,PP,0,name-occ,NA,DIF,Gary threw the jacket to the manager.,The manager threw Gary the jacket.
+2,DOPP_SYNT,DOPP_SYNT_SAME,DOPP,4,44,DblObj,0,occ-name,NA,SAME,The professor loaned Joshua a dictionary,The professor loaned a dictionary to Joshua.
+2,DOPP_SYNT,DOPP_SYNT_SAME,DOPP,8,48,DblObj,0,occ-name,NA,SAME,The woman sold Anna a dress.,The woman sold a dress to Anna.
+2,DOPP_SYNT,DOPP_SYNT_SAME,DOPP,12,52,DblObj,0,occ-name,NA,SAME,The chauffeur brought Frank the limousine.,The chauffeur brought the limousine to Frank.
+2,DOPP_SYNT,DOPP_SYNT_SAME,DOPP,16,56,DblObj,0,occ-name,NA,SAME,The neighbor brought Stephen a magazine.,The neighbor brought a magazine to Stephen.
+2,DOPP_SYNT,DOPP_SYNT_SAME,DOPP,20,60,DblObj,0,occ-name,NA,SAME,The judge handed Virginia the revolver.,The judge handed the revolver to Virginia.
+2,DOPP_SYNT,DOPP_SYNT_SAME,DOPP,24,64,PP,0,occ-name,NA,SAME,The dancer tossed the costume to Amy.,The dancer tossed Amy the costume.
+2,DOPP_SYNT,DOPP_SYNT_SAME,DOPP,28,68,PP,0,occ-name,NA,SAME,The prosecutor delivered a message to Timothy.,The prosecutor delivered Timothy a message.
+2,DOPP_SYNT,DOPP_SYNT_SAME,DOPP,32,72,PP,0,occ-name,NA,SAME,The shepherd provided some compensation to Deborah.,The shepherd provided Deborah some compensation.
+2,DOPP_SYNT,DOPP_SYNT_SAME,DOPP,36,76,PP,0,occ-name,NA,SAME,The distributor shipped a box to Shirley.,The distributor shipped Shirley a box.
+2,DOPP_SYNT,DOPP_SYNT_SAME,DOPP,40,80,PP,0,occ-name,NA,SAME,The visitor gave a gift to Natalie.,The visitor gave Natalie a gift.
+3,ActPas_SEM,ActPas_SEM_DIFF,ActPass,2,2,active,1,occ-name,noun_switch,DIF,The orator consulted Jack.,The lawyer consulted Jack.
+3,ActPas_SEM,ActPas_SEM_DIFF,ActPass,6,6,active,1,occ-name,verb_switch,DIF,The comedian ridiculed John.,The comedian warned John.
+3,ActPas_SEM,ActPas_SEM_DIFF,ActPass,10,10,active,1,occ-name,noun_switch,DIF,The watchmaker compensated Michael.,The messenger compensated Michael.
+3,ActPas_SEM,ActPas_SEM_DIFF,ActPass,14,14,active,1,occ-name,verb_switch,DIF,The scientist flattered David.,The scientist mislead David.
+3,ActPas_SEM,ActPas_SEM_DIFF,ActPass,18,18,active,1,occ-name,noun_switch,DIF,The politician killed Charles.,The informer killed Charles.
+3,ActPas_SEM,ActPas_SEM_DIFF,ActPass,22,22,passive,1,occ-name,noun_switch,DIF,The bricklayer was complimented by Sharon.,The illusionist was complimented by Sharon.
+3,ActPas_SEM,ActPas_SEM_DIFF,ActPass,26,26,passive,1,occ-name,verb_switch,DIF,The consultant was welcomed by Karen.,The consultant was assisted by Karen.
+3,ActPas_SEM,ActPas_SEM_DIFF,ActPass,30,30,passive,1,occ-name,noun_switch,DIF,The novelist was pushed by Helen.,The protestor was pushed by Helen.
+3,ActPas_SEM,ActPas_SEM_DIFF,ActPass,34,34,passive,1,occ-name,verb_switch,DIF,The demonstrator was quoted by Donna.,The demonstrator was shoved by Donna.
+3,ActPas_SEM,ActPas_SEM_DIFF,ActPass,38,38,passive,1,occ-name,noun_switch,DIF,The barber was found by Steven.,The robber was found by Steven.
+3,ActPas_SEM,ActPas_SEM_SAME,ActPass,3,3,active,1,name-occ,noun_synon,SAME,Mary visited the principal.,Mary visited the headmaster.
+3,ActPas_SEM,ActPas_SEM_SAME,ActPass,7,7,active,1,name-occ,verb_synon,SAME,Linda rescued the volunteer.,Linda saved the volunteer.
+3,ActPas_SEM,ActPas_SEM_SAME,ActPass,11,11,active,1,name-occ,noun_synon,SAME,Elizabeth disliked the proprietor.,Elizabeth disliked the owner.
+3,ActPas_SEM,ActPas_SEM_SAME,ActPass,15,15,active,1,name-occ,noun_synon,SAME,Maria trusted the interpreter.,Maria trusted the translator.
+3,ActPas_SEM,ActPas_SEM_SAME,ActPass,19,19,active,1,name-occ,verb_synon,SAME,Margaret misinformed the sponsor.,Margaret mislead the sponsor.
+3,ActPas_SEM,ActPas_SEM_SAME,ActPass,23,23,passive,1,name-occ,noun_synon,SAME,Lisa was discouraged by the spy.,Lisa was discouraged by the informer.
+3,ActPas_SEM,ActPas_SEM_SAME,ActPass,27,27,passive,1,name-occ,verb_synon,SAME,Daniel was called by the decorator.,Daniel was telephoned by the decorator.
+3,ActPas_SEM,ActPas_SEM_SAME,ActPass,31,31,passive,1,name-occ,noun_synon,SAME,Mark was encouraged by the apprentice.,Mark was encouraged by the intern.
+3,ActPas_SEM,ActPas_SEM_SAME,ActPass,35,35,passive,1,name-occ,noun_synon,SAME,Richard was noticed by the thief.,Richard was noticed by the robber.
+3,ActPas_SEM,ActPas_SEM_SAME,ActPass,39,39,passive,1,name-occ,verb_synon,SAME,Mark was hugged by the cashier.,Mark was embraced by the cashier.
+3,ActPas_SYNT,ActPas_SYNT_DIFF,ActPass,4,4,active,1,occ-name,NA,DIF,The bystander overheard James.,James overheard the bystander.
+3,ActPas_SYNT,ActPas_SYNT_DIFF,ActPass,8,8,active,1,occ-name,NA,DIF,The electrician interrogated Robert.,Robert interrogated the electrician.
+3,ActPas_SYNT,ActPas_SYNT_DIFF,ActPass,12,12,active,0,occ-name,NA,DIF,The courier belittled William.,The courier was belittled by William.
+3,ActPas_SYNT,ActPas_SYNT_DIFF,ActPass,16,16,active,0,occ-name,NA,DIF,The florist employed George.,The florist was employed by George.
+3,ActPas_SYNT,ActPas_SYNT_DIFF,ActPass,20,20,active,0,occ-name,NA,DIF,The performer drew Joseph.,The performer was drawn by Joseph.
+3,ActPas_SYNT,ActPas_SYNT_DIFF,ActPass,24,24,passive,0,occ-name,NA,DIF,The prisoner was seen by Nancy.,The prisoner saw Nancy.
+3,ActPas_SYNT,ActPas_SYNT_DIFF,ActPass,28,28,passive,0,occ-name,NA,DIF,The pop-star was rushed by Lauren.,The pop-star rushed Lauren.
+3,ActPas_SYNT,ActPas_SYNT_DIFF,ActPass,32,32,passive,1,occ-name,NA,DIF,The housekeeper was thanked by Sandra.,Sandra was thanked by the housekeeper.
+3,ActPas_SYNT,ActPas_SYNT_DIFF,ActPass,36,36,passive,1,occ-name,NA,DIF,The repairman was chastised by Kenneth.,Kenneth was chastised by the repairman.
+3,ActPas_SYNT,ActPas_SYNT_DIFF,ActPass,40,40,passive,1,occ-name,NA,DIF,The sailor was helped by Thomas.,Thomas was helped by the sailor.
+3,ActPas_SYNT,ActPas_SYNT_SAME,ActPass,1,1,active,0,name-occ,NA,SAME,Anna invited the composer.,The composer was invited by Anna.
+3,ActPas_SYNT,ActPas_SYNT_SAME,ActPass,5,5,active,0,name-occ,NA,SAME,Patricia praised the magician.,The magician was praised by Patricia.
+3,ActPas_SYNT,ActPas_SYNT_SAME,ActPass,9,9,active,0,name-occ,NA,SAME,Barbara angered the pharmacist.,The pharmacist was angered by Barbara.
+3,ActPas_SYNT,ActPas_SYNT_SAME,ActPass,13,13,active,0,name-occ,NA,SAME,Jennifer criticized the secretary.,The secretary was criticized by Jennifer.
+3,ActPas_SYNT,ActPas_SYNT_SAME,ActPass,17,17,active,0,name-occ,NA,SAME,Susan cautioned the waiter.,The waiter was cautioned by Susan.
+3,ActPas_SYNT,ActPas_SYNT_SAME,ActPass,21,21,passive,0,name-occ,NA,SAME,Dorothy was respected by the attorney.,The attorney respected Dorothy.
+3,ActPas_SYNT,ActPas_SYNT_SAME,ActPass,25,25,passive,0,name-occ,NA,SAME,Christopher was convinced by the vocalist.,The vocalist convinced Christopher.
+3,ActPas_SYNT,ActPas_SYNT_SAME,ActPass,29,29,passive,0,name-occ,NA,SAME,Paul was blamed by the playwright.,The playwright blamed Paul.
+3,ActPas_SYNT,ActPas_SYNT_SAME,ActPass,33,33,passive,0,name-occ,NA,SAME,Ruth was congratulated by the newscaster.,The newscaster congratulated Ruth.
+3,ActPas_SYNT,ActPas_SYNT_SAME,ActPass,37,37,passive,0,name-occ,NA,SAME,Carol was chosen by the banker.,The banker chose Carol.
+3,DOPP_SEM,DOPP_SEM_DIFF,DOPP,2,42,DblObj,1,occ-name,occup_switch,DIF,The woodworker sent James a package.,The accountant sent James a package.
+3,DOPP_SEM,DOPP_SEM_DIFF,DOPP,6,46,DblObj,1,occ-name,obj_switch,DIF,The mechanic showed Pamela the automobile.,The mechanic showed Pamela the jet.
+3,DOPP_SEM,DOPP_SEM_DIFF,DOPP,10,50,DblObj,1,occ-name,occup_switch,DIF,The analyst promised Andrew a report.,The drummer promised Andrew a report.
+3,DOPP_SEM,DOPP_SEM_DIFF,DOPP,14,54,DblObj,1,occ-name,obj_switch,DIF,The filmmaker mailed Eric the script.,The filmmaker mailed Eric the assignment.
+3,DOPP_SEM,DOPP_SEM_DIFF,DOPP,18,58,DblObj,1,occ-name,occup_switch,DIF,The jeweler slipped Jeffrey a note.,The specialist slipped Jeffrey a note.
+3,DOPP_SEM,DOPP_SEM_DIFF,DOPP,22,62,PP,1,occ-name,occup_switch,DIF,The bookkeeper loaned a calculator to Angela.,The lecturer loaned a calculator to Angela.
+3,DOPP_SEM,DOPP_SEM_DIFF,DOPP,26,66,PP,1,occ-name,obj_switch,DIF,The teacher passed the homework to Frank.,The teacher passed the film to Frank.
+3,DOPP_SEM,DOPP_SEM_DIFF,DOPP,30,70,PP,1,occ-name,occup_switch,DIF,The percussionist sent an invitation to Laura.,The journalist sent an invitation to Laura.
+3,DOPP_SEM,DOPP_SEM_DIFF,DOPP,34,74,PP,1,occ-name,obj_switch,DIF,The author showed the room to Jason.,The author showed the letter to Jason.
+3,DOPP_SEM,DOPP_SEM_DIFF,DOPP,38,78,PP,1,occ-name,occup_switch,DIF,The millionaire sold the house to Anthony.,The psychiatrist sold the house to Anthony.
+3,DOPP_SEM,DOPP_SEM_SAME,DOPP,3,43,DblObj,1,name-occ,occup_synon,SAME,Patricia handed the cleaner the keys.,Patricia handed the janitor the keys.
+3,DOPP_SEM,DOPP_SEM_SAME,DOPP,7,47,DblObj,1,name-occ,obj_synon,SAME,Jerry provided the celebrity an airplane.,Jerry provided the celebrity a jet.
+3,DOPP_SEM,DOPP_SEM_SAME,DOPP,11,51,DblObj,1,name-occ,occup_synon,SAME,Brenda read the expert a passage.,Brenda read the specialist a passage.
+3,DOPP_SEM,DOPP_SEM_SAME,DOPP,15,55,DblObj,1,name-occ,occup_synon,SAME,Gregory issued the dressmaker a check.,Gregory issued the tailor a check.
+3,DOPP_SEM,DOPP_SEM_SAME,DOPP,19,59,DblObj,1,name-occ,obj_synon,SAME,Melissa shipped the dealer some merchandise.,Melissa shipped the dealer some products.
+3,DOPP_SEM,DOPP_SEM_SAME,DOPP,23,63,PP,1,name-occ,occup_synon,SAME,Michelle delivered a payment to the therapist.,Michelle delivered a payment to the psychiatrist.
+3,DOPP_SEM,DOPP_SEM_SAME,DOPP,27,67,PP,1,name-occ,obj_synon,SAME,Joseph lent a movie to the coach.,Joseph lent a film to the coach.
+3,DOPP_SEM,DOPP_SEM_SAME,DOPP,31,71,PP,1,name-occ,obj_synon,SAME,Matthew threw some flowers to the actress.,Matthew threw a bouquet to the actress.
+3,DOPP_SEM,DOPP_SEM_SAME,DOPP,35,75,PP,1,name-occ,occup_synon,SAME,Kimberly mailed the records to the policeman.,Kimberly mailed the records to the cop.
+3,DOPP_SEM,DOPP_SEM_SAME,DOPP,39,79,PP,1,name-occ,obj_synon,SAME,Gary threw the jacket to the manager.,Gary threw the coat to the manager.
+3,DOPP_SYNT,DOPP_SYNT_DIFF,DOPP,4,44,DblObj,1,occ-name,NA,DIF,The professor loaned Joshua a dictionary,Joshua loaned the professor a dictionary.
+3,DOPP_SYNT,DOPP_SYNT_DIFF,DOPP,8,48,DblObj,1,occ-name,NA,DIF,The woman sold Anna a dress.,Anna sold the woman a dress.
+3,DOPP_SYNT,DOPP_SYNT_DIFF,DOPP,12,52,DblObj,0,occ-name,NA,DIF,The chauffeur brought Frank the limousine.,Frank brought the limousine to the chauffeur.
+3,DOPP_SYNT,DOPP_SYNT_DIFF,DOPP,16,56,DblObj,0,occ-name,NA,DIF,The neighbor brought Stephen a magazine.,Stephen brought a magazine to the neighbor.
+3,DOPP_SYNT,DOPP_SYNT_DIFF,DOPP,20,60,DblObj,0,occ-name,NA,DIF,The judge handed Virginia the revolver.,Virginia handed the revolver to the judge.
+3,DOPP_SYNT,DOPP_SYNT_DIFF,DOPP,24,64,PP,1,occ-name,NA,DIF,The dancer tossed the costume to Amy.,Amy tossed the costume to the dancer.
+3,DOPP_SYNT,DOPP_SYNT_DIFF,DOPP,28,68,PP,1,occ-name,NA,DIF,The prosecutor delivered a message to Timothy.,Timothy delivered a message to the prosecutor.
+3,DOPP_SYNT,DOPP_SYNT_DIFF,DOPP,32,72,PP,0,occ-name,NA,DIF,The shepherd provided some compensation to Deborah.,Deborah provided the shepherd some compensation.
+3,DOPP_SYNT,DOPP_SYNT_DIFF,DOPP,36,76,PP,0,occ-name,NA,DIF,The distributor shipped a box to Shirley.,Shirley shipped the distributor a box.
+3,DOPP_SYNT,DOPP_SYNT_DIFF,DOPP,40,80,PP,0,occ-name,NA,DIF,The visitor gave a gift to Natalie.,Natalie gave the visitor a gift.
+3,DOPP_SYNT,DOPP_SYNT_SAME,DOPP,1,41,DblObj,0,name-occ,NA,SAME,Amanda lent the cook some money.,Amanda lent some money to the cook.
+3,DOPP_SYNT,DOPP_SYNT_SAME,DOPP,5,45,DblObj,0,name-occ,NA,SAME,Martha tossed the artist a pen.,Martha tossed a pen to the artist.
+3,DOPP_SYNT,DOPP_SYNT_SAME,DOPP,9,49,DblObj,0,name-occ,NA,SAME,Kathleen gave the agent a picture.,Kathleen gave a picture to the agent.
+3,DOPP_SYNT,DOPP_SYNT_SAME,DOPP,13,53,DblObj,0,name-occ,NA,SAME,Rebecca promised the runner some water.,Rebecca promised some water to the runner.
+3,DOPP_SYNT,DOPP_SYNT_SAME,DOPP,17,57,DblObj,0,name-occ,NA,SAME,Larry offered the customer a prize.,Larry offered a prize to the customer.
+3,DOPP_SYNT,DOPP_SYNT_SAME,DOPP,21,61,PP,0,name-occ,NA,SAME,Emily passed a towel to the fighter.,Emily passed the fighter a towel.
+3,DOPP_SYNT,DOPP_SYNT_SAME,DOPP,25,65,PP,0,name-occ,NA,SAME,Cynthia read the request to the reporter.,Cynthia read the reporter the request.
+3,DOPP_SYNT,DOPP_SYNT_SAME,DOPP,29,69,PP,0,name-occ,NA,SAME,Kevin slipped the reimbursement to the photographer.,Kevin slipped the photographer the reimbursement.
+3,DOPP_SYNT,DOPP_SYNT_SAME,DOPP,33,73,PP,0,name-occ,NA,SAME,Jessica offered a lollipop to the kid.,Jessica offered the kid a lollipop.
+3,DOPP_SYNT,DOPP_SYNT_SAME,DOPP,37,77,PP,0,name-occ,NA,SAME,Sarah issued an outfit to the waitress.,Sarah issued the waitress an outfit.
+4,ActPas_SEM,ActPas_SEM_DIFF,ActPass,3,3,active,1,name-occ,noun_switch,DIF,Mary visited the principal.,Mary visited the singer.
+4,ActPas_SEM,ActPas_SEM_DIFF,ActPass,7,7,active,1,name-occ,verb_switch,DIF,Linda rescued the volunteer.,Linda embraced the volunteer.
+4,ActPas_SEM,ActPas_SEM_DIFF,ActPass,11,11,active,1,name-occ,noun_switch,DIF,Elizabeth disliked the proprietor.,Elizabeth disliked the maid.
+4,ActPas_SEM,ActPas_SEM_DIFF,ActPass,15,15,active,1,name-occ,verb_switch,DIF,Maria trusted the interpreter.,Maria located the translator.
+4,ActPas_SEM,ActPas_SEM_DIFF,ActPass,19,19,active,1,name-occ,noun_switch,DIF,Margaret misinformed the sponsor.,Margaret misinformed the witness.
+4,ActPas_SEM,ActPas_SEM_DIFF,ActPass,23,23,passive,1,name-occ,noun_switch,DIF,Lisa was discouraged by the spy.,Lisa was discouraged by the owner.
+4,ActPas_SEM,ActPas_SEM_DIFF,ActPass,27,27,passive,1,name-occ,verb_switch,DIF,Daniel was called by the decorator.,Daniel was hired by the decorator.
+4,ActPas_SEM,ActPas_SEM_DIFF,ActPass,31,31,passive,1,name-occ,noun_switch,DIF,Mark was encouraged by the apprentice.,Mark was encouraged by the researcher.
+4,ActPas_SEM,ActPas_SEM_DIFF,ActPass,35,35,passive,1,name-occ,verb_switch,DIF,Richard was noticed by the thief.,Richard was murdered by the thief.
+4,ActPas_SEM,ActPas_SEM_DIFF,ActPass,39,39,passive,1,name-occ,noun_switch,DIF,Mark was hugged by the cashier.,Mark was hugged by the headmaster.
+4,ActPas_SEM,ActPas_SEM_SAME,ActPass,4,4,active,1,occ-name,noun_synon,SAME,The bystander overheard James.,The witness overheard James.
+4,ActPas_SEM,ActPas_SEM_SAME,ActPass,8,8,active,1,occ-name,verb_synon,SAME,The electrician interrogated Robert.,The electrician questioned Robert.
+4,ActPas_SEM,ActPas_SEM_SAME,ActPass,12,12,active,1,occ-name,noun_synon,SAME,The courier belittled William.,The messenger belittled William.
+4,ActPas_SEM,ActPas_SEM_SAME,ActPass,16,16,active,1,occ-name,verb_synon,SAME,The florist employed George.,The florist hired George.
+4,ActPas_SEM,ActPas_SEM_SAME,ActPass,20,20,active,1,occ-name,verb_synon,SAME,The performer drew Joseph.,The performer painted Joseph.
+4,ActPas_SEM,ActPas_SEM_SAME,ActPass,24,24,passive,1,occ-name,noun_synon,SAME,The prisoner was seen by Nancy.,The inmate was seen by Nancy.
+4,ActPas_SEM,ActPas_SEM_SAME,ActPass,28,28,passive,1,occ-name,verb_synon,SAME,The pop-star was rushed by Lauren.,The pop-star was hurried by Lauren.
+4,ActPas_SEM,ActPas_SEM_SAME,ActPass,32,32,passive,1,occ-name,noun_synon,SAME,The housekeeper was thanked by Sandra.,The maid was thanked by Sandra.
+4,ActPas_SEM,ActPas_SEM_SAME,ActPass,36,36,passive,1,occ-name,verb_synon,SAME,The repairman was chastised by Kenneth.,The repairman was scolded by Kenneth.
+4,ActPas_SEM,ActPas_SEM_SAME,ActPass,40,40,passive,1,occ-name,verb_synon,SAME,The sailor was helped by Thomas.,The sailor was assisted by Thomas.
+4,ActPas_SYNT,ActPas_SYNT_DIFF,ActPass,1,1,active,1,name-occ,NA,DIF,Anna invited the composer.,The composer invited Anna.
+4,ActPas_SYNT,ActPas_SYNT_DIFF,ActPass,5,5,active,1,name-occ,NA,DIF,Patricia praised the magician.,The magician praised Patricia.
+4,ActPas_SYNT,ActPas_SYNT_DIFF,ActPass,9,9,active,1,name-occ,NA,DIF,Barbara angered the pharmacist.,The pharmacist angered Barbara.
+4,ActPas_SYNT,ActPas_SYNT_DIFF,ActPass,13,13,active,0,name-occ,NA,DIF,Jennifer criticized the secretary.,Jennifer was criticized by the secretary.
+4,ActPas_SYNT,ActPas_SYNT_DIFF,ActPass,17,17,active,0,name-occ,NA,DIF,Susan cautioned the waiter.,Susan was cautioned by the waiter.
+4,ActPas_SYNT,ActPas_SYNT_DIFF,ActPass,21,21,passive,0,name-occ,NA,DIF,Dorothy was respected by the attorney.,Dorothy respected the attorney.
+4,ActPas_SYNT,ActPas_SYNT_DIFF,ActPass,25,25,passive,0,name-occ,NA,DIF,Christopher was convinced by the vocalist.,Christopher convinced the vocalist.
+4,ActPas_SYNT,ActPas_SYNT_DIFF,ActPass,29,29,passive,0,name-occ,NA,DIF,Paul was blamed by the playwright.,Paul blamed the playwright.
+4,ActPas_SYNT,ActPas_SYNT_DIFF,ActPass,33,33,passive,1,name-occ,NA,DIF,Ruth was congratulated by the newscaster.,The newscaster was congratulated by Ruth.
+4,ActPas_SYNT,ActPas_SYNT_DIFF,ActPass,37,37,passive,1,name-occ,NA,DIF,Carol was chosen by the banker.,The banker was chosen by Carol.
+4,ActPas_SYNT,ActPas_SYNT_SAME,ActPass,2,2,active,0,occ-name,NA,SAME,The orator consulted Jack.,Jack was consulted by the orator.
+4,ActPas_SYNT,ActPas_SYNT_SAME,ActPass,6,6,active,0,occ-name,NA,SAME,The comedian ridiculed John.,John was ridiculed by the comedian.
+4,ActPas_SYNT,ActPas_SYNT_SAME,ActPass,10,10,active,0,occ-name,NA,SAME,The watchmaker compensated Michael.,Michael was compensated by the watchmaker.
+4,ActPas_SYNT,ActPas_SYNT_SAME,ActPass,14,14,active,0,occ-name,NA,SAME,The scientist flattered David.,David was flattered by the scientist.
+4,ActPas_SYNT,ActPas_SYNT_SAME,ActPass,18,18,active,0,occ-name,NA,SAME,The politician killed Charles.,Charles was killed by the politician.
+4,ActPas_SYNT,ActPas_SYNT_SAME,ActPass,22,22,passive,0,occ-name,NA,SAME,The bricklayer was complimented by Sharon.,Sharon complimented the bricklayer.
+4,ActPas_SYNT,ActPas_SYNT_SAME,ActPass,26,26,passive,0,occ-name,NA,SAME,The consultant was welcomed by Karen.,Karen welcomed the consultant
+4,ActPas_SYNT,ActPas_SYNT_SAME,ActPass,30,30,passive,0,occ-name,NA,SAME,The novelist was pushed by Helen.,Helen pushed the novelist.
+4,ActPas_SYNT,ActPas_SYNT_SAME,ActPass,34,34,passive,0,occ-name,NA,SAME,The demonstrator was quoted by Donna.,Donna quoted the demonstrator.
+4,ActPas_SYNT,ActPas_SYNT_SAME,ActPass,38,38,passive,0,occ-name,NA,SAME,The barber was found by Steven.,Steven found the barber.
+4,DOPP_SEM,DOPP_SEM_DIFF,DOPP,3,43,DblObj,1,name-occ,occup_switch,DIF,Patricia handed the cleaner the keys.,Patricia handed the driver the keys.
+4,DOPP_SEM,DOPP_SEM_DIFF,DOPP,7,47,DblObj,1,name-occ,obj_switch,DIF,Jerry provided the celebrity an airplane.,Jerry provided the celebrity a gown.
+4,DOPP_SEM,DOPP_SEM_DIFF,DOPP,11,51,DblObj,1,name-occ,occup_switch,DIF,Brenda read the expert a passage.,Brenda read the writer a passage.
+4,DOPP_SEM,DOPP_SEM_DIFF,DOPP,15,55,DblObj,1,name-occ,obj_switch,DIF,Gregory issued the dressmaker a check.,Gregory issued the dressmaker a uniform.
+4,DOPP_SEM,DOPP_SEM_DIFF,DOPP,19,59,DblObj,1,name-occ,occup_switch,DIF,Melissa shipped the dealer some merchandise.,Melissa shipped the tailor some merchandise.
+4,DOPP_SEM,DOPP_SEM_DIFF,DOPP,23,63,PP,1,name-occ,occup_switch,DIF,Michelle delivered a payment to the therapist.,Michelle delivered a payment to the illustrator.
+4,DOPP_SEM,DOPP_SEM_DIFF,DOPP,27,67,PP,1,name-occ,obj_switch,DIF,Joseph lent a movie to the coach.,Joseph lent a coat to the coach.
+4,DOPP_SEM,DOPP_SEM_DIFF,DOPP,31,71,PP,1,name-occ,occup_switch,DIF,Matthew threw some flowers to the actress.,Matthew threw some flowers to the ballerina.
+4,DOPP_SEM,DOPP_SEM_DIFF,DOPP,35,75,PP,1,name-occ,obj_switch,DIF,Kimberly mailed the records to the policeman.,Kimberly mailed the memo to the policeman.
+4,DOPP_SEM,DOPP_SEM_DIFF,DOPP,39,79,PP,1,name-occ,occup_switch,DIF,Gary threw the jacket to the manager.,Gary threw the jacket to the herder.
+4,DOPP_SEM,DOPP_SEM_SAME,DOPP,4,44,DblObj,1,occ-name,occup_synon,SAME,The professor loaned Joshua a dictionary,The lecturer loaned Joshua a dictionary.
+4,DOPP_SEM,DOPP_SEM_SAME,DOPP,8,48,DblObj,1,occ-name,obj_synon,SAME,The woman sold Anna a dress.,The woman sold Anna a gown.
+4,DOPP_SEM,DOPP_SEM_SAME,DOPP,12,52,DblObj,1,occ-name,occup_synon,SAME,The chauffeur brought Frank the limousine.,The driver brought Frank the limousine.
+4,DOPP_SEM,DOPP_SEM_SAME,DOPP,16,56,DblObj,1,occ-name,obj_synon,SAME,The neighbor brought Stephen a magazine.,The neighbor brought Stephen a periodical.
+4,DOPP_SEM,DOPP_SEM_SAME,DOPP,20,60,DblObj,1,occ-name,obj_synon,SAME,The judge handed Virginia the revolver.,The judge handed Virginia the gun.
+4,DOPP_SEM,DOPP_SEM_SAME,DOPP,24,64,PP,1,occ-name,occup_synon,SAME,The dancer tossed the costume to Amy.,The ballerina tossed the costume to Amy.
+4,DOPP_SEM,DOPP_SEM_SAME,DOPP,28,68,PP,1,occ-name,obj_synon,SAME,The prosecutor delivered a message to Timothy.,The prosecutor delivered a letter to Timothy.
+4,DOPP_SEM,DOPP_SEM_SAME,DOPP,32,72,PP,1,occ-name,occup_synon,SAME,The shepherd provided some compensation to Deborah.,The herder provided some compensation to Deborah.
+4,DOPP_SEM,DOPP_SEM_SAME,DOPP,36,76,PP,1,occ-name,obj_synon,SAME,The distributor shipped a box to Shirley.,The distributor shipped a crate to Shirley.
+4,DOPP_SEM,DOPP_SEM_SAME,DOPP,40,80,PP,1,occ-name,obj_synon,SAME,The visitor gave a gift to Natalie.,The visitor gave a present to Natalie.
+4,DOPP_SYNT,DOPP_SYNT_DIFF,DOPP,1,41,DblObj,1,name-occ,NA,DIF,Amanda lent the cook some money.,The cook lent Amanda some money.
+4,DOPP_SYNT,DOPP_SYNT_DIFF,DOPP,5,45,DblObj,1,name-occ,NA,DIF,Martha tossed the artist a pen.,The artist tossed Martha a pen.
+4,DOPP_SYNT,DOPP_SYNT_DIFF,DOPP,9,49,DblObj,1,name-occ,NA,DIF,Kathleen gave the agent a picture.,The agent gave Kathleen a picture.
+4,DOPP_SYNT,DOPP_SYNT_DIFF,DOPP,13,53,DblObj,0,name-occ,NA,DIF,Rebecca promised the runner some water.,The runner promised some water to Rebecca.
+4,DOPP_SYNT,DOPP_SYNT_DIFF,DOPP,17,57,DblObj,0,name-occ,NA,DIF,Larry offered the customer a prize.,The customer offered a prize to Larry.
+4,DOPP_SYNT,DOPP_SYNT_DIFF,DOPP,21,61,PP,1,name-occ,NA,DIF,Emily passed a towel to the fighter.,The fighter passed a towel to Emily.
+4,DOPP_SYNT,DOPP_SYNT_DIFF,DOPP,25,65,PP,1,name-occ,NA,DIF,Cynthia read the request to the reporter.,The reporter read the request to Cynthia.
+4,DOPP_SYNT,DOPP_SYNT_DIFF,DOPP,29,69,PP,1,name-occ,NA,DIF,Kevin slipped the reimbursement to the photographer.,The photographer slipped the reimbursement to Kevin.
+4,DOPP_SYNT,DOPP_SYNT_DIFF,DOPP,33,73,PP,0,name-occ,NA,DIF,Jessica offered a lollipop to the kid.,The kid offered Jessica a lollipop.
+4,DOPP_SYNT,DOPP_SYNT_DIFF,DOPP,37,77,PP,0,name-occ,NA,DIF,Sarah issued an outfit to the waitress.,The waitress issued Sarah an outfit.
+4,DOPP_SYNT,DOPP_SYNT_SAME,DOPP,2,42,DblObj,0,occ-name,NA,SAME,The woodworker sent James a package.,The woodworker sent a package to James.
+4,DOPP_SYNT,DOPP_SYNT_SAME,DOPP,6,46,DblObj,0,occ-name,NA,SAME,The mechanic showed Pamela the automobile.,The mechanic showed the automobile to Pamela.
+4,DOPP_SYNT,DOPP_SYNT_SAME,DOPP,10,50,DblObj,0,occ-name,NA,SAME,The analyst promised Andrew a report.,The analyst promised a report to Andrew.
+4,DOPP_SYNT,DOPP_SYNT_SAME,DOPP,14,54,DblObj,0,occ-name,NA,SAME,The filmmaker mailed Eric the script.,The filmmaker mailed the script to Eric.
+4,DOPP_SYNT,DOPP_SYNT_SAME,DOPP,18,58,DblObj,0,occ-name,NA,SAME,The jeweler slipped Jeffrey a note.,The jeweler slipped a note to Jeffrey.
+4,DOPP_SYNT,DOPP_SYNT_SAME,DOPP,22,62,PP,0,occ-name,NA,SAME,The bookkeeper loaned a calculator to Angela.,The bookkeeper loaned Angela a calculator.
+4,DOPP_SYNT,DOPP_SYNT_SAME,DOPP,26,66,PP,0,occ-name,NA,SAME,The teacher passed the homework to Frank.,The teacher passed Frank the homework.
+4,DOPP_SYNT,DOPP_SYNT_SAME,DOPP,30,70,PP,0,occ-name,NA,SAME,The percussionist sent an invitation to Laura.,The percussionist sent Laura an invitation.
+4,DOPP_SYNT,DOPP_SYNT_SAME,DOPP,34,74,PP,0,occ-name,NA,SAME,The author showed the room to Jason.,The author showed Jason the room.
+4,DOPP_SYNT,DOPP_SYNT_SAME,DOPP,38,78,PP,0,occ-name,NA,SAME,The millionaire sold the house to Anthony.,The millionaire sold Anthony the house.
