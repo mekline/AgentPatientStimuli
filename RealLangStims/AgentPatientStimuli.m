@@ -21,7 +21,7 @@
 %
 % Output: 
 %   -csv containing subject and run information
-%       (data/SameDiffSent_subjID_list_order_run_data.csv)
+%       (data/AgentPatientStimuli_subjID_list_order_run_data.csv)
 %
 % Go to DISPLAY OPTIONS section to change things like font size, etc.
 %
@@ -47,7 +47,7 @@ function AgentPatienStimuli(subjID, list, order, run)
     
     %% Make sure we don't accidentally overwrite a data file
 	DATA_DIR = fullfile(pwd, 'data');
-	fileToSave = ['SameDiffSents_' subjID '_list' num2str(list) ...
+	fileToSave = ['AgentPatientStimuli' subjID '_list' num2str(list) ...
                   '_order' num2str(order) '_run' num2str(run) '_data.csv'];
     fileToSave = fullfile(DATA_DIR, fileToSave);
     
@@ -73,7 +73,7 @@ function AgentPatienStimuli(subjID, list, order, run)
     RESPOND_DUR = 1.5; %Amound of time respond screen is shown for
     
     %Language stimuli
-    SENTENCE = 'Kyle Square bounced Lily Triangle.';
+    SENTENCE = 'Kyle Square bounced Lily Triangle agent highlight.';
     QUESTION = 'Did Kyle Square bounce someone?';
     
     
@@ -97,7 +97,7 @@ function AgentPatienStimuli(subjID, list, order, run)
     %--o ORDER
     %--nsearch 1000
     
-    order_filename = ['SameDiffSents_Order' num2str(order) '.csv'];
+    order_filename = ['AgentPatientStimuli_Order' num2str(order) '.csv'];
     order_filename = fullfile(ORDER_DIR, order_filename);
     order_filename
     run_order = readtable(order_filename);  %the order for this run
@@ -121,7 +121,7 @@ function AgentPatienStimuli(subjID, list, order, run)
     
     %% Read in the stimuli materials
     MATERIALS_DIR = fullfile(pwd, 'materials');
-    mat_filename = ['SameDiffSents_' subjID '_list' num2str(list)  '_materials.mat'];
+    mat_filename = ['AgentPatientStimuli' subjID '_list' num2str(list)  '_materials.mat'];
     mat_filename = fullfile(MATERIALS_DIR, mat_filename);
     
     %If this is the first run for this subjectID, read in the materials
