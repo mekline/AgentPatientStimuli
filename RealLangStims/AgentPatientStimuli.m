@@ -1,14 +1,14 @@
-%SameDiffSents.m
+%AgentPatientStimuli.m
 %
-%Same/Different meaning judgment task 
-%   based on Dapretto & Bookheimer, 1999
+%Agent/patient task 
+%  
 %
 %DESCRIPTION
-%In this experiment, participants are presented with pairs of sentences and
-%they have to decide whether they mean roughly the same thing.
+%In this experiment, participants are presented with sentences about agents
+%and patients.
 %
-% Function call: SameDiffSents(subjID, list, order, run)
-%                eg. SameDiffSents('test', 1, 1, 1)
+% Function call: AgentPatientStimuli(subjID, list, order, run)
+%                eg. AgentPatientStimuli('test', 1, 1, 1)
 %
 % RUNTIME: 360 sec (6 min, 180 TRs)
 %          runs 10x faster if subID is 'debug'
@@ -30,7 +30,7 @@
 %             With help from PTBhelper, written by
 %                * Walid Bendris - wbendris@mit.edu
 
-function SameDiffSents(subjID, list, order, run)
+function AgentPatienStimuli(subjID, list, order, run)
     %% Make sure inputs are valid
     %subjID is a string
 	assert(ischar(subjID), 'subjID must be a string');
@@ -73,8 +73,8 @@ function SameDiffSents(subjID, list, order, run)
     RESPOND_DUR = 1.5; %Amound of time respond screen is shown for
     
     %Language stimuli
-    SENTENCE = 'Kyle Square bounced Lily Triangle.'
-    QUESTION = 'Did Kyle Square bounce someone?'
+    SENTENCE = 'Kyle Square bounced Lily Triangle.';
+    QUESTION = 'Did Kyle Square bounce someone?';
     
     
     %% Set up condition ordering
@@ -426,7 +426,7 @@ function SameDiffSents(subjID, list, order, run)
     if run == 1 && ran_completely
         fprintf('\n\n%s%s\n\n', 'Run 1 finished for: ', subjID);
         fprintf('%s\n', 'Run 2 command should be: ');
-        fprintf('\t%s%s%s%d%s%d%s\n\n', 'SameDiffSents(''', subjID, ''', ', list, ', <ORDER>, ', 2, ')')
+        fprintf('\t%s%s%s%d%s%d%s\n\n', 'AgentPatientStimuli(''', subjID, ''', ', list, ', <ORDER>, ', 2, ')')
     end
 end
 
