@@ -1,6 +1,7 @@
 # AgentPatientStimuli
 Developing sets of simple agent-patient visual stimuli
 
+<<<<<<< HEAD
 
 These are the files and folders:
 
@@ -38,3 +39,8 @@ LangStims: like RealLangStims, except that RealLangStims works
 Polyglot: not 100% sure
 
 stills_mk.key: early version of stills.key
+=======
+## Lily todo
+
+- Add descriptions of top level files & folders 
+>>>>>>> origin/master
