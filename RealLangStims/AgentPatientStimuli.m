@@ -363,26 +363,26 @@ function AgentPatientStimuli(subjID, list, order, run)
             PTBhelper('waitFor',blankEndTime,kbIdx,escapeKey);
             
             %Sentence 2
-            PTBhelper('stimText', wPtr, sentence2, sentFontSize);
-            sent2EndTime = blankEndTime + SENT2_DUR;
-            PTBhelper('waitFor',sent2EndTime,kbIdx,escapeKey);
+            %PTBhelper('stimText', wPtr, sentence2, sentFontSize);
+            %sent2EndTime = blankEndTime + SENT2_DUR;
+            %PTBhelper('waitFor',sent2EndTime,kbIdx,escapeKey);
             
             %Respond screen
-            PTBhelper('stimText', wPtr, respondText, sentFontSize);
-            respondEndTime = sent2EndTime + RESPOND_DUR;
-            response_info = PTBhelper('waitFor',respondEndTime,kbIdx,escapeKey);
-                response = response_info{1};
-                RT = response_info{2};
+            %PTBhelper('stimText', wPtr, respondText, sentFontSize);
+            %respondEndTime = sent2EndTime + RESPOND_DUR;
+            %response_info = PTBhelper('waitFor',respondEndTime,kbIdx,escapeKey);
+            %    response = response_info{1};
+            %    RT = response_info{2};
                 
-            if ischar(response)
-                response = sscanf(response, '%d');
-            end
+            %if ischar(response)
+            %    response = sscanf(response, '%d');
+            %end
             
             
             %Save Data
-            results.Onset{eventNum}    = onset - runOnset;
-            results.Response{eventNum} = response;
-            results.RT{eventNum}       = RT;
+            %results.Onset{eventNum}    = onset - runOnset;
+            %results.Response{eventNum} = response;
+            %results.RT{eventNum}       = RT;
             
             %Update loop variables
             conditionIndex.(condition{:}) = condIdx + 1;
@@ -437,27 +437,27 @@ end
 
 
 %% grade_results
-function [results] = grade_results(results)
-    rows_to_grade = ~strcmp(results.Condition, 'FIX');
-    rows_to_grade = rows_to_grade & ~cellfun(@isempty,results.Response);
-    
-    conditions = results.Condition(rows_to_grade);
-    correct_answers = zeros(length(conditions),1);
-    for i=1:length(conditions)
-        if ~isempty(findstr('SAME', conditions{i}))
-            correct_answers(i) = 1;
-            
-        else
-            correct_answers(i) = 2;
-        end
-    end
-    
-    responses = cell2mat(results.Response(rows_to_grade));
-    accuracies = num2cell((correct_answers == responses));
-    
-    %CHANGE HERE
-    results.Correctness(rows_to_grade) = accuracies;
-end
+% function [results] = grade_results(results)
+%     rows_to_grade = ~strcmp(results.Condition, 'FIX');
+%     rows_to_grade = rows_to_grade & ~cellfun(@isempty,results.Response);
+%     
+%     conditions = results.Condition(rows_to_grade);
+%     correct_answers = zeros(length(conditions),1);
+%     for i=1:length(conditions)
+%         if ~isempty(findstr('SAME', conditions{i}))
+%             correct_answers(i) = 1;
+%             
+%         else
+%             correct_answers(i) = 2;
+%         end
+%     end
+%     
+%     responses = cell2mat(results.Response(rows_to_grade));
+%     accuracies = num2cell((correct_answers == responses));
+%     
+%     %CHANGE HERE
+%     results.Correctness(rows_to_grade) = accuracies;
+% end
 
 
 
