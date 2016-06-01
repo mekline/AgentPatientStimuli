@@ -201,10 +201,16 @@ function AgentPatientStimuli(subjID, list, order, run)
         materials.(conditionNames{i}) = materials.(conditionNames{i})(rowsToUse, :);
     end
     
+    %Set up the data that we want to save
+     resultsHdr = {'SubjID',        'Run',       'Order',   'Onset'};
+ 	
+     %results is the table that will hold all of the data we want to save
+     results = cell(numEvents, length(resultsHdr));
+     results = cell2table(results, 'VariableNames', resultsHdr);
     
     %Fill in the user input information
     results.SubjID(:) = {subjID};
-    results.List  = ones(numEvents,1)*list;
+    %results.List  = ones(numEvents,1)*list;
 	results.Run   = ones(numEvents,1)*run;
     results.Order = ones(numEvents,1)*order;
     
@@ -216,7 +222,7 @@ function AgentPatientStimuli(subjID, list, order, run)
     end
     
     for eventNum = 1:numEvents
-        %onset = run_order.Onset(eventNum);
+        onset = run_order.Onset(eventNum);
             %We'll save the onsets as we go so that we get the real onsets
             %rather than the theoretical ones
         
