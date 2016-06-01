@@ -227,14 +227,6 @@ function AgentPatientStimuli(subjID, list, order, run)
         
         %Fill in info for fixation events
         if strcmp(condition, 'NULL')
-%             results.TrialNum{eventNum}         = 'NA';
-%             results.Item{eventNum}             = 'NA';
-%             results.Condition{eventNum}        = 'FIX';
-%             results.Response{eventNum}         = 'NA';
-%             results.RT{eventNum}               = 'NA';
-%             results.Correctness{eventNum}      = 'NA';
-            %results.Onset{eventNum}           = onset;
-            
             continue
         end
         
