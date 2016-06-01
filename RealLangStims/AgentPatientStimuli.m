@@ -139,14 +139,7 @@ function AgentPatientStimuli(subjID, list, order, run)
         %each item in the order they appear in all_materials
         conditions = all_materials.COND_markingSameDiff;
         
-        conditionNames ={'ActPas_SEM_DIFF';
-                         'ActPas_SEM_SAME';
-                         'ActPas_SYNT_DIFF';
-                         'ActPas_SYNT_SAME';
-                         'DOPP_SEM_DIFF';
-                         'DOPP_SEM_SAME';
-                         'DOPP_SYNT_DIFF';
-                         'DOPP_SYNT_SAME'};
+        conditionNames ={'ActPas_SEM_DIFF'};
                      
 	%Separate each condition into different tables and store each table in
 	%a struct called "materials"
