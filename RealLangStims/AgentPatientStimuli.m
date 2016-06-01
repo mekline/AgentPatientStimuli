@@ -30,7 +30,7 @@
 %             With help from PTBhelper, written by
 %                * Walid Bendris - wbendris@mit.edu
 
-function AgentPatienStimuli(subjID, list, order, run)
+function AgentPatientStimuli(subjID, list, order, run)
     %% Make sure inputs are valid
     %subjID is a string
 	assert(ischar(subjID), 'subjID must be a string');
@@ -128,7 +128,7 @@ function AgentPatienStimuli(subjID, list, order, run)
     %from the materials file and save them to a .mat file
     if run==1
         %Read in all materials from a csv
-        materials_filename = 'AgentPatientStimuli_materials.csv';
+        materials_filename = 'info_A1.csv';
         all_materials = readtable(materials_filename);
     
         %Extract only the materials for the given list
@@ -232,7 +232,7 @@ function AgentPatienStimuli(subjID, list, order, run)
         
         condition = run_order.Condition(eventNum);
         
-        %Fill in info for fixtion events
+        %Fill in info for fixation events
         if strcmp(condition, 'NULL')
             results.TrialNum{eventNum}         = 'NA';
             results.ItemNum{eventNum}          = 'NA';
@@ -349,8 +349,8 @@ function AgentPatienStimuli(subjID, list, order, run)
             curr_materials = materials.(condition{:});
             condIdx = conditionIndex.(condition{:});
             
-            %sentence1 = curr_materials.SENTENCE1{condIdx};
-            sentence1 = SENTENCE;
+            sentence1 = curr_materials.PastSentence{condIdx};
+            %sentence2 = curr_materials.SENTENCE2{condIdx};
             sentence2 = QUESTION;
             
             %Show trial
