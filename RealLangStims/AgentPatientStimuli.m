@@ -226,6 +226,7 @@ function AgentPatientStimuli(subjID, list, order, run)
         condition = run_order.Condition(eventNum);
         
         %Fill in info for fixation events
+        %I don't know why this little block has to be here but it just does
         if strcmp(condition, 'NULL')
             continue
         end
@@ -235,19 +236,11 @@ function AgentPatientStimuli(subjID, list, order, run)
         condIdx = conditionIndex.(condition{:});
         
         item          = curr_materials.Item(condIdx);
-        type1            = curr_materials.TYPE1(condIdx);
-        type1_sameconstr = curr_materials.TYPE1_sameconstr(condIdx);
-        type2            = curr_materials.TYPE2(condIdx);
-        type3            = curr_materials.TYPE3(condIdx);
+
         
         results.TrialNum{eventNum}         = trialNum;
         results.Item{eventNum}             = item;
         results.Condition(eventNum)        = condition;
-        results.Type1(eventNum)            = type1;
-        results.Type1_sameconstr{eventNum} = type1_sameconstr;
-        results.Type2(eventNum)            = type2;
-        results.Type3(eventNum)            = type3;
-        %results.Onset{eventNum}           = onset;
         
         %Update loop variables
         trialNum = trialNum + 1;
