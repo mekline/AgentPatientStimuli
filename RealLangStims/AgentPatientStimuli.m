@@ -63,7 +63,7 @@ function AgentPatientStimuli(subjID, list, order, run)
     %% Set experiment constants
     %Number of events
     NUM_TRIALS     = 40;  %Number of non-fixation trials for 1 run
-    NUM_CONDITIONS = 8;
+    NUM_CONDITIONS = 1;
     
 	%Timing (in seconds)              
     FIX_DUR     = 0.3; %Length of trial-initial fixation
