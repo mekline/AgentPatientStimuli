@@ -128,7 +128,7 @@ function AgentPatientStimuli(subjID, list, order, run)
     %from the materials file and save them to a .mat file
     if run==1
         %Read in all materials from a csv
-        materials_filename = 'info_A1.csv';
+        materials_filename = 'AgentPatientStimuli_materials.csv';
         all_materials = readtable(materials_filename);
     
         %Extract only the materials for the given list
