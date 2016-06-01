@@ -196,14 +196,14 @@ function AgentPatientStimuli(subjID, list, order, run)
     
     
     %% Set up the data that we want to save
-    resultsHdr = {'SubjID',           'List',    'Run',       'Order', ...
-                  'TrialNum',         'Item', 'Condition', 'Type1', ...
-                  'Type1_sameconstr', 'Type2',   'Type3',     'Onset', ...
-                  'Response',         'RT',      'Correctness'};
-	
-    %results is the table that will hold all of the data we want to save
-    results = cell(numEvents, length(resultsHdr));
-    results = cell2table(results, 'VariableNames', resultsHdr);
+%     resultsHdr = {'SubjID',           'List',    'Run',       'Order', ...
+%                   'TrialNum',         'Item', 'Condition', 'Type1', ...
+%                   'Type1_sameconstr', 'Type2',   'Type3',     'Onset', ...
+%                   'Response',         'RT',      'Correctness'};
+% 	
+%     %results is the table that will hold all of the data we want to save
+%     results = cell(numEvents, length(resultsHdr));
+%     results = cell2table(results, 'VariableNames', resultsHdr);
     
     %Fill in the user input information
     results.SubjID(:) = {subjID};
