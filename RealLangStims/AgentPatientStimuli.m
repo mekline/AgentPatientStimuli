@@ -110,7 +110,7 @@ function AgentPatientStimuli(subjID, list, order, run)
     order_filename = ['AgentPatientStimuli_Order' num2str(order) '.csv'];
     order_filename = fullfile(ORDER_DIR, order_filename);
     order_filename
-    run_order = readtable(order_filename);  %the order for this run
+    run_order = readtable(order_filename)%;  %the order for this run
     
     numEvents = height(run_order); %the number of trials and fixations
     
@@ -204,16 +204,6 @@ function AgentPatientStimuli(subjID, list, order, run)
         materials.(conditionNames{i}) = materials.(conditionNames{i})(rowsToUse, :);
     end
     
-    
-    %% Set up the data that we want to save
-%     resultsHdr = {'SubjID',           'List',    'Run',       'Order', ...
-%                   'TrialNum',         'Item', 'Condition', 'Type1', ...
-%                   'Type1_sameconstr', 'Type2',   'Type3',     'Onset', ...
-%                   'Response',         'RT',      'Correctness'};
-% 	
-%     %results is the table that will hold all of the data we want to save
-%     results = cell(numEvents, length(resultsHdr));
-%     results = cell2table(results, 'VariableNames', resultsHdr);
     
     %Fill in the user input information
     results.SubjID(:) = {subjID};
