@@ -319,8 +319,6 @@ function AgentPatientStimuli(subjID, list, order, run)
             condIdx = conditionIndex.(condition{:});
             
             sentence1 = curr_materials.PastSentence{condIdx};
-            %sentence2 = curr_materials.SENTENCE2{condIdx};
-            sentence2 = QUESTION;
             
             %Show trial
             %Trial-initial fixation
@@ -337,11 +335,6 @@ function AgentPatientStimuli(subjID, list, order, run)
             PTBhelper('stimText', wPtr, ' ', sentFontSize);
             blankEndTime = sent1EndTime + ITI;
             PTBhelper('waitFor',blankEndTime,kbIdx,escapeKey);
-            
-            %Sentence 2
-            %PTBhelper('stimText', wPtr, sentence2, sentFontSize);
-            %sent2EndTime = blankEndTime + SENT2_DUR;
-            %PTBhelper('waitFor',sent2EndTime,kbIdx,escapeKey);
             
             %Respond screen
             %PTBhelper('stimText', wPtr, respondText, sentFontSize);
