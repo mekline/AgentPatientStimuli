@@ -1,61 +1,61 @@
-LIST_NUM,COND,COND_markingSameDiff,CONSTR,ItemNum_withinconstr,Item,TYPE1,TYPE1_sameconstr,TYPE2,TYPE3,ANS,PastSentence,SENTENCE2
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,4,4,active,1,occ-name,verb_switch,DIF,Kyle Square stopped Lily Triangle.,The bystander questioned James.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,8,8,active,1,occ-name,verb_switch,DIF,Kyle Square stopped Zach Star.,The electrician paid Robert.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,12,12,active,1,occ-name,noun_switch,DIF,Kyle Square stopped Melissa Oval.,The intern belittled William.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,16,16,active,1,occ-name,verb_switch,DIF,Kyle Square bounced Lily Triangle.,The florist telephoned George.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,20,20,active,1,occ-name,noun_switch,DIF,Kyle Square bounced Zach Star.,The songwriter drew Joseph.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,24,24,passive,1,occ-name,verb_switch,DIF,Kyle Square bounced Melissa Oval.,The prisoner was saved by Nancy.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,28,28,passive,1,occ-name,verb_switch,DIF,Kyle Square rolled Lily Triangle.,The pop-star was painted by Lauren.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,32,32,passive,1,occ-name,noun_switch,DIF,Kyle Square rolled Zach Star.,The speaker was thanked by Sandra.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,36,36,passive,1,occ-name,verb_switch,DIF,Kyle Square rolled Melissa Oval.,The repairman was enraged by Kenneth.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,40,40,passive,1,occ-name,noun_switch,DIF,Kyle Square shook Lily Triangle.,The anchorman was helped by Thomas.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,1,1,active,1,name-occ,noun_synon,DIF,Kyle Square shook Zach Star.,Anna invited the songwriter.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,5,5,active,1,name-occ,noun_synon,DIF,Kyle Square shook Melissa Oval.,Patricia praised the illusionist.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,9,9,active,1,name-occ,verb_synon,DIF,Kyle Square balanced Lily Triangle.,Barbara enraged the pharmacist.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,13,13,active,1,name-occ,noun_synon,DIF,Kyle Square balanced Zach Star.,Jennifer criticized the receptionist.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,17,17,active,1,name-occ,verb_synon,DIF,Kyle Square balanced Melissa Oval.,Susan warned the waiter.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,21,21,passive,1,name-occ,noun_synon,DIF,Lily Triangle stopped Kyle Square.,Dorothy was respected by the lawyer.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,25,25,passive,1,name-occ,noun_synon,DIF,Lily Triangle stopped Zach Star.,Christopher was convinced by the singer.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,29,29,passive,1,name-occ,verb_synon,DIF,Lily Triangle stopped Melissa Oval.,Paul was accused by the playwright.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,33,33,passive,1,name-occ,noun_synon,DIF,Lily Triangle bounced Kyle Square.,Ruth was congratulated by the anchorman.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,37,37,passive,1,name-occ,verb_synon,DIF,Lily Triangle bounced Zach Star.,Carol was selected by the banker.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,2,2,active,1,occ-name,NA,DIF,Lily Triangle bounced Melissa Oval.,Jack consulted the orator.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,6,6,active,1,occ-name,NA,DIF,Lily Triangle rolled Kyle Square.,John ridiculed the comedian.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,10,10,active,1,occ-name,NA,DIF,Lily Triangle rolled Zach Star.,Michael compensated the watchmaker.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,14,14,active,0,occ-name,NA,DIF,Lily Triangle rolled Melissa Oval.,The scientist was flattered by David.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,18,18,active,0,occ-name,NA,DIF,Lily Triangle shook Kyle Square.,The politician was killed by Charles.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,22,22,passive,0,occ-name,NA,DIF,Lily Triangle shook Zach Star.,The bricklayer complimented Sharon.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,26,26,passive,0,occ-name,NA,DIF,Lily Triangle shook Melissa Oval.,The consultant welcomed Karen.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,30,30,passive,0,occ-name,NA,DIF,Lily Triangle balanced Kyle Square.,The novelist pushed Helen.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,34,34,passive,1,occ-name,NA,DIF,Lily Triangle balanced Zach Star.,Donna was quoted by the demonstrator.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,38,38,passive,1,occ-name,NA,DIF,Lily Triangle balanced Melissa Oval.,Steven was found by the barber.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,3,3,active,0,name-occ,NA,DIF,Zach Star stopped Kyle Square.,The principal was visited by Mary.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,7,7,active,0,name-occ,NA,DIF,Zach Star stopped Lily Triangle.,The volunteer was rescued by Linda.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,11,11,active,0,name-occ,NA,DIF,Zach Star stopped Melissa Oval.,The proprietor was disliked by Elizabeth.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,15,15,active,0,name-occ,NA,DIF,Zach Star bounced Kyle Square.,The interpreter was trusted by Maria.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,19,19,active,0,name-occ,NA,DIF,Zach Star bounced Lily Triangle.,The sponsor was misinformed by Margaret.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,23,23,passive,0,name-occ,NA,DIF,Zach Star bounced Melissa Oval.,The spy discouraged Lisa.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,27,27,passive,0,name-occ,NA,DIF,Zach Star rolled Kyle Square.,The decorator called Daniel.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,31,31,passive,0,name-occ,NA,DIF,Zach Star rolled Lily Triangle.,The apprentice encouraged Mark.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,35,35,passive,0,name-occ,NA,DIF,Zach Star rolled Melissa Oval.,The thief noticed Richard.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,39,39,passive,0,name-occ,NA,DIF,Zach Star shook Kyle Square.,The cashier hugged Mark.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,4,44,DblObj,1,occ-name,obj_switch,DIF,Zach Star shook Lily Triangle.,The professor loaned Joshua a periodical.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,8,48,DblObj,1,occ-name,obj_switch,DIF,Zach Star shook Melissa Oval.,The woman sold Anna a mansion.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,12,52,DblObj,1,occ-name,occup_switch,DIF,Zach Star balanced Kyle Square.,The director brought Frank the limousine.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,16,56,DblObj,1,occ-name,obj_switch,DIF,Zach Star balanced Lily Triangle.,The neighbor brought Stephen a crate.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,20,60,DblObj,1,occ-name,occup_switch,DIF,Zach Star balanced Melissa Oval.,The cop handed Virginia the revolver.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,24,64,PP,1,occ-name,obj_switch,DIF,Melissa Oval stopped Kyle Square.,The dancer tossed the bouquet to Amy.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,28,68,PP,1,occ-name,obj_switch,DIF,Melissa Oval stopped Lily Triangle.,The prosecutor delivered a gun to Timothy.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,32,72,PP,1,occ-name,occup_switch,DIF,Melissa Oval stopped Zach Star.,The janitor provided some compensation to Deborah.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,36,76,PP,1,occ-name,obj_switch,DIF,Melissa Oval bounced Kyle Square.,The distributor shipped a car to Shirley.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,40,80,PP,1,occ-name,occup_switch,DIF,Melissa Oval bounced Lily Triangle.,The chef gave a gift to Natalie.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,1,41,DblObj,1,name-occ,occup_synon,DIF,Melissa Oval bounced Zach Star.,Amanda lent the chef some money.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,5,45,DblObj,1,name-occ,occup_synon,DIF,Melissa Oval rolled Kyle Square.,Martha tossed the illustrator a pen.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,9,49,DblObj,1,name-occ,obj_synon,DIF,Melissa Oval rolled Lily Triangle.,Kathleen gave the agent a photo.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,13,53,DblObj,1,name-occ,occup_synon,DIF,Melissa Oval rolled Zach Star.,Rebecca promised the jogger some water.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,17,57,DblObj,1,name-occ,obj_synon,DIF,Melissa Oval shook Kyle Square.,Larry offered the customer a reward.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,21,61,PP,1,name-occ,occup_synon,DIF,Melissa Oval shook Lily Triangle.,Emily passed a towel to the boxer.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,25,65,PP,1,name-occ,occup_synon,DIF,Melissa Oval shook Zach Star.,Cynthia read the request to the journalist.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,29,69,PP,1,name-occ,obj_synon,DIF,Melissa Oval balanced Kyle Square.,Kevin slipped the refund to the photographer.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,33,73,PP,1,name-occ,occup_synon,DIF,Melissa Oval balanced Lily Triangle.,Jessica offered a lollipop to the child.
-1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,37,77,PP,1,name-occ,obj_synon,DIF,Melissa Oval balanced Zach Star.,Sarah issued a uniform to the waitress.
+LIST_NUM,COND,COND_markingSameDiff,CONSTR,ItemNum_withinconstr,Item,TYPE1,TYPE1_sameconstr,TYPE2,TYPE3,ANS,PastSentence
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,4,4,active,1,occ-name,verb_switch,DIF,Kyle Square stopped Lily Triangle.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,8,8,active,1,occ-name,verb_switch,DIF,Kyle Square stopped Zach Star.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,12,12,active,1,occ-name,noun_switch,DIF,Kyle Square stopped Melissa Oval.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,16,16,active,1,occ-name,verb_switch,DIF,Kyle Square bounced Lily Triangle.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,20,20,active,1,occ-name,noun_switch,DIF,Kyle Square bounced Zach Star.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,24,24,passive,1,occ-name,verb_switch,DIF,Kyle Square bounced Melissa Oval.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,28,28,passive,1,occ-name,verb_switch,DIF,Kyle Square rolled Lily Triangle.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,32,32,passive,1,occ-name,noun_switch,DIF,Kyle Square rolled Zach Star.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,36,36,passive,1,occ-name,verb_switch,DIF,Kyle Square rolled Melissa Oval.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,40,40,passive,1,occ-name,noun_switch,DIF,Kyle Square shook Lily Triangle.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,1,1,active,1,name-occ,noun_synon,DIF,Kyle Square shook Zach Star.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,5,5,active,1,name-occ,noun_synon,DIF,Kyle Square shook Melissa Oval.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,9,9,active,1,name-occ,verb_synon,DIF,Kyle Square balanced Lily Triangle.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,13,13,active,1,name-occ,noun_synon,DIF,Kyle Square balanced Zach Star.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,17,17,active,1,name-occ,verb_synon,DIF,Kyle Square balanced Melissa Oval.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,21,21,passive,1,name-occ,noun_synon,DIF,Lily Triangle stopped Kyle Square.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,25,25,passive,1,name-occ,noun_synon,DIF,Lily Triangle stopped Zach Star.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,29,29,passive,1,name-occ,verb_synon,DIF,Lily Triangle stopped Melissa Oval.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,33,33,passive,1,name-occ,noun_synon,DIF,Lily Triangle bounced Kyle Square.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,37,37,passive,1,name-occ,verb_synon,DIF,Lily Triangle bounced Zach Star.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,2,2,active,1,occ-name,NA,DIF,Lily Triangle bounced Melissa Oval.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,6,6,active,1,occ-name,NA,DIF,Lily Triangle rolled Kyle Square.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,10,10,active,1,occ-name,NA,DIF,Lily Triangle rolled Zach Star.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,14,14,active,0,occ-name,NA,DIF,Lily Triangle rolled Melissa Oval.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,18,18,active,0,occ-name,NA,DIF,Lily Triangle shook Kyle Square.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,22,22,passive,0,occ-name,NA,DIF,Lily Triangle shook Zach Star.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,26,26,passive,0,occ-name,NA,DIF,Lily Triangle shook Melissa Oval.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,30,30,passive,0,occ-name,NA,DIF,Lily Triangle balanced Kyle Square.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,34,34,passive,1,occ-name,NA,DIF,Lily Triangle balanced Zach Star.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,38,38,passive,1,occ-name,NA,DIF,Lily Triangle balanced Melissa Oval.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,3,3,active,0,name-occ,NA,DIF,Zach Star stopped Kyle Square.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,7,7,active,0,name-occ,NA,DIF,Zach Star stopped Lily Triangle.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,11,11,active,0,name-occ,NA,DIF,Zach Star stopped Melissa Oval.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,15,15,active,0,name-occ,NA,DIF,Zach Star bounced Kyle Square.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,19,19,active,0,name-occ,NA,DIF,Zach Star bounced Lily Triangle.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,23,23,passive,0,name-occ,NA,DIF,Zach Star bounced Melissa Oval.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,27,27,passive,0,name-occ,NA,DIF,Zach Star rolled Kyle Square.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,31,31,passive,0,name-occ,NA,DIF,Zach Star rolled Lily Triangle.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,35,35,passive,0,name-occ,NA,DIF,Zach Star rolled Melissa Oval.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,39,39,passive,0,name-occ,NA,DIF,Zach Star shook Kyle Square.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,4,44,DblObj,1,occ-name,obj_switch,DIF,Zach Star shook Lily Triangle.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,8,48,DblObj,1,occ-name,obj_switch,DIF,Zach Star shook Melissa Oval.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,12,52,DblObj,1,occ-name,occup_switch,DIF,Zach Star balanced Kyle Square.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,16,56,DblObj,1,occ-name,obj_switch,DIF,Zach Star balanced Lily Triangle.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,20,60,DblObj,1,occ-name,occup_switch,DIF,Zach Star balanced Melissa Oval.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,24,64,PP,1,occ-name,obj_switch,DIF,Melissa Oval stopped Kyle Square.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,28,68,PP,1,occ-name,obj_switch,DIF,Melissa Oval stopped Lily Triangle.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,32,72,PP,1,occ-name,occup_switch,DIF,Melissa Oval stopped Zach Star.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,36,76,PP,1,occ-name,obj_switch,DIF,Melissa Oval bounced Kyle Square.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,40,80,PP,1,occ-name,occup_switch,DIF,Melissa Oval bounced Lily Triangle.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,1,41,DblObj,1,name-occ,occup_synon,DIF,Melissa Oval bounced Zach Star.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,5,45,DblObj,1,name-occ,occup_synon,DIF,Melissa Oval rolled Kyle Square.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,9,49,DblObj,1,name-occ,obj_synon,DIF,Melissa Oval rolled Lily Triangle.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,13,53,DblObj,1,name-occ,occup_synon,DIF,Melissa Oval rolled Zach Star.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,17,57,DblObj,1,name-occ,obj_synon,DIF,Melissa Oval shook Kyle Square.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,21,61,PP,1,name-occ,occup_synon,DIF,Melissa Oval shook Lily Triangle.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,25,65,PP,1,name-occ,occup_synon,DIF,Melissa Oval shook Zach Star.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,29,69,PP,1,name-occ,obj_synon,DIF,Melissa Oval balanced Kyle Square.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,33,73,PP,1,name-occ,occup_synon,DIF,Melissa Oval balanced Lily Triangle.
+1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,37,77,PP,1,name-occ,obj_synon,DIF,Melissa Oval balanced Zach Star.
