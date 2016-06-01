@@ -62,7 +62,7 @@ function AgentPatientStimuli(subjID, list, order, run)
     
     %% Set experiment constants
     %Number of events
-    NUM_TRIALS     = 40;  %Number of non-fixation trials for 1 run
+    NUM_TRIALS     = 60;  %Number of non-fixation trials for 1 run
     NUM_CONDITIONS = 1;
     
 	%Timing (in seconds)              
@@ -96,6 +96,16 @@ function AgentPatientStimuli(subjID, list, order, run)
     %--nkeep 8
     %--o ORDER
     %--nsearch 1000
+    
+    %To adapt to AgentPatientStimuli, use these arguments
+    %--ntp 180 (items/2 plus a minute (at least, in general) of fixation)
+    %--tr 2
+    %--tprescan 0
+    %--psdwin 0 12
+    %--ev ActPas_SEM_DIFF 6 40
+    %--nkeep 1
+    %--o ORDER
+    %--nsearch 1000 (??, but doesn't seem too condition-dependent)
     
     order_filename = ['AgentPatientStimuli_Order' num2str(order) '.csv'];
     order_filename = fullfile(ORDER_DIR, order_filename);
@@ -406,7 +416,7 @@ function AgentPatientStimuli(subjID, list, order, run)
 	%results = grade_results(results);
     
     %Save all data
-	writetable(results, fileToSave);
+	%writetable(results, fileToSave);
     
     %Close the PTB screen
 	Screen('CloseAll');
