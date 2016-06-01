@@ -231,12 +231,14 @@ function AgentPatientStimuli(subjID, list, order, run)
         %Fill in info for fixation events
         %I don't know why this little block has to be here but it just does
         if strcmp(condition, 'NULL')
+            results.Onset{eventNum} = onset;
             continue
         end
         
         %Fill in the info for trial events
         curr_materials = materials.(condition{:});
         condIdx = conditionIndex.(condition{:});
+        
         
         item = curr_materials.Item(condIdx);
         
@@ -362,7 +364,7 @@ function AgentPatientStimuli(subjID, list, order, run)
 	%runtime = GetSecs - runOnset;
     
     %Save all data
-	%writetable(results, fileToSave);
+	writetable(results, fileToSave);
     
     %Close the PTB screen
 	Screen('CloseAll');
