@@ -359,7 +359,7 @@ function AgentPatientStimuli(subjID, list, order, run)
 	%runtime = GetSecs - runOnset;
     
     %Save all data
-	writetable(results, fileToSave);
+	%writetable(results, fileToSave);
     
     %Close the PTB screen
 	Screen('CloseAll');
