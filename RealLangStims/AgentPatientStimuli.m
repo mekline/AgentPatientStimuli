@@ -386,30 +386,6 @@ function [randomized_table] = randomizeTable(table_in)
 end
 
 
-%% grade_results
-% function [results] = grade_results(results)
-%     rows_to_grade = ~strcmp(results.Condition, 'FIX');
-%     rows_to_grade = rows_to_grade & ~cellfun(@isempty,results.Response);
-%     
-%     conditions = results.Condition(rows_to_grade);
-%     correct_answers = zeros(length(conditions),1);
-%     for i=1:length(conditions)
-%         if ~isempty(findstr('SAME', conditions{i}))
-%             correct_answers(i) = 1;
-%             
-%         else
-%             correct_answers(i) = 2;
-%         end
-%     end
-%     
-%     responses = cell2mat(results.Response(rows_to_grade));
-%     accuracies = num2cell((correct_answers == responses));
-%     
-%     %CHANGE HERE
-%     results.Correctness(rows_to_grade) = accuracies;
-% end
-
-
 
 %% Debugging functions
 function [wPtr, rect] = openDebugWindow(screenNum, rect)
