@@ -1,4 +1,5 @@
-function TextOnImage(text)
+function TextToImage(text)
+%Takes in text and turns it into a jpeg file in images
     IMAGE_DIR = fullfile(pwd, 'images');
     fileToSave = ['AgentPatientStimuli_image.jpg'];
     fileToSave = fullfile(IMAGE_DIR, fileToSave);
