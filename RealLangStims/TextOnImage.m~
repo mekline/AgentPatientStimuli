@@ -1,0 +1,12 @@
+function TextOnImage(text)
+    IMAGE_DIR = fullfile(pwd, 'i');
+    
+    I = imread('blank-white-rectangle.png');
+    position = [1000 1000];
+    RGB = insertText(I,position,text,'FontSize',200,'BoxOpacity',0);
+    
+    figure
+    imshow(RGB)
+    
+    imwrite(RGB,'newImage.jpg','jpg')
+end
