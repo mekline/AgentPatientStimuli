@@ -315,7 +315,7 @@ function AgentPatientStimuli(subjID, list, order, run)
             curr_materials = materials.(condition{:});
             condIdx = conditionIndex.(condition{:});
             
-            sentence1 = curr_materials.PastSentence{condIdx};
+            sentence1 = curr_materials.ProgressiveSentence{condIdx};
             
             %Show trial
             %Trial-initial fixation
