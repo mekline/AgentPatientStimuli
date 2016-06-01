@@ -337,21 +337,8 @@ function AgentPatientStimuli(subjID, list, order, run)
             PTBhelper('waitFor',blankEndTime,kbIdx,escapeKey);
             
             %Respond screen
-            %PTBhelper('stimText', wPtr, respondText, sentFontSize);
             respondEndTime = sent1EndTime + RESPOND_DUR;
-            %response_info = PTBhelper('waitFor',respondEndTime,kbIdx,escapeKey);
-            %    response = response_info{1};
-            %    RT = response_info{2};
-                
-            %if ischar(response)
-            %    response = sscanf(response, '%d');
-            %end
-            
-            
-            %Save Data
-            %results.Onset{eventNum}    = onset - runOnset;
-            %results.Response{eventNum} = response;
-            %results.RT{eventNum}       = RT;
+
             
             %Update loop variables
             conditionIndex.(condition{:}) = condIdx + 1;
