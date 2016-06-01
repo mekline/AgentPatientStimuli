@@ -188,7 +188,7 @@ function AgentPatientStimuli(subjID, list, order, run)
               '3) list is the same for run 1 and run 2');
     end
     
-    %Use the first 5 rows of each table for run 1; the second 5 for run 2
+    %Use the first itemsPerCondition (a number) rows of each table for run 1; the second 5 for run 2
     itemsPerCondition = NUM_TRIALS / NUM_CONDITIONS;    %5
     if run==1
         rowsToUse = [1:itemsPerCondition];
