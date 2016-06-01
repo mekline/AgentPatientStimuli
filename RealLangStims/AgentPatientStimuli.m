@@ -204,7 +204,7 @@ function AgentPatientStimuli(subjID, list, order, run)
     
     %% Set up the data that we want to save
     resultsHdr = {'SubjID',           'List',    'Run',       'Order', ...
-                  'TrialNum',         'ItemNum', 'Condition', 'Type1', ...
+                  'TrialNum',         'Item', 'Condition', 'Type1', ...
                   'Type1_sameconstr', 'Type2',   'Type3',     'Onset', ...
                   'Response',         'RT',      'Correctness'};
 	
@@ -235,7 +235,7 @@ function AgentPatientStimuli(subjID, list, order, run)
         %Fill in info for fixation events
         if strcmp(condition, 'NULL')
             results.TrialNum{eventNum}         = 'NA';
-            results.ItemNum{eventNum}          = 'NA';
+            results.Item{eventNum}          = 'NA';
             results.Condition{eventNum}        = 'FIX';
             results.Type1{eventNum}            = 'NA';
             results.Type1_sameconstr{eventNum} = 'NA';
@@ -253,14 +253,14 @@ function AgentPatientStimuli(subjID, list, order, run)
         curr_materials = materials.(condition{:});
         condIdx = conditionIndex.(condition{:});
         
-        itemNum          = curr_materials.ItemNum(condIdx);
+        item          = curr_materials.Item(condIdx);
         type1            = curr_materials.TYPE1(condIdx);
         type1_sameconstr = curr_materials.TYPE1_sameconstr(condIdx);
         type2            = curr_materials.TYPE2(condIdx);
         type3            = curr_materials.TYPE3(condIdx);
         
         results.TrialNum{eventNum}         = trialNum;
-        results.ItemNum{eventNum}          = itemNum;
+        results.Item{eventNum}             = item;
         results.Condition(eventNum)        = condition;
         results.Type1(eventNum)            = type1;
         results.Type1_sameconstr{eventNum} = type1_sameconstr;

@@ -1,4 +1,4 @@
-LIST_NUM,COND,COND_markingSameDiff,CONSTR,ItemNum_withinconstr,ItemNum,TYPE1,TYPE1_sameconstr,TYPE2,TYPE3,ANS,PastSentence,SENTENCE2
+LIST_NUM,COND,COND_markingSameDiff,CONSTR,ItemNum_withinconstr,Item,TYPE1,TYPE1_sameconstr,TYPE2,TYPE3,ANS,PastSentence,SENTENCE2
 1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,4,4,active,1,occ-name,verb_switch,DIF,The bystander overheard James.,The bystander questioned James.
 1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,8,8,active,1,occ-name,verb_switch,DIF,The electrician interrogated Robert.,The electrician paid Robert.
 1,ActPas_SEM,ActPas_SEM_DIFF,ActPass,12,12,active,1,occ-name,noun_switch,DIF,The courier belittled William.,The intern belittled William.
