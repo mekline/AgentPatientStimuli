@@ -140,10 +140,7 @@ function AgentPatientStimuli(subjID, list, order, run)
         %Read in all materials from a csv
         materials_filename = 'AgentPatientStimuli_materials.csv';
         all_materials = readtable(materials_filename);
-    
-        %Extract only the materials for the given list
-        list_rows = all_materials.LIST_NUM == list;
-        all_materials = all_materials(list_rows, :);
+ 
         
         %"conditions" is a cell array containing the condition name for
         %each item in the order they appear in all_materials
