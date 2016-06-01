@@ -235,12 +235,7 @@ function AgentPatientStimuli(subjID, list, order, run)
         curr_materials = materials.(condition{:});
         condIdx = conditionIndex.(condition{:});
         
-        item          = curr_materials.Item(condIdx);
-
-        
-        results.TrialNum{eventNum}         = trialNum;
-        results.Item{eventNum}             = item;
-        results.Condition(eventNum)        = condition;
+        item = curr_materials.Item(condIdx);
         
         %Update loop variables
         trialNum = trialNum + 1;
