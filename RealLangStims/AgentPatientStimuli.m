@@ -358,12 +358,6 @@ function AgentPatientStimuli(subjID, list, order, run)
     
 	%runtime = GetSecs - runOnset;
     
-	%Calculate the accuracies
-	%results = grade_results(results);
-    
-    %Save all data
-	%writetable(results, fileToSave);
-    
     %Close the PTB screen
 	Screen('CloseAll');
 	ShowCursor;
