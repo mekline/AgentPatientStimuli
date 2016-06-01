@@ -369,7 +369,7 @@ function AgentPatientStimuli(subjID, list, order, run)
             
             %Respond screen
             %PTBhelper('stimText', wPtr, respondText, sentFontSize);
-            %respondEndTime = sent2EndTime + RESPOND_DUR;
+            respondEndTime = sent1EndTime + RESPOND_DUR;
             %response_info = PTBhelper('waitFor',respondEndTime,kbIdx,escapeKey);
             %    response = response_info{1};
             %    RT = response_info{2};
@@ -403,7 +403,7 @@ function AgentPatientStimuli(subjID, list, order, run)
 	%runtime = GetSecs - runOnset;
     
 	%Calculate the accuracies
-	results = grade_results(results);
+	%results = grade_results(results);
     
     %Save all data
 	writetable(results, fileToSave);
