@@ -65,6 +65,7 @@ function AgentPatientStimuli(subjID, list, order, run)
     NUM_TRIALS     = 60;  %Number of non-fixation trials for 1 run
     NUM_CONDITIONS = 1;
     
+    
 	%Timing (in seconds)              
     FIX_DUR     = 0.3; %Length of trial-initial fixation
     SENT1_DUR   = 2.0; %Amount of time sentence 1 is shown for
@@ -72,9 +73,10 @@ function AgentPatientStimuli(subjID, list, order, run)
     SENT2_DUR   = 2.0; %Amount of time sentence 2 is shown for
     RESPOND_DUR = 1.5; %Amound of time respond screen is shown for
     
-    %Language stimuli
-    SENTENCE = 'Kyle Square bounced Lily Triangle agent highlight.';
-    QUESTION = 'Did Kyle Square bounce someone?';
+    
+    %Get flip orders
+    setUpFlip(NUM_TRIALS)
+   
     
     
     %% Set up condition ordering
@@ -248,6 +250,8 @@ function AgentPatientStimuli(subjID, list, order, run)
         conditionIndex.(condition{:}) = condIdx + 1;
     end
     
+
+    
     
 	%% Set up screen and keyboard for Psychtoolbox
     %Screen
@@ -395,6 +399,13 @@ function [randomized_table] = randomizeTable(table_in)
 end
 
 
+%% SetUpFlip
+%Sets up binary values of flip
+%Output should be a random ordered list of binary values, one for each item
+%presented, and a second list that is the negation of the first one.
+function [flip1,flip2] = setUpFlip(NUM_TRIALS);
+    flip1 = randi(2,NUM_TRIALS,1)-randi(1,NUM_TRIALS,1)
+end
 
 %% Debugging functions
 function [wPtr, rect] = openDebugWindow(screenNum, rect)
