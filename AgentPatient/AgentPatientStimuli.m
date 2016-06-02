@@ -324,7 +324,7 @@ function AgentPatientStimuli(subjID, list, order, run)
             curr_materials = materials.(condition{:});
             condIdx = conditionIndex.(condition{:});
             
-            sentence1 = curr_materials.ProgressiveSentence{condIdx};
+            sentence1 = [curr_materials.ProgressiveSentence{condIdx} ' (' curr_materials.Highlight{condIdx} ' highlight)'];
             
             %Show trial
             %Trial-initial fixation
