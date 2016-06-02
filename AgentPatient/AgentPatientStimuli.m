@@ -98,7 +98,8 @@ function AgentPatientStimuli(subjID, list, order, run)
     %--nsearch 1000
     
     %To adapt to AgentPatientStimuli, use these arguments
-    %--ntp 180 (items/2 plus a minute (at least, in general) of fixation)
+    %--ntp 180 (items/2 plus a minute (at least, in general) of fixation;
+    %may want as much fixation time as viewing time
     %--tr 2
     %--tprescan 0
     %--psdwin 0 12
@@ -159,7 +160,7 @@ function AgentPatientStimuli(subjID, list, order, run)
             materials.(conditionNames{i}) = all_materials(condition_rows, :);
             
             %Randomize the order of the table
-            materials.(conditionNames{i}) = randomizeTable(materials.(conditionNames{i}));
+            %materials.(conditionNames{i}) = randomizeTable(materials.(conditionNames{i}));
         end
         
         %So now "materials" is a struct containing 8 tables (one for each
