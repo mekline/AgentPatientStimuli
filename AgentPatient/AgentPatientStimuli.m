@@ -160,7 +160,7 @@ function AgentPatientStimuli(subjID, list, order, run)
             materials.(conditionNames{i}) = all_materials(condition_rows, :);
             
             %Randomize the order of the table
-            %materials.(conditionNames{i}) = randomizeTable(materials.(conditionNames{i}));
+            materials.(conditionNames{i}) = randomizeTable(materials.(conditionNames{i}));
         end
         
         %So now "materials" is a struct containing 8 tables (one for each
