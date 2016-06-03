@@ -148,11 +148,11 @@ function AgentPatientStimuli(subjID, list, order, run)
         %each item in the order they appear in all_materials
         conditions = all_materials.COND_markingSameDiff;
         
-        conditionNames ={'ActPas_SEM_DIFF'};
+        conditionNames ={'ActPas_SEMM'};
                      
 	%Separate each condition into different tables and store each table in
 	%a struct called "materials"
-        for i=1:length(conditionNames)
+        for i=1:length(conditionNames
             %Determine which rows in all_materials are for this condition
             condition_rows = strcmp(conditions, conditionNames{i});
             

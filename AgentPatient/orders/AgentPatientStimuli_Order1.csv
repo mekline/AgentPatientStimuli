@@ -1,69 +1,221 @@
 Onset,Duration,Condition
-0,6,ActPas_SEM_DIFF
-6,2,NULL
-8,6,ActPas_SEM_DIFF
-14,2,NULL
-16,6,ActPas_SEM_DIFF
-22,4,NULL
-26,6,ActPas_SEM_DIFF
-32,6,ActPas_SEM_DIFF
-38,2,NULL
-40,6,ActPas_SEM_DIFF
-46,2,NULL
-48,6,ActPas_SEM_DIFF
-54,6,NULL
-60,6,ActPas_SEM_DIFF
-66,6,NULL
-72,6,ActPas_SEM_DIFF
-78,6,NULL
-84,6,ActPas_SEM_DIFF
-90,6,ActPas_SEM_DIFF
-96,6,ActPas_SEM_DIFF
-102,2,NULL
-104,6,ActPas_SEM_DIFF
-110,6,ActPas_SEM_DIFF
-116,4,NULL
-120,6,ActPas_SEM_DIFF
-126,4,NULL
-130,6,ActPas_SEM_DIFF
-136,4,NULL
-140,6,ActPas_SEM_DIFF
-146,4,NULL
-150,6,ActPas_SEM_DIFF
-156,2,NULL
-158,6,ActPas_SEM_DIFF
-164,6,ActPas_SEM_DIFF
-170,6,ActPas_SEM_DIFF
-176,6,ActPas_SEM_DIFF
-182,6,NULL
-188,6,ActPas_SEM_DIFF
-194,6,ActPas_SEM_DIFF
-200,8,NULL
-208,6,ActPas_SEM_DIFF
-214,6,ActPas_SEM_DIFF
-220,2,NULL
-222,6,ActPas_SEM_DIFF
-228,2,NULL
-230,6,ActPas_SEM_DIFF
-236,4,NULL
-240,6,ActPas_SEM_DIFF
-246,6,NULL
-252,6,ActPas_SEM_DIFF
-258,4,NULL
-262,6,ActPas_SEM_DIFF
-268,6,ActPas_SEM_DIFF
-274,2,NULL
-276,6,ActPas_SEM_DIFF
-282,4,NULL
-286,6,ActPas_SEM_DIFF
-292,2,NULL
-294,6,ActPas_SEM_DIFF
-300,6,NULL
-306,6,ActPas_SEM_DIFF
-312,8,NULL
-320,6,ActPas_SEM_DIFF
-326,6,ActPas_SEM_DIFF
-332,6,ActPas_SEM_DIFF
-338,6,NULL
-344,6,ActPas_SEM_DIFF
-350,10,NULL
+0,6,      Stimulus
+6,8,          NULL 
+14,6,      Stimulus
+20,6,      Stimulus
+26,2,          NULL 
+28,6,      Stimulus
+34,2,          NULL 
+36,6,      Stimulus
+42,10,          NULL 
+52,6,      Stimulus
+58,6,          NULL 
+64,6,      Stimulus
+70,10,          NULL 
+80,6,      Stimulus
+86,2,          NULL 
+88,6,      Stimulus
+94,6,      Stimulus
+100,6,          NULL 
+106,6,      Stimulus
+112,6,      Stimulus
+118,4,          NULL 
+122,6,      Stimulus
+128,8,          NULL 
+136,6,      Stimulus
+142,6,      Stimulus
+148,2,          NULL 
+150,6,      Stimulus
+156,6,          NULL 
+162,6,      Stimulus
+168,6,      Stimulus
+174,2,          NULL 
+176,6,      Stimulus
+182,8,          NULL 
+190,6,      Stimulus
+196,4,          NULL 
+200,6,      Stimulus
+206,4,          NULL 
+210,6,      Stimulus
+216,6,          NULL 
+222,6,      Stimulus
+228,6,      Stimulus
+234,12,          NULL 
+246,6,      Stimulus
+252,4,          NULL 
+256,6,      Stimulus
+262,6,      Stimulus
+268,4,          NULL 
+272,6,      Stimulus
+278,16,          NULL 
+294,6,      Stimulus
+300,6,          NULL 
+306,6,      Stimulus
+312,2,          NULL 
+314,6,      Stimulus
+320,6,          NULL 
+326,6,      Stimulus
+332,10,          NULL 
+342,6,      Stimulus
+348,6,      Stimulus
+354,4,          NULL 
+358,6,      Stimulus
+364,6,          NULL 
+370,6,      Stimulus
+376,6,      Stimulus
+382,2,          NULL 
+384,6,      Stimulus
+390,6,          NULL 
+396,6,      Stimulus
+402,10,          NULL 
+412,6,      Stimulus
+418,16,          NULL 
+434,6,      Stimulus
+440,2,          NULL 
+442,6,      Stimulus
+448,4,          NULL 
+452,6,      Stimulus
+458,26,          NULL 
+484,6,      Stimulus
+490,6,      Stimulus
+496,4,          NULL 
+500,6,      Stimulus
+506,6,          NULL 
+512,6,      Stimulus
+518,2,          NULL 
+520,6,      Stimulus
+526,4,          NULL 
+530,6,      Stimulus
+536,4,          NULL 
+540,6,      Stimulus
+546,2,          NULL 
+548,6,      Stimulus
+554,34,          NULL 
+588,6,      Stimulus
+594,4,          NULL 
+598,6,      Stimulus
+604,8,          NULL 
+612,6,      Stimulus
+618,4,          NULL 
+622,6,      Stimulus
+628,6,          NULL 
+634,6,      Stimulus
+640,12,          NULL 
+652,6,      Stimulus
+658,8,          NULL 
+666,6,      Stimulus
+672,6,      Stimulus
+678,6,          NULL 
+684,6,      Stimulus
+690,4,          NULL 
+694,6,      Stimulus
+700,10,          NULL 
+710,6,      Stimulus
+716,4,          NULL 
+720,6,      Stimulus
+726,2,          NULL 
+728,6,      Stimulus
+734,6,      Stimulus
+740,22,          NULL 
+762,6,      Stimulus
+768,2,          NULL 
+770,6,      Stimulus
+776,2,          NULL 
+778,6,      Stimulus
+784,12,          NULL 
+796,6,      Stimulus
+802,6,          NULL 
+808,6,      Stimulus
+814,12,          NULL 
+826,6,      Stimulus
+832,18,          NULL 
+850,6,      Stimulus
+856,8,          NULL 
+864,6,      Stimulus
+870,6,          NULL 
+876,6,      Stimulus
+882,4,          NULL 
+886,6,      Stimulus
+892,6,          NULL 
+898,6,      Stimulus
+904,16,          NULL 
+920,6,      Stimulus
+926,6,      Stimulus
+932,2,          NULL 
+934,6,      Stimulus
+940,10,          NULL 
+950,6,      Stimulus
+956,2,          NULL 
+958,6,      Stimulus
+964,6,      Stimulus
+970,2,          NULL 
+972,6,      Stimulus
+978,2,          NULL 
+980,6,      Stimulus
+986,12,          NULL 
+998,6,      Stimulus
+1004,6,      Stimulus
+1010,6,      Stimulus
+1016,8,          NULL 
+1024,6,      Stimulus
+1030,6,          NULL 
+1036,6,      Stimulus
+1042,2,          NULL 
+1044,6,      Stimulus
+1050,8,          NULL 
+1058,6,      Stimulus
+1064,6,          NULL 
+1070,6,      Stimulus
+1076,14,          NULL 
+1090,6,      Stimulus
+1096,16,          NULL 
+1112,6,      Stimulus
+1118,12,          NULL 
+1130,6,      Stimulus
+1136,4,          NULL 
+1140,6,      Stimulus
+1146,4,          NULL 
+1150,6,      Stimulus
+1156,6,          NULL 
+1162,6,      Stimulus
+1168,2,          NULL 
+1170,6,      Stimulus
+1176,18,          NULL 
+1194,6,      Stimulus
+1200,16,          NULL 
+1216,6,      Stimulus
+1222,6,      Stimulus
+1228,4,          NULL 
+1232,6,      Stimulus
+1238,6,      Stimulus
+1244,14,          NULL 
+1258,6,      Stimulus
+1264,10,          NULL 
+1274,6,      Stimulus
+1280,12,          NULL 
+1292,6,      Stimulus
+1298,4,          NULL 
+1302,6,      Stimulus
+1308,6,      Stimulus
+1314,8,          NULL 
+1322,6,      Stimulus
+1328,4,          NULL 
+1332,6,      Stimulus
+1338,2,          NULL 
+1340,6,      Stimulus
+1346,2,          NULL 
+1348,6,      Stimulus
+1354,6,          NULL 
+1360,6,      Stimulus
+1366,6,          NULL 
+1372,6,      Stimulus
+1378,4,          NULL 
+1382,6,      Stimulus
+1388,8,          NULL 
+1396,6,      Stimulus
+1402,6,      Stimulus
+1408,8,          NULL 
+1416,6,      Stimulus
+1422,6,          NULL 
+1428,6,      Stimulus
+1434,6,          NULL 
