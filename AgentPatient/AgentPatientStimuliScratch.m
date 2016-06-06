@@ -24,7 +24,6 @@ function AgentPatientStimuliScratch(subjID, order, run)
     
         
     %% Set experiment constants
-    NUM_TRIALS = length(AgentPatientStimuli_materials.csv);
 
     %Timing (in seconds)              
     FIX_DUR     = 0.3; %Length of trial-initial fixation
@@ -62,5 +61,64 @@ function AgentPatientStimuliScratch(subjID, order, run)
         run_order.Onset = run_order.Onset * 0.1;
         run_order.Duration = run_order.Duration * 0.1;
     end
+    
+    %% Read in the stimuli materials
+    MATERIALS_DIR = fullfile(pwd, 'materials'); %where to put the saved materials
+    mat_filename = ['AgentPatientStimuli' subjID '_' order num2str(run)  '_materials.mat']; %materials to save
+    mat_filename = fullfile(MATERIALS_DIR, mat_filename);
+    
+    %If this is the first run for this subjectID, read in the materials
+    %from the materials file and save them to a .mat file
+    if run==1
+        %Read in all materials from a csv
+        materials_filename = 'AgentPatientStimuli_materials.csv';
+        all_materials = readtable(materials_filename);
+        
+        %"conditions" is a cell array containing the condition name for
+        %each item in the order they appear in all_materials
+        conditions = all_materials.Condition;
+        
+        conditionNames ={'Active'; 'Passive'};
+        
+        %Separate materials into tables, one per condition, and store all tables in
+	    %a struct called "materials"
+        for i=1:length(conditionNames)
+            %Determine which rows in all_materials are for this condition
+            condition_rows = strcmp(conditions, conditionNames{i});
+            
+            %Extract the materials for this condition from all_materials
+            %and save this table to the struct "materials"
+            materials.(conditionNames{i}) = all_materials(condition_rows, :);
+            
+            %Randomize the order of the table
+            materials.(conditionNames{i}) = randomizeTable(materials.(conditionNames{i}));
+        end
+        
+        %So now "materials" is a struct containing 2 tables (one for each
+        %condition in the cell array "conditionNames"). Each table has been
+        %put into a random order using the function randomizeTable. To
+        %access a table for a specific condition, you can do (e.g.)
+        %materials.Active
+        
+        %Save the materials to a matfile
+        save(mat_filename, 'materials');
+        
+    end
+    
+    %Load the materials from the mat file
+    %If the mat file doesn't exist, make sure the user entered the correct
+    %inputs
+    try
+        load(mat_filename);
+        
+    catch errorInfo
+        fprintf('%s%s\n\n', 'error message: ', errorInfo.message)
+        
+        error('\n%s\n\t%s\n\t%s\n\t%s\n', ...
+              'Please make sure the following conditions are met:', ...
+              '1) subjID is the same for run 1 and run 2', ...
+              '2) run is 1 for the first run and 2 for the second';
+    end
+    
     
 end

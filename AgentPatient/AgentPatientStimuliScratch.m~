@@ -1,4 +1,4 @@
-function AgentPatientStimuliScratch(subjID, o, run)
+function AgentPatientStimuliScratch(subjID, order, run)
     %% Make sure inputs are valid
     %subjID is a string
     assert(ischar(subjID), 'subjID must be a string');
@@ -11,7 +11,7 @@ function AgentPatientStimuliScratch(subjID, o, run)
     
     %% Make sure we don't accidentally overwrite a data file
     DATA_DIR = fullfile(pwd, 'data');
-    fileToSave = ['AgentPatientStimuli' subjID '_' AE run '_data.csv'];
+    fileToSave = ['AgentPatientStimuli' subjID '_' order num2str(run) '_data.csv'];
     fileToSave = fullfile(DATA_DIR, fileToSave);
     
     % Error message if data file already exists.
@@ -46,5 +46,54 @@ function AgentPatientStimuliScratch(subjID, o, run)
     
     ORDER_DIR = fullfile(pwd, 'orders');
     
-    order_filename = ['AgentPatientStimuli_Order' num2str(order) '.csv'];
+    order_filename = ['AgentPatientStimuli_Order' order num2str(run) '.csv'];
+    order_filename = fullfile(ORDER_DIR, order_filename);
+    run_order = readtable(order_filename); %the order for this run
+    
+    numEvents = height(run_order); %the number of trials and fixations
+    
+    %% Make the experiment run faster if subjID is 'debug'
+    if strcmpi(subjID, 'debug')
+        scale = 0.1;
+        FIX_DUR = FIX_DUR * scale;
+        SENT_DUR = SENT_DUR * scale;
+        ITI = ITI * scale;
+        
+        run_order.Onset = run_order.Onset * 0.1;
+        run_order.Duration = run_order.Duration * 0.1;
+    end
+    
+    %% Read in the stimuli materials
+    MATERIALS_DIR = fullfile(pwd, 'materials'); %where to put the saved materials
+    mat_filename = ['AgentPatientStimuli' subjID '_' order num2str(run)  '_materials.mat']; %materials to save
+    mat_filename = fullfile(MATERIALS_DIR, mat_filename);
+    
+    %If this is the first run for this subjectID, read in the materials
+    %from the materials file and save them to a .mat file
+    if run==1
+        %Read in all materials from a csv
+        materials_filename = 'AgentPatientStimuli_materials.csv';
+        all_materials = readtable(materials_filename);
+        
+        %"conditions" is a cell array containing the condition name for
+        %each item in the order they appear in all_materials
+        conditions = all_materials.Condition;
+        
+        conditionNames ={'Active'; 'Passive'};
+        
+        %Separate materials into tables, one per condition, and store all tables in
+	    %a struct called "materials"
+        for i=1:length(conditionNames)
+            %Determine which rows in all_materials are for this condition
+            condition_rows = strcmp(conditions, conditionNames{i});
+            
+            %Extract the materials for this condition from all_materials
+            %and save this table to the struct "materials"
+            materials.(conditionNames{i}) = all_materials(condition_rows, :);
+            
+            %Randomize the order of the table
+            materials.(conditionNames{i}) = randomizeTable(materials.(conditionNames{i}));
+        end
+    
+    
 end
