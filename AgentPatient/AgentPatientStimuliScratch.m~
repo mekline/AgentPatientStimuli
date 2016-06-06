@@ -66,6 +66,12 @@ function AgentPatientStimuliScratch(subjID, order, run)
     mat_filename = ['AgentPatientStimuli' subjID '_' order num2str(run)  '_materials.mat']; %materials to save
     mat_filename = fullfile(MATERIALS_DIR, mat_filename);
     
+    if run==2
+        active_item_indices_alias = active_item_indices;
+        active_item_indices = passive_item_indices;
+        passive_item_indices = active_item_indices_alias;
+    end
+    
     %If this is the first run for this subjectID, read in the materials
     %from the materials file and save them to a .mat file
     if run==1
@@ -73,14 +79,16 @@ function AgentPatientStimuliScratch(subjID, order, run)
         materials_filename = 'AgentPatientStimuli_materials.csv';
         all_materials = readtable(materials_filename);
         
+        num_items = height(all_materials);
+        
         %"conditions" is a cell array containing the condition name for
         %each item in the order they appear in all_materials
-        flip_condition = all_materials.Condition;
+        active_item_indices = randperm(num_items, num_items/2);
+        passive_item_indices = setdiff([1:120], active_item_indices);
         
-        conditionNames ={'Stimulus'};
-        
-        %Separate materials into tables, one per condition, and store all tables in
+        %Separate materials into two tables, active and passive, and store the tables in
 	    %a struct called "materials"
+        
         for i=1:length(conditionNames)
             %Determine which rows in all_materials are for this condition
             condition_rows = strcmp(conditions, conditionNames{i});
@@ -88,16 +96,12 @@ function AgentPatientStimuliScratch(subjID, order, run)
             %Extract the materials for this condition from all_materials
             %and save this table to the struct "materials"
             materials.(conditionNames{i}) = all_materials(condition_rows, :);
+            materials = all_materials
             
             %Randomize the order of the table
             materials.(conditionNames{i}) = randomizeTable(materials.(conditionNames{i}));
         end
         
-        %So now "materials" is a struct containing 2 tables (one for each
-        %condition in the cell array "conditionNames"). Each table has been
-        %put into a random order using the function randomizeTable. To
-        %access a table for a specific condition, you can do (e.g.)
-        %materials.Active
         
         %Save the materials to a matfile
         save(mat_filename, 'materials');
@@ -113,11 +117,29 @@ function AgentPatientStimuliScratch(subjID, order, run)
     catch errorInfo
         fprintf('%s%s\n\n', 'error message: ', errorInfo.message)
         
-        error('\n%s\n\t%s\n\t%s\n\t%s\n', ...
+        error('\n%s\n\t%s\n\t%s\n', ...
               'Please make sure the following conditions are met:', ...
               '1) subjID is the same for run 1 and run 2', ...
-              '2) run is 1 for the first run and 2 for the second';
+              '2) run is 1 for the first run and 2 for the second');
     end
+    
+    %% %% RandomizeTableAndFlip
+%Randomizes the order of the rows in table table_in and determines random
+%flip conditions
+function [randomized_table] = randomizeTable(table_in)
+    numItems = height(table_in);
+    
+    %Shuffle the materials randomly
+    randomized_table = table_in(randperm(numItems), :);
+    
+    %Add flip conditions
+    zeros(
+    
+    %Shuffle again
+    randomized_table = randomized_table(randperm(numItems, :);
+    
+end
+    
     
     
 end

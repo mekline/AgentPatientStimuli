@@ -86,8 +86,9 @@ function AgentPatientStimuliScratch(subjID, order, run)
         active_item_indices = randperm(num_items, num_items/2);
         passive_item_indices = setdiff([1:120], active_item_indices);
         
-        %Separate materials into tables, one per condition, and store all tables in
+        %Separate materials into two tables, active and passive, and store the tables in
 	    %a struct called "materials"
+        
         for i=1:length(conditionNames)
             %Determine which rows in all_materials are for this condition
             condition_rows = strcmp(conditions, conditionNames{i});
@@ -95,16 +96,12 @@ function AgentPatientStimuliScratch(subjID, order, run)
             %Extract the materials for this condition from all_materials
             %and save this table to the struct "materials"
             materials.(conditionNames{i}) = all_materials(condition_rows, :);
+            materials = all_materials
             
             %Randomize the order of the table
             materials.(conditionNames{i}) = randomizeTable(materials.(conditionNames{i}));
         end
         
-        %So now "materials" is a struct containing 2 tables (one for each
-        %condition in the cell array "conditionNames"). Each table has been
-        %put into a random order using the function randomizeTable. To
-        %access a table for a specific condition, you can do (e.g.)
-        %materials.Active
         
         %Save the materials to a matfile
         save(mat_filename, 'materials');
@@ -125,6 +122,24 @@ function AgentPatientStimuliScratch(subjID, order, run)
               '1) subjID is the same for run 1 and run 2', ...
               '2) run is 1 for the first run and 2 for the second');
     end
+    
+    %% %% RandomizeTableAndFlip
+%Randomizes the order of the rows in table table_in and determines random
+%flip conditions
+function [randomized_table] = randomizeTable(table_in)
+    itemsInTable = height(table_in);
+    
+    %Shuffle the materials randomly
+    randomized_table = table_in(randperm(itemsInTable), :);
+    
+    %Add flip conditions
+    randomized_table.Flip = [zeros(itemsInTable/2); ones(itemsInTable/2)];
+    
+    %Shuffle again
+    randomized_table = randomized_table(randperm(itemsInTable, :);
+    
+end
+    
     
     
 end
