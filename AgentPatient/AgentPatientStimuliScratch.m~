@@ -1,0 +1,25 @@
+function AgentPatientStimuliScratch(subjID, AE, run)
+    %% Make sure inputs are valid
+    %subjID is a string
+    assert(ischar(subjID), 'subjID must be a string');
+
+    %AE is whatever it's supposed to be
+
+
+    %run is 1 or 2
+    assert(ismember(run, 1:2), 'run must be 1 for the first run and 2 for the second');
+    
+    %% Make sure we don't accidentally overwrite a data file
+    DATA_DIR = fullfile(pwd, 'data');
+    fileToSave = ['AgentPatientStimuli' subjID '_' AE run '_data.csv'
+    
+        
+    %% Set experiment constants
+    NUM_TRIALS = length(AgentPatientStimuli_materials.csv);
+
+    %Timing (in seconds)              
+    FIX_DUR     = 0.3; %Length of trial-initial fixation
+    SENT_DUR   = 2.0; %Amount of time sentence is shown for
+    ITI         = 0.2; %Inter-trial interval
+        
+end

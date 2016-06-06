@@ -75,7 +75,7 @@ function AgentPatientStimuli(subjID, list, order, run)
     
     
     %Get flip orders
-    setUpFlip(NUM_TRIALS)
+    setUpFlip(NUM_TRIALS);
    
     
     
@@ -106,7 +106,7 @@ function AgentPatientStimuli(subjID, list, order, run)
     %--tprescan 0
     %--psdwin 0 12
     %--ev Stimulus 6 120
-    %--nkeep 1
+    %--nkeep 1`
     %--o ORDER
     %--nsearch 1000 (??, but doesn't seem too condition-dependent)
     
@@ -148,7 +148,7 @@ function AgentPatientStimuli(subjID, list, order, run)
         %each item in the order they appear in all_materials
         conditions = all_materials.COND_markingSameDiff;
         
-        conditionNames ={'ActPas_SEM_DIFF'};
+        conditionNames ={'Stimulus'};
                      
 	%Separate each condition into different tables and store each table in
 	%a struct called "materials"
@@ -200,7 +200,7 @@ function AgentPatientStimuli(subjID, list, order, run)
     
     conditionNames = fieldnames(materials);
     for i=1:length(conditionNames)
-        materials.(conditionNames{i}) = materials.(conditionNames{i})(rowsToUse, :);
+        materials.(conditionNames{i}) = all_materials.(conditionNames{i});
     end
     
     %Set up the data that we want to save
@@ -403,7 +403,7 @@ end
 %Output should be a random ordered list of binary values, one for each item
 %presented, and a second list that is the negation of the first one.
 function [flip1,flip2] = setUpFlip(NUM_TRIALS);
-    flip1 = randi(2,NUM_TRIALS,1)-randi(1,NUM_TRIALS,1)
+    flip1 = randi(2,NUM_TRIALS,1)-randi(1,NUM_TRIALS,1);
 end
 
 %% Debugging functions
