@@ -63,12 +63,13 @@ function AgentPatientStimuliScratch(subjID, order, run)
     
     %% Read in the stimuli materials
     MATERIALS_DIR = fullfile(pwd, 'materials'); %where to put the saved materials
-    mat_filename = ['AgentPatientStimuli' subjID '_' order num2str(run)  '_materials.mat']; %materials to save
+    mat_filename = ['AgentPatientStimuli_' subjID '_' order '_materials.csv']; %materials to save
     mat_filename = fullfile(MATERIALS_DIR, mat_filename);
     
     if run==2
-        all_materials.Flip = abs(all_materials.Flip - ones(numItems,1));
-        all_materials.Flip
+        all_materials = readtable(mat_filename);
+        mat_filename.Flip = abs(mat_filename.Flip - ones(numItems,1));
+        mat_filename.Flip
     end
     
     %If this is the first run for this subjectID, read in the materials
@@ -89,17 +90,17 @@ function AgentPatientStimuliScratch(subjID, order, run)
     %Load the materials from the mat file
     %If the mat file doesn't exist, make sure the user entered the correct
     %inputs
-    try
-        load(mat_filename);
-        
-    catch errorInfo
-        fprintf('%s%s\n\n', 'error message: ', errorInfo.message)
-        
-        error('\n%s\n\t%s\n\t%s\n', ...
-              'Please make sure the following conditions are met:', ...
-              '1) subjID is the same for run 1 and run 2', ...
-              '2) run is 1 for the first run and 2 for the second');
-    end
+%     try
+%         load(mat_filename);
+%         
+%     catch errorInfo
+%         fprintf('%s%s\n\n', 'error message: ', errorInfo.message)
+%         
+%         error('\n%s\n\t%s\n\t%s\n', ...
+%               'Please make sure the following conditions are met:', ...
+%               '1) subjID is the same for run 1 and run 2', ...
+%               '2) run is 1 for the first run and 2 for the second');
+%     end
     
     %% %% randomizeTableAndFlip
 %Randomizes the order of the rows in table table_in and determines random
