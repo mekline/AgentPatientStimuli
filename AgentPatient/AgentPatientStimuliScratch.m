@@ -37,8 +37,7 @@ function AgentPatientStimuliScratch(subjID, order, run)
     %--tr 2
     %--tprescan 0
     %--psdwin 0 12
-    %--ev Active 6 120
-    %--ev Passive 6 120
+    %--ev Stimulus 6 120
     %--nkeep 10
     %--o ORDER
     %--nsearch 10000
@@ -67,6 +66,12 @@ function AgentPatientStimuliScratch(subjID, order, run)
     mat_filename = ['AgentPatientStimuli' subjID '_' order num2str(run)  '_materials.mat']; %materials to save
     mat_filename = fullfile(MATERIALS_DIR, mat_filename);
     
+    if run==2
+        active_item_indices_alias = active_item_indices;
+        active_item_indices = passive_item_indices;
+        passive_item_indices = active_item_indices_alias;
+    end
+    
     %If this is the first run for this subjectID, read in the materials
     %from the materials file and save them to a .mat file
     if run==1
@@ -74,11 +79,12 @@ function AgentPatientStimuliScratch(subjID, order, run)
         materials_filename = 'AgentPatientStimuli_materials.csv';
         all_materials = readtable(materials_filename);
         
+        num_items = height(all_materials);
+        
         %"conditions" is a cell array containing the condition name for
         %each item in the order they appear in all_materials
-        conditions = all_materials.Condition;
-        
-        conditionNames ={'Active'; 'Passive'};
+        active_item_indices = randperm(num_items, num_items/2);
+        passive_item_indices = setdiff([1:120], active_item_indices);
         
         %Separate materials into tables, one per condition, and store all tables in
 	    %a struct called "materials"
@@ -114,10 +120,10 @@ function AgentPatientStimuliScratch(subjID, order, run)
     catch errorInfo
         fprintf('%s%s\n\n', 'error message: ', errorInfo.message)
         
-        error('\n%s\n\t%s\n\t%s\n\t%s\n', ...
+        error('\n%s\n\t%s\n\t%s\n', ...
               'Please make sure the following conditions are met:', ...
               '1) subjID is the same for run 1 and run 2', ...
-              '2) run is 1 for the first run and 2 for the second';
+              '2) run is 1 for the first run and 2 for the second');
     end
     
     

@@ -24,7 +24,6 @@ function AgentPatientStimuliScratch(subjID, order, run)
     
         
     %% Set experiment constants
-    NUM_TRIALS = length(AgentPatientStimuli_materials.csv);
 
     %Timing (in seconds)              
     FIX_DUR     = 0.3; %Length of trial-initial fixation
@@ -38,8 +37,7 @@ function AgentPatientStimuliScratch(subjID, order, run)
     %--tr 2
     %--tprescan 0
     %--psdwin 0 12
-    %--ev Active 6 120
-    %--ev Passive 6 120
+    %--ev Stimulus 6 120
     %--nkeep 10
     %--o ORDER
     %--nsearch 10000
@@ -77,9 +75,9 @@ function AgentPatientStimuliScratch(subjID, order, run)
         
         %"conditions" is a cell array containing the condition name for
         %each item in the order they appear in all_materials
-        conditions = all_materials.Condition;
+        flip_condition = all_materials.Condition;
         
-        conditionNames ={'Active'; 'Passive'};
+        conditionNames ={'Stimulus'};
         
         %Separate materials into tables, one per condition, and store all tables in
 	    %a struct called "materials"
@@ -94,6 +92,32 @@ function AgentPatientStimuliScratch(subjID, order, run)
             %Randomize the order of the table
             materials.(conditionNames{i}) = randomizeTable(materials.(conditionNames{i}));
         end
+        
+        %So now "materials" is a struct containing 2 tables (one for each
+        %condition in the cell array "conditionNames"). Each table has been
+        %put into a random order using the function randomizeTable. To
+        %access a table for a specific condition, you can do (e.g.)
+        %materials.Active
+        
+        %Save the materials to a matfile
+        save(mat_filename, 'materials');
+        
+    end
+    
+    %Load the materials from the mat file
+    %If the mat file doesn't exist, make sure the user entered the correct
+    %inputs
+    try
+        load(mat_filename);
+        
+    catch errorInfo
+        fprintf('%s%s\n\n', 'error message: ', errorInfo.message)
+        
+        error('\n%s\n\t%s\n\t%s\n\t%s\n', ...
+              'Please make sure the following conditions are met:', ...
+              '1) subjID is the same for run 1 and run 2', ...
+              '2) run is 1 for the first run and 2 for the second';
+    end
     
     
 end
