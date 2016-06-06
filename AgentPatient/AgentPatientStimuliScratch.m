@@ -1,4 +1,4 @@
-function AgentPatientStimuliScratch(subjID, AE, run)
+function AgentPatientStimuliScratch(subjID, order, run)
     %% Make sure inputs are valid
     %subjID is a string
     assert(ischar(subjID), 'subjID must be a string');
@@ -11,7 +11,7 @@ function AgentPatientStimuliScratch(subjID, AE, run)
     
     %% Make sure we don't accidentally overwrite a data file
     DATA_DIR = fullfile(pwd, 'data');
-    fileToSave = ['AgentPatientStimuli' subjID '_' AE run '_data.csv'];
+    fileToSave = ['AgentPatientStimuli' subjID '_' order num2str(run) '_data.csv'];
     fileToSave = fullfile(DATA_DIR, fileToSave);
     
     % Error message if data file already exists.
@@ -45,5 +45,22 @@ function AgentPatientStimuliScratch(subjID, AE, run)
     %--nsearch 10000
     
     ORDER_DIR = fullfile(pwd, 'orders');
+    
+    order_filename = ['AgentPatientStimuli_Order' order num2str(run) '.csv'];
+    order_filename = fullfile(ORDER_DIR, order_filename);
+    run_order = readtable(order_filename); %the order for this run
+    
+    numEvents = height(run_order); %the number of trials and fixations
+    
+    %% Make the experiment run faster if subjID is 'debug'
+    if strcmpi(subjID, 'debug')
+        scale = 0.1;
+        FIX_DUR = FIX_DUR * scale;
+        SENT_DUR = SENT_DUR * scale;
+        ITI = ITI * scale;
+        
+        run_order.Onset = run_order.Onset * 0.1;
+        run_order.Duration = run_order.Duration * 0.1;
+    end
     
 end
