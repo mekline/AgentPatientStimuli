@@ -67,9 +67,8 @@ function AgentPatientStimuliScratch(subjID, order, run)
     mat_filename = fullfile(MATERIALS_DIR, mat_filename);
     
     if run==2
-        active_item_indices_alias = active_item_indices;
-        active_item_indices = passive_item_indices;
-        passive_item_indices = active_item_indices_alias;
+        all_materials.Flip = abs(all_materials.Flip - ones(numItems,1));
+        all_materials.Flip
     end
     
     %If this is the first run for this subjectID, read in the materials
@@ -79,32 +78,11 @@ function AgentPatientStimuliScratch(subjID, order, run)
         materials_filename = 'AgentPatientStimuli_materials.csv';
         all_materials = readtable(materials_filename);
         
-        num_items = height(all_materials);
-        
-        %"conditions" is a cell array containing the condition name for
-        %each item in the order they appear in all_materials
-        active_item_indices = randperm(num_items, num_items/2);
-        passive_item_indices = setdiff([1:120], active_item_indices);
-        
-        %Separate materials into two tables, active and passive, and store the tables in
-	    %a struct called "materials"
-        
-        for i=1:length(conditionNames)
-            %Determine which rows in all_materials are for this condition
-            condition_rows = strcmp(conditions, conditionNames{i});
-            
-            %Extract the materials for this condition from all_materials
-            %and save this table to the struct "materials"
-            materials.(conditionNames{i}) = all_materials(condition_rows, :);
-            materials = all_materials
-            
-            %Randomize the order of the table
-            materials.(conditionNames{i}) = randomizeTable(materials.(conditionNames{i}));
-        end
-        
+        %Randomize the order of the table
+        all_materials = randomizeTableAndFlip(all_materials);
         
         %Save the materials to a matfile
-        save(mat_filename, 'materials');
+        save(mat_filename, 'all_materials');
         
     end
     
@@ -123,20 +101,21 @@ function AgentPatientStimuliScratch(subjID, order, run)
               '2) run is 1 for the first run and 2 for the second');
     end
     
-    %% %% RandomizeTableAndFlip
+    %% %% randomizeTableAndFlip
 %Randomizes the order of the rows in table table_in and determines random
 %flip conditions
-function [randomized_table] = randomizeTable(table_in)
+function [randomized_table] = randomizeTableAndFlip(table_in)
     itemsInTable = height(table_in);
     
     %Shuffle the materials randomly
     randomized_table = table_in(randperm(itemsInTable), :);
     
     %Add flip conditions
-    randomized_table.Flip = [zeros(itemsInTable/2); ones(itemsInTable/2)];
+    flip_column = [zeros(itemsInTable/2,1);ones(itemsInTable/2,1)];
+    randomized_table.Flip = flip_column;
     
     %Shuffle again
-    randomized_table = randomized_table(randperm(itemsInTable, :);
+    randomized_table = randomized_table(randperm(itemsInTable), :);
     
 end
     
