@@ -161,11 +161,16 @@ function AgentPatientStimuliScratch(subjID, order, run)
                 continue
             end
             
-            if all_materials.Flip{index} == 0
-                sentence = [all_materials.ProgressiveActive{index} ' (' all_materials.Highlight{index} ' highlight)'];
-            else
-                  sentence = [all_materials.ProgressivePassive{index} ' (' all_materials.Highlight{index} ' highlight)'];
+            %debugging
+            global sentence
             
+            if all_materials.Flip(item_index) == 0
+                sentence = char([char(all_materials.ProgressiveActive(item_index)) ' (' char(all_materials.Highlight(item_index)) ' highlight)']);
+            else
+                sentence = [all_materials.ProgressivePassive(item_index) ' (' all_materials.Highlight(item_index) ' highlight)'];
+            end
+            sentence
+                  
             %Show trial
             %Trial-initial fixation
             PTBhelper('stimText', wPtr, '+', fixFontSize);
@@ -185,10 +190,29 @@ function AgentPatientStimuliScratch(subjID, order, run)
             %Update loop variables
             item_index = item_index + 1;
             onset = sentEndTime;
-            
-
+        
+        end
+        
+        ran_completely = true;
+        
+    catch errorInfo
+        ran_completely = false;
+        
+        fprintf('%s%s\n\n', 'error message: ', errorInfo.message)
+        for k=1:length(errorInfo.stack)
+            disp(errorInfo.stack(k))
+        end
+    end
     
+    %Save all data
+	%writetable(results, fileToSave);
     
+     %Close the PTB screen
+	Screen('CloseAll');
+	ShowCursor;
+    
+    %Restore the old level.
+    Screen('Preference','SuppressAllWarnings',oldEnableFlag);
     
 end
 
@@ -209,3 +233,25 @@ function [randomized_table] = randomizeTableAndFlip(table_in)
     randomized_table = randomized_table(randperm(itemsInTable), :);
     
 end
+
+%% %% Debugging functions
+function [wPtr, rect] = openDebugWindow(screenNum, rect)
+    Screen('CloseAll');
+    ShowCursor;
+    clear Screen
+    
+    rect = rect / 2;
+    rect(1) = 5;
+    rect(2) = 5;
+
+    java; %clear java cache
+    KbName('UnifyKeyNames');
+    warning('off','MATLAB:dispatcher:InexactMatch');
+    AssertOpenGL;
+    suppress_warnings = 1;
+    Screen('Preference', 'SuppressAllWarnings', suppress_warnings);
+    Screen('Preference', 'TextRenderer', 0);
+    Screen('Preference', 'SkipSyncTests', 1);
+    [wPtr,rect] = Screen('OpenWindow',screenNum,1,rect,[],[],[],[],[],kPsychGUIWindow,[]);
+end
+
