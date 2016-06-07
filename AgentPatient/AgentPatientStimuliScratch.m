@@ -67,7 +67,7 @@ function AgentPatientStimuliScratch(subjID, order, run)
     mat_filename = fullfile(MATERIALS_DIR, mat_filename);
     
     %If this is the first run for this subjectID, read in the materials
-    %from the materials file and save them to a .mat file
+    %from the materials file as a table and save them to a .mat file
     if run==1
         %Read in all materials from a csv
         materials_filename = 'AgentPatientStimuli_materials.csv';
@@ -81,7 +81,7 @@ function AgentPatientStimuliScratch(subjID, order, run)
         
     end
     
-    %Load the materials from the mat file
+    %Load the materials (read: table all_materials) from the mat file
     %If the mat file doesn't exist, make sure the user entered the correct
     %inputs
     try
@@ -98,10 +98,74 @@ function AgentPatientStimuliScratch(subjID, order, run)
      
     if run==2
         all_materials.Flip = abs(all_materials.Flip - ones(height(all_materials),1));
-        all_materials.Flip
+        all_materials.Flip;
     end
     
-    %% %% randomizeTableAndFlip
+	%% Set up screen and keyboard for Psychtoolbox
+    %Screen
+    screenNum = max(Screen('Screens'));  %Highest screen number is most likely correct display
+    windowInfo = PTBhelper('initialize',screenNum);
+	wPtr = windowInfo{1}; %pointer to window on screen that's being referenced
+%     rect = windowInfo{2}; %dimensions of the window
+%         winWidth = rect(3);
+%         winHeight = rect(4);
+    oldEnableFlag = windowInfo{4};
+    HideCursor;
+    PTBhelper('stimImage',wPtr,'WHITE');
+    PTBhelper('stimText',wPtr,'Loading experiment\n\n(Don''t start yet!)',30);
+    
+%       if strcmpi(subjID, 'debug')
+%           [wPtr, rect] = openDebugWindow(screenNum, rect);
+%           winWidth = rect(3);
+%           winHeight = rect(4);
+%       end
+    
+    %Keyboard
+    keyboardInfo = PTBhelper('getKeyboardIndex');
+    kbIdx = keyboardInfo{1};
+    escapeKey = keyboardInfo{2};
+    
+    
+    %% Set display options
+    %Font sizes
+    sentFontSize = 40;      %stimuli sentences
+    fixFontSize = 40;       %fixation cross
+    
+    %% Present the experiment
+	% Wait indefinitely until trigger
+    PTBhelper('stimText',wPtr,'Waiting for trigger...',sentFontSize);
+    PTBhelper('waitFor','TRIGGER',kbIdx,escapeKey);
+    
+    runOnset = GetSecs; %remains the same
+    onset = runOnset;   %updates for each trial
+    
+    %Present each block
+    try
+        for eventNum = 1:numEvents
+            %Fixation
+            condition = run_order.Condition(eventNum); %Null or Stimulus
+            if strcmp(condition, 'NULL')
+                %Show fixation cross
+                duration = run_order.Duration(eventNum);
+                PTBhelper('stimText', wPtr, '+', fixFontSize);
+                fixEndTime = onset + duration;
+                PTBhelper('waitFor',fixEndTime,kbIdx,escapeKey);
+                
+                %Save data
+                %results.Onset{eventNum} = onset - runOnset;
+                
+                %Update loop variables
+                onset = fixEndTime;
+                
+                continue
+            end
+
+    
+    
+    
+end
+
+%% %% randomizeTableAndFlip
 %Randomizes the order of the rows in table table_in and determines random
 %flip conditions
 function [randomized_table] = randomizeTableAndFlip(table_in)
@@ -116,9 +180,5 @@ function [randomized_table] = randomizeTableAndFlip(table_in)
     
     %Shuffle again
     randomized_table = randomized_table(randperm(itemsInTable), :);
-    
-end
-    
-    
     
 end
