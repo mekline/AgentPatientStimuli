@@ -165,7 +165,6 @@ function AgentPatientStimuliScratch(subjID, order, run)
                 sentence = [all_materials.ProgressiveActive{index} ' (' all_materials.Highlight{index} ' highlight)'];
             else
                   sentence = [all_materials.ProgressivePassive{index} ' (' all_materials.Highlight{index} ' highlight)'];
-            item_index = item_index + 1;
             
             %Show trial
             %Trial-initial fixation
@@ -175,13 +174,18 @@ function AgentPatientStimuliScratch(subjID, order, run)
             
             %Sentence
             PTBhelper('stimText', wPtr, sentence, sentFontSize);
-            sentEndTime = fixEndTime + SENT1_DUR;
+            sentEndTime = fixEndTime + SENT_DUR;
             PTBhelper('waitFor',sentEndTime,kbIdx,escapeKey);
             
             %Blank ITI
             PTBhelper('stimText', wPtr, ' ', sentFontSize);
             blankEndTime = sent1EndTime + ITI;
             PTBhelper('waitFor',blankEndTime,kbIdx,escapeKey);
+            
+            %Update loop variables
+            item_index = item_index + 1;
+            onset = sentEndTime;
+            
 
     
     
