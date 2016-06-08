@@ -94,10 +94,18 @@ function AgentPatientStimuliScratch(subjID, order, run)
                '2) run is 1 for the first run and 2 for the second');
     end
      
-    if run==2
-        all_materials.Flip = abs(all_materials.Flip - ones(height(all_materials),1));
-        all_materials.Flip;
-    end
+    %Set up the data that we want to save
+     resultsHdr = {'SubjID',        'Run',       'Order',   'Onset'};
+ 	
+     %results is the table that will hold all of the data we want to save
+     results = cell(numEvents, length(resultsHdr));
+     results = cell2table(results, 'VariableNames', resultsHdr);
+    
+    %Fill in the user input information
+    results.SubjID(:) = {subjID};
+    %results.List  = ones(numEvents,1)*list;
+	results.Run   = ones(numEvents,1)*run;
+    results.Order = ones(numEvents,1)*order;
     
 	%% Set up screen and keyboard for Psychtoolbox
     %Screen
