@@ -37,7 +37,8 @@ function AgentPatientStimuliScratch(subjID, order, run)
     %--tr 2
     %--tprescan 0
     %--psdwin 0 12
-    %--ev Stimulus 6 120
+    %--ev Active 6 60
+    %--ev Passive 6 60
     %--nkeep 10
     %--o ORDER
     %--nsearch 10000
