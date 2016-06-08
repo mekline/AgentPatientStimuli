@@ -70,11 +70,8 @@ function AgentPatientStimuliScratch(subjID, order, run)
     %from the materials file as a table and save them to a .mat file
     if run==1
         %Read in all materials from a csv
-        materials_filename = 'AgentPatientStimuli_materials.csv';
+        materials_filename = ['AP_materials_' order '.csv';
         all_materials = readtable(materials_filename);
-        
-        %Randomize the order of the table
-        all_materials = randomizeTableAndFlip(all_materials);
         
         %Save the materials to a matfile
         save(mat_filename, 'all_materials');
@@ -209,24 +206,6 @@ function AgentPatientStimuliScratch(subjID, order, run)
     
     %Restore the old level.
     Screen('Preference','SuppressAllWarnings',oldEnableFlag);
-    
-end
-
-%% %% randomizeTableAndFlip
-%Randomizes the order of the rows in table table_in and determines random
-%flip conditions
-function [randomized_table] = randomizeTableAndFlip(table_in)
-    itemsInTable = height(table_in);
-    
-    %Shuffle the materials randomly
-    randomized_table = table_in(randperm(itemsInTable), :);
-    
-    %Add flip conditions
-    flip_column = [zeros(itemsInTable/2,1);ones(itemsInTable/2,1)];
-    randomized_table.Flip = flip_column;
-    
-    %Shuffle again
-    randomized_table = randomized_table(randperm(itemsInTable), :);
     
 end
 
