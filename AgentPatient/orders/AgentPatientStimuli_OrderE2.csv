@@ -1,219 +1,220 @@
-0,6,         Agent
-6,4,          NULL 
-10,6,       Patient
-16,6,         Agent
-22,6,       Patient
-28,6,       Patient
-34,16,          NULL 
-50,6,         Agent
-56,4,          NULL 
-60,6,       Patient
-66,4,          NULL 
-70,6,       Patient
-76,8,          NULL 
-84,6,         Agent
-90,14,          NULL 
-104,6,         Agent
-110,6,         Agent
-116,2,          NULL 
-118,6,       Patient
-124,8,          NULL 
-132,6,       Patient
-138,6,         Agent
-144,10,          NULL 
-154,6,       Patient
-160,6,          NULL 
-166,6,       Patient
-172,8,          NULL 
-180,6,         Agent
-186,10,          NULL 
-196,6,         Agent
-202,4,          NULL 
-206,6,       Patient
-212,16,          NULL 
-228,6,       Patient
-234,12,          NULL 
-246,6,       Patient
-252,2,          NULL 
-254,6,         Agent
-260,8,          NULL 
-268,6,         Agent
-274,2,          NULL 
-276,6,         Agent
-282,4,          NULL 
-286,6,       Patient
-292,14,          NULL 
-306,6,       Patient
-312,8,          NULL 
-320,6,         Agent
-326,12,          NULL 
-338,6,       Patient
-344,10,          NULL 
-354,6,         Agent
-360,4,          NULL 
-364,6,       Patient
-370,6,         Agent
-376,4,          NULL 
-380,6,         Agent
-386,6,       Patient
-392,6,          NULL 
-398,6,         Agent
-404,4,          NULL 
-408,6,         Agent
-414,8,          NULL 
-422,6,         Agent
-428,2,          NULL 
-430,6,       Patient
-436,2,          NULL 
-438,6,       Patient
-444,6,         Agent
-450,4,          NULL 
-454,6,         Agent
-460,10,          NULL 
-470,6,         Agent
-476,6,       Patient
-482,26,          NULL 
-508,6,         Agent
-514,6,          NULL 
-520,6,       Patient
-526,8,          NULL 
-534,6,       Patient
-540,6,       Patient
-546,2,          NULL 
-548,6,       Patient
-554,2,          NULL 
-556,6,       Patient
-562,6,         Agent
-568,6,       Patient
-574,4,          NULL 
-578,6,       Patient
-584,14,          NULL 
-598,6,         Agent
-604,8,          NULL 
-612,6,       Patient
-618,2,          NULL 
-620,6,         Agent
-626,16,          NULL 
-642,6,       Patient
-648,12,          NULL 
-660,6,         Agent
-666,4,          NULL 
-670,6,         Agent
-676,4,          NULL 
-680,6,         Agent
-686,8,          NULL 
-694,6,         Agent
-700,10,          NULL 
-710,6,         Agent
-716,6,          NULL 
-722,6,         Agent
-728,6,         Agent
-734,4,          NULL 
-738,6,       Patient
-744,2,          NULL 
-746,6,       Patient
-752,2,          NULL 
-754,6,         Agent
-760,2,          NULL 
-762,6,         Agent
-768,2,          NULL 
-770,6,       Patient
-776,4,          NULL 
-780,6,         Agent
-786,4,          NULL 
-790,6,       Patient
-796,8,          NULL 
-804,6,       Patient
-810,4,          NULL 
-814,6,       Patient
-820,6,       Patient
-826,12,          NULL 
-838,6,       Patient
-844,4,          NULL 
-848,6,       Patient
-854,6,          NULL 
-860,6,       Patient
-866,8,          NULL 
-874,6,       Patient
-880,14,          NULL 
-894,6,       Patient
-900,6,          NULL 
-906,6,       Patient
-912,12,          NULL 
-924,6,         Agent
-930,6,         Agent
-936,6,       Patient
-942,4,          NULL 
-946,6,         Agent
-952,8,          NULL 
-960,6,       Patient
-966,16,          NULL 
-982,6,       Patient
-988,4,          NULL 
-992,6,       Patient
-998,2,          NULL 
-1000,6,       Patient
-1006,4,          NULL 
-1010,6,         Agent
-1016,6,          NULL 
-1022,6,         Agent
-1028,6,          NULL 
-1034,6,       Patient
-1040,6,          NULL 
-1046,6,         Agent
-1052,4,          NULL 
-1056,6,       Patient
-1062,26,          NULL 
-1088,6,         Agent
-1094,6,          NULL 
-1100,6,       Patient
-1106,6,          NULL 
-1112,6,         Agent
-1118,6,          NULL 
-1124,6,         Agent
-1130,28,          NULL 
-1158,6,       Patient
-1164,4,          NULL 
-1168,6,         Agent
-1174,10,          NULL 
-1184,6,         Agent
-1190,6,       Patient
-1196,2,          NULL 
-1198,6,         Agent
-1204,4,          NULL 
-1208,6,         Agent
-1214,8,          NULL 
-1222,6,       Patient
-1228,2,          NULL 
-1230,6,       Patient
-1236,12,          NULL 
-1248,6,         Agent
-1254,4,          NULL 
-1258,6,       Patient
-1264,6,         Agent
-1270,8,          NULL 
-1278,6,         Agent
-1284,6,       Patient
-1290,2,          NULL 
-1292,6,         Agent
-1298,8,          NULL 
-1306,6,         Agent
-1312,2,          NULL 
-1314,6,         Agent
-1320,8,          NULL 
-1328,6,         Agent
-1334,2,          NULL 
-1336,6,       Patient
-1342,6,          NULL 
-1348,6,       Patient
-1354,4,          NULL 
-1358,6,       Patient
-1364,28,          NULL 
-1392,6,         Agent
-1398,6,         Agent
-1404,8,          NULL 
-1412,6,         Agent
-1418,6,         Agent
-1424,8,          NULL 
-1432,6,       Patient
-1438,2,          NULL 
+Onset,Duration,Condition,ItemNumber,AgentName,AgentShape,AgentShapeLower,PatientName,PatientShape,PatientShapeLower,VerbStem,PastTense,PastParticiple,Verb,ProgressiveActive,PastActive,GenericProgressiveActive,GenericPastActive,ProgressivePassive,PastPassive,GenericProgressivePassive,GenericPastPassive,Flip1,Flip2,Order1_agent,Order2_agent,Order1_patient,Order2_patient
+6,4,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+34,16,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+56,4,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+66,4,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+76,8,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+90,14,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+116,2,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+124,8,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+144,10,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+160,6,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+172,8,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+186,10,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+202,4,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+212,16,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+234,12,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+252,2,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+260,8,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+274,2,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+282,4,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+292,14,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+312,8,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+326,12,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+344,10,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+360,4,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+376,4,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+392,6,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+404,4,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+414,8,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+428,2,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+436,2,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+450,4,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+460,10,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+482,26,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+514,6,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+526,8,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+546,2,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+554,2,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+574,4,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+584,14,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+604,8,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+618,2,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+626,16,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+648,12,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+666,4,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+676,4,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+686,8,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+700,10,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+716,6,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+734,4,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+744,2,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+752,2,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+760,2,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+768,2,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+776,4,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+786,4,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+796,8,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+810,4,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+826,12,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+844,4,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+854,6,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+866,8,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+880,14,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+900,6,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+912,12,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+942,4,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+952,8,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+966,16,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+988,4,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+998,2,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+1006,4,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+1016,6,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+1028,6,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+1040,6,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+1052,4,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+1062,26,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+1094,6,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+1106,6,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+1118,6,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+1130,28,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+1164,4,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+1174,10,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+1196,2,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+1204,4,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+1214,8,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+1228,2,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+1236,12,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+1254,4,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+1270,8,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+1290,2,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+1298,8,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+1312,2,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+1320,8,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+1334,2,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+1342,6,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+1354,4,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+1364,28,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+1404,8,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+1424,8,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+1438,2,          NULL ,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+0,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+16,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+50,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+84,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+104,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+110,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+138,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+180,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+196,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+254,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+268,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+276,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+320,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+354,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+370,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+380,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+398,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+408,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+422,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+444,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+454,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+470,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+508,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+562,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+598,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+620,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+660,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+670,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+680,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+694,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+710,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+722,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+728,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+754,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+762,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+780,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+924,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+930,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+946,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+1010,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+1022,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+1046,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+1088,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+1112,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+1124,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+1168,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+1184,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+1198,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+1208,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+1248,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+1264,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+1278,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+1292,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+1306,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+1314,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+1328,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+1392,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+1398,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+1412,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+1418,6,         Agent,,,,,,,,,,,,,,,,,,,,,,,,,
+10,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+22,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+28,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+60,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+70,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+118,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+132,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+154,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+166,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+206,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+228,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+246,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+286,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+306,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+338,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+364,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+386,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+430,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+438,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+476,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+520,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+534,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+540,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+548,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+556,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+568,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+578,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+612,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+642,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+738,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+746,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+770,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+790,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+804,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+814,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+820,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+838,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+848,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+860,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+874,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+894,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+906,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+936,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+960,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+982,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+992,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+1000,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+1034,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+1056,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+1100,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+1158,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+1190,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+1222,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+1230,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+1258,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+1284,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+1336,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+1348,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+1358,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,
+1432,6,       Patient,,,,,,,,,,,,,,,,,,,,,,,,,

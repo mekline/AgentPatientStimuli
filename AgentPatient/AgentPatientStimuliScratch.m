@@ -47,9 +47,9 @@ function AgentPatientStimuliScratch(subjID, order, run)
     
     order_filename = ['AgentPatientStimuli_Order' order num2str(run) '.csv'];
     order_filename = fullfile(ORDER_DIR, order_filename);
-    run_order = readtable(order_filename); %the order for this run
+    all_materials = readtable(order_filename); %the order for this run
     
-    numEvents = height(run_order); %the number of trials and fixations
+    numEvents = height(all_materials); %the number of trials and fixations
     
     %% Make the experiment run faster if subjID is 'debug'
     if strcmpi(subjID, 'debug')
@@ -58,8 +58,8 @@ function AgentPatientStimuliScratch(subjID, order, run)
         SENT_DUR = SENT_DUR * scale;
         ITI = ITI * scale;
         
-        run_order.Onset = run_order.Onset * 0.1;
-        run_order.Duration = run_order.Duration * 0.1;
+        all_materials.Onset = all_materials.Onset * 0.1;
+        all_materials.Duration = all_materials.Duration * 0.1;
     end
     
     %% Read in the stimuli materials
@@ -71,7 +71,8 @@ function AgentPatientStimuliScratch(subjID, order, run)
     %from the order materials file as a table and save them to a .mat file
     if run==1
         %Read in all materials from a csv
-        materials_filename = ['AgentPatientStimuli_Order' order run '.csv'];
+        materials_filename = ['AgentPatientStimuli_Order' order num2str(run) '.csv'];
+        materials_filename = fullfile(ORDER_DIR, materials_filename);
         all_materials = readtable(materials_filename);
         
         %Save the materials to a matfile
@@ -149,10 +150,9 @@ function AgentPatientStimuliScratch(subjID, order, run)
     try
         for eventNum = 1:numEvents
             %Fixation
-            condition = run_order.Condition(eventNum); %Null or Stimulus
-            if strcmp(condition, 'NULL')
+            if strcmp(char(all_materials.Condition(eventNum)), 'NULL')
                 %Show fixation cross
-                duration = run_order.Duration(eventNum);
+                duration = all_materials.Duration(eventNum);
                 PTBhelper('stimText', wPtr, '+', fixFontSize);
                 fixEndTime = onset + duration;
                 PTBhelper('waitFor',fixEndTime,kbIdx,escapeKey);
@@ -164,12 +164,13 @@ function AgentPatientStimuliScratch(subjID, order, run)
                 onset = fixEndTime;
                 
                 continue
-            end
-            
-            if all_materials.Flip(item_index) == 0
-                sentence = char([char(all_materials.ProgressiveActive(item_index)) ' (' char(all_materials.Highlight(item_index)) ' highlight)']);
             else
-                sentence = char([char(all_materials.ProgressivePassive(item_index)) ' (' char(all_materials.Highlight(item_index)) ' highlight)']);
+                if char(all_materials.Flip(item_index)) == '0'
+                    sentence = char([char(all_materials.ProgressiveActive(item_index)) ' (' char(all_materials.Condition(item_index)) ' highlight)']);
+                else
+                    sentence = char([char(all_materials.ProgressivePassive(item_index)) ' (' char(all_materials.Condition(item_index)) ' highlight)']);
+                end
+            
             end
                   
             %Show trial
