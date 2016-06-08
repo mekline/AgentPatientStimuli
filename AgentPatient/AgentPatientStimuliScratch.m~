@@ -14,7 +14,7 @@ function AgentPatientStimuliScratch(subjID, order, run)
     DATA_DIR = fullfile(pwd, 'data');
     %This is what we'll call the data file we're making
     fileToSave = ['AgentPatientStimuli' subjID '_' order num2str(run) '_data.csv'];
-    %The file should be in the DATA_DIR folder
+    %Put the file in
     fileToSave = fullfile(DATA_DIR, fileToSave);
     
     % Error message if data file already exists.
