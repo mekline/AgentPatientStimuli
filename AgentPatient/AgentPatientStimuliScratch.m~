@@ -67,8 +67,8 @@ function AgentPatientStimuliScratch(subjID, order, run)
     mat_filename = ['AgentPatientStimuli_' subjID '_' order '_materials.mat']; %materials to save
     mat_filename = fullfile(MATERIALS_DIR, mat_filename);
     
-    %If this is the first run for this subjectID, read in the raw materials
-    %from the order materials file as a table and save them to a .mat file
+    %If this is the first run for this subjectID, read in the materials
+    %from the materials file as a table and save them to a .mat file
     if run==1
         %Read in all materials from a csv
         materials_filename = ['AgentPatientStimuli_Order' order run '.csv'];
