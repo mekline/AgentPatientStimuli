@@ -95,17 +95,16 @@ function AgentPatientStimuliScratch(subjID, order, run)
     end
      
     %Set up the data that we want to save
-     resultsHdr = {'SubjID',        'Run',       'Order',   'Onset'};
+     %resultsHdr = {'SubjID',        'Run',       'Order',   'Onset'};
  	
      %results is the table that will hold all of the data we want to save
-     results = cell(numEvents, length(resultsHdr));
-     results = cell2table(results, 'VariableNames', resultsHdr);
+     %results = cell(numEvents, length(resultsHdr));
+     %results = cell2table(results, 'VariableNames', resultsHdr);
     
     %Fill in the user input information
-    results.SubjID(:) = {subjID};
-    %results.List  = ones(numEvents,1)*list;
-	results.Run   = ones(numEvents,1)*run;
-    results.Order = ones(numEvents,1)*order;
+    %results.SubjID(:) = {subjID};
+	%results.Run   = ones(numEvents,1)*run;
+    %results.Order = ones(numEvents,1)*order;
     
 	%% Set up screen and keyboard for Psychtoolbox
     %Screen
