@@ -13,7 +13,7 @@ function AgentPatientStimuliScratch(subjID, order, run)
     %This is where the data file will go
     DATA_DIR = fullfile(pwd, 'data');
     %This is what we'll call the data file we're making
-    fileToSave = ['AgentPatientStimuli' subjID '_' order num2str(run) '_data.csv'];
+    fileToSave = ['AgentPatientStimuli_' subjID '_' order num2str(run) '_data.csv'];
     %The file should be in the DATA_DIR folder
     fileToSave = fullfile(DATA_DIR, fileToSave);
     
@@ -75,16 +75,15 @@ function AgentPatientStimuliScratch(subjID, order, run)
     
     %If this is the first run for this subjectID, read in the raw materials
     %from the order materials file as a table and save them to a .mat file
-    if run==1
-        %Read in all materials from a csv
-        materials_filename = ['AgentPatientStimuli_Order' order num2str(run) '.csv'];
-        materials_filename = fullfile(ORDER_DIR, materials_filename);
-        all_materials = readtable(materials_filename); %the materials are now a table
+
+    %Read in all materials from a csv
+    materials_filename = ['AgentPatientStimuli_Order' order num2str(run) '.csv'];
+    materials_filename = fullfile(ORDER_DIR, materials_filename);
+    all_materials = readtable(materials_filename); %the materials are now a table
         
-        %Save the materials to a matfile
-        save(mat_filename, 'all_materials');
+    %Save the materials to a matfile
+    save(mat_filename, 'all_materials');
         
-    end
     
     %Load the all_materials table from the mat file
     %If the mat file doesn't exist, make sure the user entered the correct
@@ -106,17 +105,19 @@ function AgentPatientStimuliScratch(subjID, order, run)
                    'Duration',      'Condition', 'Flip',    'Sentence'};
  	
      %results is the table that will hold all of the data we want to save
-     %results = cell(numEvents, length(resultsHdr));
-     %results = cell2table(results, 'VariableNames', resultsHdr);
+     results = cell(numEvents, length(resultsHdr));
+     results = cell2table(results, 'VariableNames', resultsHdr);
     
     %Fill in the user input information
     results.SubjID(:) = {subjID};
 	results.Run   = ones(numEvents,1)*run;
-    results.Order = ones(numEvents,1)*order;
+    results.Order(:) = {order};
+    %eventually change these to just 1 entry
     
+    %Fill in condition and flip
     for eventNum=1:numEvents
-        results.Condition(eventNum) = all_materials.Condition(eventNum);
-        results.Flip{eventNum} = all_materials.Flip(eventNum);
+        results.Condition{eventNum} = char(all_materials.Condition(eventNum));
+        results.Flip{eventNum} = char(all_materials.Flip(eventNum));
     end
     
 	%% Set up screen and keyboard for Psychtoolbox
@@ -190,7 +191,7 @@ function AgentPatientStimuliScratch(subjID, order, run)
                 sentence = char([char(all_materials.ProgressivePassive(item_index)) ' (' char(all_materials.Condition(item_index)) ' highlight)']);
             end
             
-            results.Sentence{eventNum} = sentence
+            results.Sentence{eventNum} = sentence;
             results.Onset{eventNum} = onset - runOnset;
             results.Duration{eventNum} = all_materials.Duration(eventNum);
 
@@ -230,8 +231,7 @@ function AgentPatientStimuliScratch(subjID, order, run)
     end
     
     %Save all data
-    results
-	%writetable(results, fileToSave);
+	writetable(results, fileToSave);
     
      %Close the PTB screen
 	Screen('CloseAll');

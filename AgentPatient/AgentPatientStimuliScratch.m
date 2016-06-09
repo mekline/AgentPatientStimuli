@@ -75,16 +75,15 @@ function AgentPatientStimuliScratch(subjID, order, run)
     
     %If this is the first run for this subjectID, read in the raw materials
     %from the order materials file as a table and save them to a .mat file
-    if run==1
-        %Read in all materials from a csv
-        materials_filename = ['AgentPatientStimuli_Order' order num2str(run) '.csv'];
-        materials_filename = fullfile(ORDER_DIR, materials_filename);
-        all_materials = readtable(materials_filename); %the materials are now a table
+
+    %Read in all materials from a csv
+    materials_filename = ['AgentPatientStimuli_Order' order num2str(run) '.csv'];
+    materials_filename = fullfile(ORDER_DIR, materials_filename);
+    all_materials = readtable(materials_filename); %the materials are now a table
         
-        %Save the materials to a matfile
-        save(mat_filename, 'all_materials');
+    %Save the materials to a matfile
+    save(mat_filename, 'all_materials');
         
-    end
     
     %Load the all_materials table from the mat file
     %If the mat file doesn't exist, make sure the user entered the correct
@@ -113,7 +112,9 @@ function AgentPatientStimuliScratch(subjID, order, run)
     results.SubjID(:) = {subjID};
 	results.Run   = ones(numEvents,1)*run;
     results.Order(:) = {order};
+    %eventually change these to just 1 entry
     
+    %Fill in condition and flip
     for eventNum=1:numEvents
         results.Condition{eventNum} = char(all_materials.Condition(eventNum));
         results.Flip{eventNum} = char(all_materials.Flip(eventNum));
@@ -181,40 +182,50 @@ function AgentPatientStimuliScratch(subjID, order, run)
                 %Update loop variables
                 onset = fixEndTime;
                 
-                continue
-            end
+            else %If there's a sentence to be presented (i.e., not NULL)
             
-            if char(all_materials.Flip(item_index)) == '0'
-                sentence = char([char(all_materials.ProgressiveActive(eventNum)) ' (' char(all_materials.Condition(item_index)) ' highlight)']);
-            elseif char(all_materials.Flip(item_index)) == '1'
-                sentence = char([char(all_materials.ProgressivePassive(eventNum)) ' (' char(all_materials.Condition(item_index)) ' highlight)']);
-            end
-            
-            results.Sentence{eventNum} = sentence;
-            results.Onset{eventNum} = onset - runOnset;
-            results.Duration{eventNum} = all_materials.Duration(eventNum);
+                if char(all_materials.Flip(item_index)) == '0'
+                    sentence = char([char(all_materials.ProgressiveActive(item_index)) ' (' char(all_materials.Condition(item_index)) ' highlight)']);
+                    %[sentence, ' ' , num2str(item_index)]
+                elseif char(all_materials.Flip(item_index)) == '1'
+                    sentence = char([char(all_materials.ProgressivePassive(item_index)) ' (' char(all_materials.Condition(item_index)) ' highlight)']);
+                    %[sentence, ' ', num2str(item_index)]
+                end
+                
+                %Save Sentence, Onset, Duration to results file
+                results.Sentence{eventNum} = sentence;
+                results.Onset{eventNum} = onset - runOnset;
+                results.Duration{eventNum} = all_materials.Duration(eventNum);
+                
+                
+                %Show sentence trial
+                %Trial-initial fixation
+                PTBhelper('stimText', wPtr, '+', fixFontSize);
+                fixEndTime = onset + FIX_DUR;
+                PTBhelper('waitFor',fixEndTime,kbIdx,escapeKey);
 
-            
-                  
-            %Show trial
-            %Trial-initial fixation
-            PTBhelper('stimText', wPtr, '+', fixFontSize);
-            fixEndTime = onset + FIX_DUR;
-            PTBhelper('waitFor',fixEndTime,kbIdx,escapeKey);
-            
-            %Sentence
-            PTBhelper('stimText', wPtr, sentence, sentFontSize);
-            sentEndTime = fixEndTime + SENT_DUR;
-            PTBhelper('waitFor',sentEndTime,kbIdx,escapeKey);
-            
-            %Blank ITI
-            PTBhelper('stimText', wPtr, ' ', sentFontSize);
-            blankEndTime = sentEndTime + ITI;
-            PTBhelper('waitFor',blankEndTime,kbIdx,escapeKey);
+                %Sentence
+                PTBhelper('stimText', wPtr, sentence, sentFontSize);
+                sentEndTime = fixEndTime + SENT_DUR;
+                PTBhelper('waitFor',sentEndTime,kbIdx,escapeKey);
+
+                %Blank ITI
+                PTBhelper('stimText', wPtr, ' ', sentFontSize);
+                blankEndTime = sentEndTime + ITI;
+                PTBhelper('waitFor',blankEndTime,kbIdx,escapeKey);
+            end
             
             %Update loop variables
             item_index = item_index + 1;
-            onset = sentEndTime;
+            onset = sentEndTime;                
+                
+
+            
+
+
+            
+                  
+
         
         end
 
