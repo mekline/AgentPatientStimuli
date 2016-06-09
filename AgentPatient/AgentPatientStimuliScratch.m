@@ -13,7 +13,7 @@ function AgentPatientStimuliScratch(subjID, order, run)
     %This is where the data file will go
     DATA_DIR = fullfile(pwd, 'data');
     %This is what we'll call the data file we're making
-    fileToSave = ['AgentPatientStimuli' subjID '_' order num2str(run) '_data.csv'];
+    fileToSave = ['AgentPatientStimuli_' subjID '_' order num2str(run) '_data.csv'];
     %The file should be in the DATA_DIR folder
     fileToSave = fullfile(DATA_DIR, fileToSave);
     
@@ -106,17 +106,17 @@ function AgentPatientStimuliScratch(subjID, order, run)
                    'Duration',      'Condition', 'Flip',    'Sentence'};
  	
      %results is the table that will hold all of the data we want to save
-     %results = cell(numEvents, length(resultsHdr));
-     %results = cell2table(results, 'VariableNames', resultsHdr);
+     results = cell(numEvents, length(resultsHdr));
+     results = cell2table(results, 'VariableNames', resultsHdr);
     
     %Fill in the user input information
     results.SubjID(:) = {subjID};
 	results.Run   = ones(numEvents,1)*run;
-    results.Order = ones(numEvents,1)*order;
+    results.Order(:) = {order};
     
     for eventNum=1:numEvents
-        results.Condition{eventNum} = all_materials.Condition(eventNum)
-        results.Flip{eventNum} = all_materials.Flip(eventNum)
+        results.Condition{eventNum} = char(all_materials.Condition(eventNum));
+        results.Flip{eventNum} = char(all_materials.Flip(eventNum));
     end
     
 	%% Set up screen and keyboard for Psychtoolbox
@@ -167,11 +167,13 @@ function AgentPatientStimuliScratch(subjID, order, run)
             if strcmp(condition, 'NULL ')
                 %Show fixation cross
                 duration = all_materials.Duration(eventNum);
+                duration = duration * .001;
                 PTBhelper('stimText', wPtr, '+', fixFontSize);
                 fixEndTime = onset + duration;
                 PTBhelper('waitFor',fixEndTime,kbIdx,escapeKey);
                 
                 %Save data
+                
                 results.Sentence{eventNum} = 'N/A';
                 results.Onset{eventNum} = onset - runOnset;
                 results.Duration{eventNum} = duration;
@@ -183,9 +185,9 @@ function AgentPatientStimuliScratch(subjID, order, run)
             end
             
             if char(all_materials.Flip(item_index)) == '0'
-                sentence = char([char(all_materials.ProgressiveActive(item_index)) ' (' char(all_materials.Condition(item_index)) ' highlight)']);
+                sentence = char([char(all_materials.ProgressiveActive(eventNum)) ' (' char(all_materials.Condition(item_index)) ' highlight)']);
             elseif char(all_materials.Flip(item_index)) == '1'
-                sentence = char([char(all_materials.ProgressivePassive(item_index)) ' (' char(all_materials.Condition(item_index)) ' highlight)']);
+                sentence = char([char(all_materials.ProgressivePassive(eventNum)) ' (' char(all_materials.Condition(item_index)) ' highlight)']);
             end
             
             results.Sentence{eventNum} = sentence;

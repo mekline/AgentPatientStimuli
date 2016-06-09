@@ -103,7 +103,7 @@ function AgentPatientStimuliScratch(subjID, order, run)
      
     %Set up the data that we want to save
      resultsHdr = {'SubjID',        'Run',       'Order',   'Onset', ...
-                   'Duration',      'Sentence'};
+                   'Duration',      'Condition', 'Flip',    'Sentence'};
  	
      %results is the table that will hold all of the data we want to save
      %results = cell(numEvents, length(resultsHdr));
@@ -114,9 +114,10 @@ function AgentPatientStimuliScratch(subjID, order, run)
 	results.Run   = ones(numEvents,1)*run;
     results.Order = ones(numEvents,1)*order;
     
-    for ev
-
-    
+    for eventNum=1:numEvents
+        results.Condition(eventNum) = all_materials.Condition(eventNum);
+        results.Flip{eventNum} = all_materials.Flip(eventNum);
+    end
     
 	%% Set up screen and keyboard for Psychtoolbox
     %Screen
@@ -166,11 +167,13 @@ function AgentPatientStimuliScratch(subjID, order, run)
             if strcmp(condition, 'NULL ')
                 %Show fixation cross
                 duration = all_materials.Duration(eventNum);
+                duration = duration * .001;
                 PTBhelper('stimText', wPtr, '+', fixFontSize);
                 fixEndTime = onset + duration;
                 PTBhelper('waitFor',fixEndTime,kbIdx,escapeKey);
                 
                 %Save data
+                
                 results.Sentence{eventNum} = 'N/A';
                 results.Onset{eventNum} = onset - runOnset;
                 results.Duration{eventNum} = duration;
@@ -187,7 +190,7 @@ function AgentPatientStimuliScratch(subjID, order, run)
                 sentence = char([char(all_materials.ProgressivePassive(item_index)) ' (' char(all_materials.Condition(item_index)) ' highlight)']);
             end
             
-            results.Sentence{eventNum} = sentence;
+            results.Sentence{eventNum} = sentence
             results.Onset{eventNum} = onset - runOnset;
             results.Duration{eventNum} = all_materials.Duration(eventNum);
 
@@ -227,7 +230,8 @@ function AgentPatientStimuliScratch(subjID, order, run)
     end
     
     %Save all data
-	writetable(results, fileToSave);
+    results
+	%writetable(results, fileToSave);
     
      %Close the PTB screen
 	Screen('CloseAll');
