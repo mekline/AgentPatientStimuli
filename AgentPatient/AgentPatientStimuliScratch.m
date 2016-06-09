@@ -79,14 +79,14 @@ function AgentPatientStimuliScratch(subjID, order, run)
         %Read in all materials from a csv
         materials_filename = ['AgentPatientStimuli_Order' order num2str(run) '.csv'];
         materials_filename = fullfile(ORDER_DIR, materials_filename);
-        all_materials = readtable(materials_filename);
+        all_materials = readtable(materials_filename); %the materials are now a table
         
         %Save the materials to a matfile
         save(mat_filename, 'all_materials');
         
     end
     
-    %Load the materials (read: table all_materials) from the mat file
+    %Load the all_materials table from the mat file
     %If the mat file doesn't exist, make sure the user entered the correct
     %inputs
     try
@@ -102,16 +102,22 @@ function AgentPatientStimuliScratch(subjID, order, run)
     end
      
     %Set up the data that we want to save
-     %resultsHdr = {'SubjID',        'Run',       'Order',   'Onset'};
+     resultsHdr = {'SubjID',        'Run',       'Order',   'Onset', ...
+                   'Duration',      'Condition', 'Flip',    'Sentence'};
  	
      %results is the table that will hold all of the data we want to save
      %results = cell(numEvents, length(resultsHdr));
      %results = cell2table(results, 'VariableNames', resultsHdr);
     
     %Fill in the user input information
-    %results.SubjID(:) = {subjID};
-	%results.Run   = ones(numEvents,1)*run;
-    %results.Order = ones(numEvents,1)*order;
+    results.SubjID(:) = {subjID};
+	results.Run   = ones(numEvents,1)*run;
+    results.Order = ones(numEvents,1)*order;
+    
+    for eventNum=1:numEvents
+        results.Condition{eventNum} = all_materials.Condition(eventNum)
+        results.Flip{eventNum} = all_materials.Flip(eventNum)
+    end
     
 	%% Set up screen and keyboard for Psychtoolbox
     %Screen
@@ -155,7 +161,7 @@ function AgentPatientStimuliScratch(subjID, order, run)
     %Present each block
     try
         for eventNum = 1:numEvents
-            condition = all_materials.Condition(eventNum)
+            condition = all_materials.Condition(eventNum);
             
             %Fixation
             if strcmp(condition, 'NULL ')
@@ -166,7 +172,9 @@ function AgentPatientStimuliScratch(subjID, order, run)
                 PTBhelper('waitFor',fixEndTime,kbIdx,escapeKey);
                 
                 %Save data
-                %results.Onset{eventNum} = onset - runOnset;
+                results.Sentence{eventNum} = 'N/A';
+                results.Onset{eventNum} = onset - runOnset;
+                results.Duration{eventNum} = duration;
                 
                 %Update loop variables
                 onset = fixEndTime;
@@ -179,6 +187,10 @@ function AgentPatientStimuliScratch(subjID, order, run)
             elseif char(all_materials.Flip(item_index)) == '1'
                 sentence = char([char(all_materials.ProgressivePassive(item_index)) ' (' char(all_materials.Condition(item_index)) ' highlight)']);
             end
+            
+            results.Sentence{eventNum} = sentence;
+            results.Onset{eventNum} = onset - runOnset;
+            results.Duration{eventNum} = all_materials.Duration(eventNum);
 
             
                   
@@ -216,7 +228,7 @@ function AgentPatientStimuliScratch(subjID, order, run)
     end
     
     %Save all data
-	%writetable(results, fileToSave);
+	writetable(results, fileToSave);
     
      %Close the PTB screen
 	Screen('CloseAll');
