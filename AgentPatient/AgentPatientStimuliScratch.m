@@ -69,21 +69,49 @@ function AgentPatientStimuliScratch(subjID, order, run)
     end
     
     %% Read in the stimuli materials
+    %Info on materials_filename:
+    %This is a .csv file, specific to the order and run, with all the info
+    %we need for each run. There exist 10 files total, one for each order
+    %(A-E) and run (1-2) combination (A1, A2, B1, ... , E2).
+    
+    %Below are descriptions of the important variables in the file:
+    
+    %Onset: onset time scheduled by Optseq (different from actual onset
+    %stored in results data file)
+    
+    %Duration: how long to show the item
+    
+    %Condition: agent highlighted, patient highlighted, or NULL (fixation
+    %cross).
+    
+    %Flip: for linguistic stimuli, Flip determines whether the active or
+    %passive version of the sentence is presented. 0 means active, while 1
+    %indicates passive.
+    
+    %Order_agent: index at which the agent-highlight version of the
+    %sentence is presented, relative to all the agent-highlight versions.
+    %For instance, if Order_agent for an item is 42, it will
+    %be the 42nd agent-highlight item presented, although it won't be the
+    %42nd item presented overall because there will be patient-highlight
+    %items interspersed with the agent-highlight items.
+    
+    %Order_patient: like Order_agent, but for patients.
+    
+    %Condition, Flip, Order_agent, and Order_patient were all randomly
+    %generated in an Excel spreadsheet and are random with respect to each
+    %other as well as with respect to the sentence items.
+    
     MATERIALS_DIR = fullfile(pwd, 'materials'); %where to put the saved materials
     mat_filename = ['AgentPatientStimuli_' subjID '_' order '_materials.mat']; %materials to save
     mat_filename = fullfile(MATERIALS_DIR, mat_filename);
     
-    %If this is the first run for this subjectID, read in the raw materials
-    %from the order materials file as a table and save them to a .mat file
-
-    %Read in all materials from a csv
+    %Read in the raw materials from the order file as a table and save them to a .mat file
     materials_filename = ['AgentPatientStimuli_Order' order num2str(run) '.csv'];
     materials_filename = fullfile(ORDER_DIR, materials_filename);
     all_materials = readtable(materials_filename); %the materials are now a table
         
     %Save the materials to a matfile
     save(mat_filename, 'all_materials');
-        
     
     %Load the all_materials table from the mat file
     %If the mat file doesn't exist, make sure the user entered the correct
@@ -100,11 +128,11 @@ function AgentPatientStimuliScratch(subjID, order, run)
                '2) run is 1 for the first run and 2 for the second');
     end
      
-    %Set up the data that we want to save
+     %Set up the data that we want to save
      resultsHdr = {'SubjID',        'Run',       'Order',   'Onset', ...
                    'Duration',      'Condition', 'Flip',    'Sentence'};
  	
-     %results is the table that will hold all of the data we want to save
+     %Set up results, the table that will hold this data
      results = cell(numEvents, length(resultsHdr));
      results = cell2table(results, 'VariableNames', resultsHdr);
     
@@ -114,7 +142,7 @@ function AgentPatientStimuliScratch(subjID, order, run)
     results.Order(:) = {order};
     %eventually change these to just 1 entry
     
-    %Fill in condition and flip
+    %Fill in Condition and Flip in the results file, one by one
     for eventNum=1:numEvents
         results.Condition{eventNum} = char(all_materials.Condition(eventNum));
         results.Flip{eventNum} = char(all_materials.Flip(eventNum));
@@ -132,12 +160,6 @@ function AgentPatientStimuliScratch(subjID, order, run)
     HideCursor;
     PTBhelper('stimImage',wPtr,'WHITE');
     PTBhelper('stimText',wPtr,'Loading experiment\n\n(Don''t start yet!)',30);
-    
-%       if strcmpi(subjID, 'debug')
-%           [wPtr, rect] = openDebugWindow(screenNum, rect);
-%           winWidth = rect(3);
-%           winHeight = rect(4);
-%       end
     
     %Keyboard
     keyboardInfo = PTBhelper('getKeyboardIndex');
