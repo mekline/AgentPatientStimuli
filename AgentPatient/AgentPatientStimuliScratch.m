@@ -69,7 +69,7 @@ function AgentPatientStimuliScratch(subjID, order, run)
     end
     
     %% Read in the stimuli materials
-    %Info on materials_filename:
+    %Info on order_filename:
     %This is a .csv file, specific to the order and run, with all the info
     %we need for each run. There exist 10 files total, one for each order
     %(A-E) and run (1-2) combination (A1, A2, B1, ... , E2).
@@ -101,16 +101,11 @@ function AgentPatientStimuliScratch(subjID, order, run)
     %generated in an Excel spreadsheet and are random with respect to each
     %other as well as with respect to the sentence items.
     
+    
+    %Save all_materials to a matfile
     MATERIALS_DIR = fullfile(pwd, 'materials'); %where to put the saved materials
     mat_filename = ['AgentPatientStimuli_' subjID '_' order '_materials.mat']; %materials to save
     mat_filename = fullfile(MATERIALS_DIR, mat_filename);
-    
-    %Read in the raw materials from the order file as a table and save them to a .mat file
-    materials_filename = ['AgentPatientStimuli_Order' order num2str(run) '.csv'];
-    materials_filename = fullfile(ORDER_DIR, materials_filename);
-    all_materials = readtable(materials_filename); %the materials are now a table
-        
-    %Save the materials to a matfile
     save(mat_filename, 'all_materials');
     
     %Load the all_materials table from the mat file

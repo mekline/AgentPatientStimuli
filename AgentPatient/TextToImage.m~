@@ -2,10 +2,8 @@ function TextToImage(order, run)
 %Takes in text and turns it into a jpeg file in images
     
     %Reads in materials file
-    ORDER_DIR = fullfile(pwd, 'orders');
-    order_filename = ['AgentPatientStimuli_Order' order num2str(run) '.csv'];
-    order_filename = fullfile(ORDER_DIR, order_filename);
-    all_materials = readtable(order_filename);
+    materials_filename = ['AgentPatientStimuli_Order' order num2str(run) '.csv'];
+    all_materials = readtable(materials_filename);
     sentences = all_materials.ProgressiveActive;
     numSentences = length(sentences);
     
@@ -17,10 +15,10 @@ function TextToImage(order, run)
         
         text = sentences{i};
         
-        if ~strcmp(text,'N/A')
+        if text ~= 'N/A'
             %Sets up image and overlays text
             I = imread('blank-white-rectangle.png');
-            position = [250 100];
+            position = [250 1900];
 
             RGB = insertText(I,position,text,'FontSize',150,'BoxOpacity',0);
 
