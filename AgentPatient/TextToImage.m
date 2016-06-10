@@ -12,7 +12,7 @@ function TextToImage(order, run)
     %Save file in image folder
     IMAGE_DIR = fullfile(pwd, 'debug images');
     
-    
+    item_index = 1;
     for i=1:numSentences
         
         text = sentences{i};
@@ -20,12 +20,12 @@ function TextToImage(order, run)
         if ~strcmp(text,'N/A')
             %Sets up image and overlays text
             I = imread('blank-white-rectangle.png');
-            position = [250 100];
+            position = [250 1000];
 
             RGB = insertText(I,position,text,'FontSize',150,'BoxOpacity',0);
 
             %Sets up file to save
-            fileToSave = ['AgentPatientStimuli_image' num2str(i) '.jpg'];
+            fileToSave = ['AgentPatientStimuli_image' num2str(item_index) '.jpg'];
             fileToSave = fullfile(IMAGE_DIR, fileToSave);
 
             %Displays text image
@@ -34,6 +34,9 @@ function TextToImage(order, run)
 
             %Saves text image
             imwrite(RGB,fileToSave,'jpg')
+            
+            %Increments counter
+            item_index = item_index + 1;
         end
         
     end
