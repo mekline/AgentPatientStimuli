@@ -22,9 +22,11 @@ function TextToImage(order, run)
             I = imread('blank-white-rectangle.png');
             position = [250 1000];
 
-            RGB = insertText(I,position,text,'FontSize',150,'BoxOpacity',0);
+            RGB = insertText(I,position,text,'FontSize',150,'BoxOpacity',0,'Font','LucidaSansDemiBold');
+            %RGB = insertText(RGB,position
 
-            %Sets up file to save
+            %Sets up file to save; numbers indicate index at which stimulus
+            %was presented
             fileToSave = ['AgentPatientStimuli_image' num2str(item_index) '.jpg'];
             fileToSave = fullfile(IMAGE_DIR, fileToSave);
 
