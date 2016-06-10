@@ -228,6 +228,10 @@ function AgentPatientStimuliScratch(subjID, order, run)
 
                 %Sentence
                 PTBhelper('stimText', wPtr, sentence, sentFontSize);
+                %IMAGE_DIR = fullfile(pwd, 'images');
+                %image = ['AgentPatientStimuli_image' char(all_materials.ItemNumber(eventNum)) '.jpg'];
+                %image = fullfile(IMAGE_DIR, image);
+                %PTBhelper('stimImage', wPtr, image);
                 sentEndTime = fixEndTime + SENT_DUR;
                 PTBhelper('waitFor',sentEndTime,kbIdx,escapeKey);
 
@@ -240,15 +244,8 @@ function AgentPatientStimuliScratch(subjID, order, run)
             %Update loop variables
             item_index = item_index + 1;
             onset = sentEndTime;                
-                
-
-            
 
 
-            
-                  
-
-        
         end
 
         ran_completely = true;
