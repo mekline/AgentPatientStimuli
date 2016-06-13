@@ -7,6 +7,8 @@ function TextToImage(order, run)
     order_filename = fullfile(ORDER_DIR, order_filename);
     all_materials = readtable(order_filename);
     sentences = all_materials.ProgressiveActive;
+    agents = all_materials.AgentName;
+    patients = all_materials.PatientName;
     numSentences = length(sentences);
     
     %Save file in image folder
@@ -16,14 +18,17 @@ function TextToImage(order, run)
     for i=1:numSentences
         
         text = sentences{i};
+        agent = agents{i};
+        patient = patients{i};
+        text_none = blanks(length(agent));
         
         if ~strcmp(text,'N/A')
             %Sets up image and overlays text
             I = imread('blank-white-rectangle.png');
             position = [250 1000];
 
-            RGB = insertText(I,position,text,'FontSize',150,'BoxOpacity',0,'Font','LucidaSansDemiBold');
-            %RGB = insertText(RGB,position
+            RGB = insertText(I,position,text,'FontSize',150,'BoxOpacity',0);
+            RGB = insertText(RGB,position,text_none,'FontSize',150,'BoxOpacity',.4);
 
             %Sets up file to save; numbers indicate index at which stimulus
             %was presented
