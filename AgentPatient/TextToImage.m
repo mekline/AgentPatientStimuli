@@ -21,32 +21,38 @@ function TextToImage(order, run)
     item_index = 1;
     
     for i=1:numSentences
-        
-        text = sentences{i};
-        condition = conditions{i};
-        agent = [agentNames{i} ' ' agentShapes{i}];
-        patient = [patientNames{i} ' ' patientShapes{i}];
-        %spaces don't work out uniformly, so adjust for each name
-        switch agent
-            case 'Melissa Oval'
-                adjustment = 5;
-            case 'Lily Triangle'
-                adjustment = 5;
-            case 'Kyle Square'
-                adjustment = 4;
-            case 'Zach Star'
-                adjustment = 4;
-        end
-        text_none = blanks(length(agent)-adjustment);
-
         if ~strcmp(char(condition),'NULL ')
+            %Extract info for the item we're currently on
+            text = sentences{i};
+            condition = conditions{i};
+            flip = flips{i};
+            agent = [agentNames{i} ' ' agentShapes{i}];
+            patient = [patientNames{i} ' ' patientShapes{i}];
+
+            %Spaces don't work out uniformly, so adjust for each name
+            %Will want to switch for the one being highlighted, not nec. agent
+    %         switch agent
+    %             case 'Melissa Oval'
+    %                 adjustment = 5;
+    %             case 'Lily Triangle'
+    %                 adjustment = 5;
+    %             case 'Kyle Square'
+    %                 adjustment = 4;
+    %             case 'Zach Star'
+    %                 adjustment = 4;
+    %         end
+
+            %Makes a text object with as many spaces as there are in agent
+            highlight_box = blanks(length(agent)-adjustment);
+
+
             %Sets up image and overlays text
             I = imread('blank-white-rectangle.png');
             position = [250 1000];
             position_highlight = [275 1000];
 
             RGB = insertText(I,position,text,'FontSize',110,'BoxOpacity',0,'Font','Courier');
-            RGB = insertText(RGB,position_highlight,text_none,'FontSize',150,'BoxOpacity',.4,'Font','Courier');
+            RGB = insertText(RGB,position_highlight,highlight_box,'FontSize',150,'BoxOpacity',.4,'Font','Courier');
 
             %Sets up file to save; numbers indicate index at which stimulus
             %was presented
@@ -59,7 +65,7 @@ function TextToImage(order, run)
 
             %Saves text image
             imwrite(RGB,fileToSave,'jpg')
-            
+
             %Increments counter
             item_index = item_index + 1;
         end
