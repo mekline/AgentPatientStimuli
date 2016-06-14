@@ -185,7 +185,6 @@ function AgentPatientStimuliScratch(subjID, order, run)
             if strcmp(condition, 'NULL ')
                 %Show fixation cross
                 duration = all_materials.Duration(eventNum);
-                duration = duration * .001;
                 PTBhelper('stimText', wPtr, '+', fixFontSize);
                 fixEndTime = onset + duration;
                 PTBhelper('waitFor',fixEndTime,kbIdx,escapeKey);
