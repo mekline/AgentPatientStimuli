@@ -30,7 +30,7 @@ function AgentPatientStimuliScratch(subjID, order, run)
 
     %Timing (in seconds)              
     FIX_DUR     = 0.3; %Length of trial-initial fixation
-    SENT_DUR   = 2.0; %Amount of time sentence is shown for
+    SENT_DUR    = 6.0; %Amount of time sentence is shown for
     ITI         = 0.2; %Inter-trial interval
 
     %% Set up orders
@@ -125,7 +125,9 @@ function AgentPatientStimuliScratch(subjID, order, run)
      
      %Set up the data that we want to save
      resultsHdr = {'SubjID',        'Run',       'Order',   'Onset', ...
-                   'Duration',      'Condition', 'Flip',    'Sentence'};
+                   'Duration',      'Condition', 'Flip',    'Sentence', ...
+                   'AgentName',     'AgentShape',           'PatientName'...
+                   'PatientShape'};
  	
      %Set up results, the table that will hold this data
      results = cell(numEvents, length(resultsHdr));
@@ -180,11 +182,11 @@ function AgentPatientStimuliScratch(subjID, order, run)
     try
         for eventNum = 1:numEvents
             condition = all_materials.Condition(eventNum);
+            duration = all_materials.Duration(eventNum);
             
             %Fixation
             if strcmp(condition, 'NULL ')
                 %Show fixation cross
-                duration = all_materials.Duration(eventNum);
                 PTBhelper('stimText', wPtr, '+', fixFontSize);
                 fixEndTime = onset + duration;
                 PTBhelper('waitFor',fixEndTime,kbIdx,escapeKey);
@@ -192,6 +194,10 @@ function AgentPatientStimuliScratch(subjID, order, run)
                 %Save data
                 
                 results.Sentence{eventNum} = 'N/A';
+                results.AgentName{eventNum} = 'N/A';
+                results.AgentShape{eventNum} = 'N/A';
+                results.PatientName{eventNum} = 'N/A';
+                results.PatientShape{eventNum} = 'N/A';
                 results.Onset{eventNum} = onset - runOnset;
                 results.Duration{eventNum} = duration;
                 
@@ -199,17 +205,19 @@ function AgentPatientStimuliScratch(subjID, order, run)
                 onset = fixEndTime;
                 
             else %If there's a sentence to be presented (i.e., not NULL)
-            
+                
                 if char(all_materials.Flip(item_index)) == '0'
                     sentence = char([char(all_materials.ProgressiveActive(item_index)) ' (' char(all_materials.Condition(item_index)) ' highlight)']);
-                    %[sentence, ' ' , num2str(item_index)]
                 elseif char(all_materials.Flip(item_index)) == '1'
                     sentence = char([char(all_materials.ProgressivePassive(item_index)) ' (' char(all_materials.Condition(item_index)) ' highlight)']);
-                    %[sentence, ' ', num2str(item_index)]
                 end
                 
                 %Save Sentence, Onset, Duration to results file
                 results.Sentence{eventNum} = sentence;
+                results.AgentName{eventNum} = char(all_materials.AgentName(item_index));
+                results.AgentShape{eventNum} = char(all_materials.AgentShape(item_index));
+                results.PatientName{eventNum} = char(all_materials.PatientName(item_index));
+                results.PatientShape{eventNum} = char(all_materials.PatientShape(item_index));
                 results.Onset{eventNum} = onset - runOnset;
                 results.Duration{eventNum} = all_materials.Duration(eventNum);
                 
@@ -228,18 +236,19 @@ function AgentPatientStimuliScratch(subjID, order, run)
 %                 %PTBhelper('stimImage', wPtr, image);
 %                 global foo;
 %                 foo = Screen('MakeTexture', wPtr, double(imread([image '.jpg'], 'JPG')));
-                 sentEndTime = fixEndTime + SENT_DUR;
+                 sentEndTime = fixEndTime + duration;
                  PTBhelper('waitFor',sentEndTime,kbIdx,escapeKey);
 
                 %Blank ITI
                 PTBhelper('stimText', wPtr, ' ', sentFontSize);
                 blankEndTime = sentEndTime + ITI;
                 PTBhelper('waitFor',blankEndTime,kbIdx,escapeKey);
+                onset = sentEndTime;
             end
             
             %Update loop variables
             item_index = item_index + 1;
-            onset = sentEndTime;                
+                            
 
 
         end

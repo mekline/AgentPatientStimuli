@@ -18,7 +18,7 @@ function TextToImage(order, run)
     
     item_index = 1;
     %for i=1:numSentences
-    for i=1:numSentences
+    for i=(numSentences-1):numSentences
         
         text = sentences{i};
         agent = [agentNames{i} ' ' agentShapes{i}];
@@ -35,30 +35,32 @@ function TextToImage(order, run)
                 adjustment = 4;
         end
         text_none = blanks(length(agent)-adjustment);
-
-        if ~strcmp(char(all_materials.Condition{i}),'NULL ')
-            %Sets up image and overlays text
-            I = imread('blank-white-rectangle.png');
-            position = [250 1000];
-            position_highlight = [275 1000];
-
-            RGB = insertText(I,position,text,'FontSize',110,'BoxOpacity',0,'Font','Courier');
-            RGB = insertText(RGB,position_highlight,text_none,'FontSize',150,'BoxOpacity',.4,'Font','Courier');
-
-            %Sets up file to save; numbers indicate index at which stimulus
-            %was presented
-            fileToSave = ['AgentPatientStimuli_image' num2str(item_index) '.jpg'];
-            fileToSave = fullfile(IMAGE_DIR, fileToSave);
-
-            %Displays text image
-            %figure
-            %imshow(RGB)
-
-            %Saves text image
-            imwrite(RGB,fileToSave,'jpg')
-            
-            %Increments counter
-            item_index = item_index + 1;
+        
+        null = ['start' char(all_materials.Condition{i}) 'end']
+        if ~strcmp(char(all_materials.Condition{i}),'NULL   ')
+            'cat'
+%             %Sets up image and overlays text
+%             I = imread('blank-white-rectangle.png');
+%             position = [250 1000];
+%             position_highlight = [275 1000];
+% 
+%             RGB = insertText(I,position,text,'FontSize',110,'BoxOpacity',0,'Font','Courier');
+%             RGB = insertText(RGB,position_highlight,text_none,'FontSize',150,'BoxOpacity',.4,'Font','Courier');
+% 
+%             %Sets up file to save; numbers indicate index at which stimulus
+%             %was presented
+%             fileToSave = ['AgentPatientStimuli_image' num2str(item_index) '.jpg'];
+%             fileToSave = fullfile(IMAGE_DIR, fileToSave);
+% 
+%             %Displays text image
+%             %figure
+%             %imshow(RGB)
+% 
+%             %Saves text image
+%             imwrite(RGB,fileToSave,'jpg')
+%             
+%             %Increments counter
+%             item_index = item_index + 1;
         end
         
     end

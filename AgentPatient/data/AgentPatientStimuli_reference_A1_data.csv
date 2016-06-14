@@ -1,0 +1,217 @@
+SubjID,Run,Order,Onset,Duration,Condition,Flip,Sentence,AgentName,AgentShape,PatientName,PatientShape
+reference,1,A,0,0.6,Agent,1,Kyle Square is being rolled by Melissa Oval. (Agent highlight),,,,
+reference,1,A,0.230000000000018,0.6,Agent,1,Melissa Oval is being balanced by Lily Triangle. (Agent highlight),,,,
+reference,1,A,0.460000000000036,0.6,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,0.460000000000036,0.6,Patient,0,Melissa Oval is shaking Kyle Square. (Patient highlight),,,,
+reference,1,A,0.690000000000055,0.6,Agent,1,Melissa Oval is being shaken by Lily Triangle. (Agent highlight),,,,
+reference,1,A,0.920000000000073,0.6,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,0.920000000000073,0.6,Agent,1,Kyle Square is being stopped by Lily Triangle. (Agent highlight),,,,
+reference,1,A,1.15000000000009,1,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,1.15000000000009,0.6,Patient,0,Lily Triangle is bouncing Zach Star. (Patient highlight),,,,
+reference,1,A,1.38000000000011,0.8,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,1.38000000000011,0.6,Patient,0,Kyle Square is balancing Lily Triangle. (Patient highlight),,,,
+reference,1,A,1.61000000000013,0.8,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,1.61000000000013,0.6,Agent,1,Kyle Square is being balanced by Zach Star. (Agent highlight),,,,
+reference,1,A,1.84000000000015,1.8,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,1.84000000000015,0.6,Agent,1,Zach Star is being rolled by Kyle Square. (Agent highlight),,,,
+reference,1,A,2.07000000000016,0.6,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,2.07000000000016,0.6,Patient,0,Lily Triangle is bouncing Kyle Square. (Patient highlight),,,,
+reference,1,A,2.30000000000018,0.6,Patient,1,Melissa Oval is being balanced by Lily Triangle. (Patient highlight),,,,
+reference,1,A,2.5300000000002,0.6,Patient,1,Zach Star is being stopped by Melissa Oval. (Patient highlight),,,,
+reference,1,A,2.76000000000022,0.6,Agent,1,Zach Star is being rolled by Melissa Oval. (Agent highlight),,,,
+reference,1,A,2.99000000000024,1.6,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,2.99000000000024,0.6,Agent,0,Kyle Square is stopping Zach Star. (Agent highlight),,,,
+reference,1,A,3.22000000000025,0.4,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,3.22000000000025,0.6,Agent,0,Kyle Square is rolling Melissa Oval. (Agent highlight),,,,
+reference,1,A,3.45000000000027,0.6,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,3.45000000000027,0.6,Agent,1,Kyle Square is being balanced by Melissa Oval. (Agent highlight),,,,
+reference,1,A,3.68000000000029,0.2,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,3.68000000000029,0.6,Patient,0,Lily Triangle is rolling Melissa Oval. (Patient highlight),,,,
+reference,1,A,3.91000000000031,0.8,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,3.91000000000031,0.6,Patient,0,Kyle Square is rolling Lily Triangle. (Patient highlight),,,,
+reference,1,A,4.14000000000033,2,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,4.14000000000033,0.6,Agent,1,Lily Triangle is being balanced by Melissa Oval. (Agent highlight),,,,
+reference,1,A,4.37000000000035,0.6,Patient,0,Zach Star is balancing Lily Triangle. (Patient highlight),,,,
+reference,1,A,4.60000000000036,0.4,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,4.60000000000036,0.6,Patient,1,Melissa Oval is being bounced by Lily Triangle. (Patient highlight),,,,
+reference,1,A,4.83000000000038,1.4,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,4.83000000000038,0.6,Agent,1,Kyle Square is being stopped by Zach Star. (Agent highlight),,,,
+reference,1,A,5.0600000000004,0.4,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,5.0600000000004,0.6,Agent,0,Melissa Oval is bouncing Zach Star. (Agent highlight),,,,
+reference,1,A,5.29000000000042,1.2,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,5.29000000000042,0.6,Patient,1,Lily Triangle is being stopped by Zach Star. (Patient highlight),,,,
+reference,1,A,5.52000000000044,0.6,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,5.52000000000044,0.6,Agent,0,Kyle Square is bouncing Lily Triangle. (Agent highlight),,,,
+reference,1,A,5.75000000000045,0.2,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,5.75000000000045,0.6,Patient,1,Melissa Oval is being shaken by Lily Triangle. (Patient highlight),,,,
+reference,1,A,5.98000000000047,0.4,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,5.98000000000047,0.6,Agent,1,Lily Triangle is being bounced by Zach Star. (Agent highlight),,,,
+reference,1,A,6.21000000000049,0.6,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,6.21000000000049,0.6,Agent,0,Kyle Square is shaking Melissa Oval. (Agent highlight),,,,
+reference,1,A,6.44000000000051,0.8,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,6.44000000000051,0.6,Patient,1,Lily Triangle is being bounced by Zach Star. (Patient highlight),,,,
+reference,1,A,6.67000000000053,0.6,Patient,1,Melissa Oval is being stopped by Zach Star. (Patient highlight),,,,
+reference,1,A,6.90000000000055,0.2,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,6.90000000000055,0.6,Agent,0,Lily Triangle is rolling Melissa Oval. (Agent highlight),,,,
+reference,1,A,7.13000000000056,0.6,Patient,1,Kyle Square is being shaken by Zach Star. (Patient highlight),,,,
+reference,1,A,7.36000000000058,0.2,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,7.36000000000058,0.6,Patient,0,Melissa Oval is rolling Lily Triangle. (Patient highlight),,,,
+reference,1,A,7.5900000000006,0.6,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,7.5900000000006,0.6,Patient,0,Lily Triangle is stopping Zach Star. (Patient highlight),,,,
+reference,1,A,7.82000000000062,0.6,Patient,0,Zach Star is rolling Melissa Oval. (Patient highlight),,,,
+reference,1,A,8.05000000000064,0.6,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,8.05000000000064,0.6,Patient,1,Zach Star is being rolled by Melissa Oval. (Patient highlight),,,,
+reference,1,A,8.28000000000065,0.6,Patient,1,Melissa Oval is being stopped by Lily Triangle. (Patient highlight),,,,
+reference,1,A,8.51000000000067,0.4,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,8.51000000000067,0.6,Agent,0,Kyle Square is stopping Melissa Oval. (Agent highlight),,,,
+reference,1,A,8.74000000000069,2,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,8.74000000000069,0.6,Patient,0,Lily Triangle is balancing Zach Star. (Patient highlight),,,,
+reference,1,A,8.97000000000071,0.6,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,8.97000000000071,0.6,Agent,1,Kyle Square is being bounced by Zach Star. (Agent highlight),,,,
+reference,1,A,9.20000000000073,0.4,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,9.20000000000073,0.6,Agent,0,Lily Triangle is bouncing Zach Star. (Agent highlight),,,,
+reference,1,A,9.43000000000075,1.2,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,9.43000000000075,0.6,Agent,0,Lily Triangle is rolling Kyle Square. (Agent highlight),,,,
+reference,1,A,9.66000000000076,0.4,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,9.66000000000076,0.6,Agent,1,Zach Star is being balanced by Melissa Oval. (Agent highlight),,,,
+reference,1,A,9.89000000000078,0.6,Agent,0,Zach Star is rolling Lily Triangle. (Agent highlight),,,,
+reference,1,A,10.1200000000008,1.8,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,10.1200000000008,0.6,Patient,0,Kyle Square is bouncing Lily Triangle. (Patient highlight),,,,
+reference,1,A,10.3500000000008,0.2,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,10.3500000000008,0.6,Agent,1,Kyle Square is being rolled by Zach Star. (Agent highlight),,,,
+reference,1,A,10.5800000000008,0.2,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,10.5800000000008,0.6,Patient,0,Kyle Square is bouncing Zach Star. (Patient highlight),,,,
+reference,1,A,10.8100000000009,1.4,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,10.8100000000009,0.6,Agent,1,Kyle Square is being shaken by Lily Triangle. (Agent highlight),,,,
+reference,1,A,11.0400000000009,0.4,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,11.0400000000009,0.6,Patient,1,Kyle Square is being balanced by Zach Star. (Patient highlight),,,,
+reference,1,A,11.2700000000009,1,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,11.2700000000009,0.6,Patient,1,Zach Star is being shaken by Lily Triangle. (Patient highlight),,,,
+reference,1,A,11.5000000000009,0.4,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,11.5000000000009,0.6,Patient,1,Zach Star is being rolled by Kyle Square. (Patient highlight),,,,
+reference,1,A,11.7300000000009,0.4,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,11.7300000000009,0.6,Patient,1,Melissa Oval is being balanced by Kyle Square. (Patient highlight),,,,
+reference,1,A,11.9600000000009,1.2,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,11.9600000000009,0.6,Agent,1,Melissa Oval is being stopped by Lily Triangle. (Agent highlight),,,,
+reference,1,A,12.190000000001,0.4,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,12.190000000001,0.6,Agent,1,Kyle Square is being bounced by Melissa Oval. (Agent highlight),,,,
+reference,1,A,12.420000000001,0.6,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,12.420000000001,0.6,Patient,1,Lily Triangle is being shaken by Kyle Square. (Patient highlight),,,,
+reference,1,A,12.650000000001,0.6,Agent,1,Melissa Oval is being balanced by Zach Star. (Agent highlight),,,,
+reference,1,A,12.880000000001,1,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,12.880000000001,0.6,Patient,0,Kyle Square is bouncing Melissa Oval. (Patient highlight),,,,
+reference,1,A,13.110000000001,0.6,Patient,1,Kyle Square is being stopped by Zach Star. (Patient highlight),,,,
+reference,1,A,13.3400000000011,1.8,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,13.3400000000011,0.6,Agent,0,Kyle Square is rolling Lily Triangle. (Agent highlight),,,,
+reference,1,A,13.5700000000011,0.6,Patient,0,Zach Star is rolling Lily Triangle. (Patient highlight),,,,
+reference,1,A,13.8000000000011,0.6,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,13.8000000000011,0.6,Agent,1,Kyle Square is being shaken by Zach Star. (Agent highlight),,,,
+reference,1,A,14.0300000000011,0.6,Agent,0,Lily Triangle is bouncing Kyle Square. (Agent highlight),,,,
+reference,1,A,14.2600000000011,0.8,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,14.2600000000011,0.6,Patient,1,Kyle Square is being stopped by Melissa Oval. (Patient highlight),,,,
+reference,1,A,14.4900000000011,1,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,14.4900000000011,0.6,Agent,1,Kyle Square is being stopped by Melissa Oval. (Agent highlight),,,,
+reference,1,A,14.7200000000012,0.6,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,14.7200000000012,0.6,Agent,0,Melissa Oval is bouncing Lily Triangle. (Agent highlight),,,,
+reference,1,A,14.9500000000012,0.6,Patient,1,Kyle Square is being rolled by Melissa Oval. (Patient highlight),,,,
+reference,1,A,15.1800000000012,1,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,15.1800000000012,0.6,Patient,0,Zach Star is shaking Melissa Oval. (Patient highlight),,,,
+reference,1,A,15.4100000000012,0.8,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,15.4100000000012,0.6,Patient,0,Zach Star is bouncing Melissa Oval. (Patient highlight),,,,
+reference,1,A,15.6400000000012,0.2,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,15.6400000000012,0.6,Agent,1,Zach Star is being shaken by Lily Triangle. (Agent highlight),,,,
+reference,1,A,15.8700000000013,0.8,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,15.8700000000013,0.6,Patient,1,Zach Star is being balanced by Melissa Oval. (Patient highlight),,,,
+reference,1,A,16.1000000000013,0.8,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,16.1000000000013,0.6,Patient,0,Kyle Square is stopping Lily Triangle. (Patient highlight),,,,
+reference,1,A,16.3300000000013,0.4,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,16.3300000000013,0.6,Patient,0,Melissa Oval is bouncing Zach Star. (Patient highlight),,,,
+reference,1,A,16.5600000000013,1.4,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,16.5600000000013,0.6,Patient,0,Kyle Square is stopping Zach Star. (Patient highlight),,,,
+reference,1,A,16.7900000000013,0.4,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,16.7900000000013,0.6,Patient,0,Melissa Oval is shaking Zach Star. (Patient highlight),,,,
+reference,1,A,17.0200000000013,0.2,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,17.0200000000013,0.6,Agent,0,Kyle Square is bouncing Melissa Oval. (Agent highlight),,,,
+reference,1,A,17.2500000000014,0.6,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,17.2500000000014,0.6,Patient,1,Melissa Oval is being balanced by Zach Star. (Patient highlight),,,,
+reference,1,A,17.4800000000014,3.6,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,17.4800000000014,0.6,Agent,0,Lily Triangle is stopping Zach Star. (Agent highlight),,,,
+reference,1,A,17.7100000000014,0.6,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,17.7100000000014,0.6,Agent,0,Zach Star is shaking Lily Triangle. (Agent highlight),,,,
+reference,1,A,17.9400000000014,1.4,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,17.9400000000014,0.6,Patient,1,Kyle Square is being bounced by Melissa Oval. (Patient highlight),,,,
+reference,1,A,18.1700000000014,0.6,Agent,0,Lily Triangle is rolling Zach Star. (Agent highlight),,,,
+reference,1,A,18.4000000000015,0.6,Patient,1,Kyle Square is being stopped by Lily Triangle. (Patient highlight),,,,
+reference,1,A,18.6300000000015,0.6,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,18.6300000000015,0.6,Agent,0,Lily Triangle is balancing Kyle Square. (Agent highlight),,,,
+reference,1,A,18.8600000000015,0.4,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,18.8600000000015,0.6,Agent,1,Lily Triangle is being stopped by Melissa Oval. (Agent highlight),,,,
+reference,1,A,19.0900000000015,1.2,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,19.0900000000015,0.6,Patient,1,Lily Triangle is being stopped by Melissa Oval. (Patient highlight),,,,
+reference,1,A,19.3200000000015,0.8,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,19.3200000000015,0.6,Patient,1,Kyle Square is being bounced by Zach Star. (Patient highlight),,,,
+reference,1,A,19.5500000000015,0.4,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,19.5500000000015,0.6,Agent,1,Zach Star is being balanced by Kyle Square. (Agent highlight),,,,
+reference,1,A,19.7800000000016,0.6,Agent,1,Melissa Oval is being stopped by Zach Star. (Agent highlight),,,,
+reference,1,A,20.0100000000016,0.4,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,20.0100000000016,0.6,Patient,1,Kyle Square is being balanced by Melissa Oval. (Patient highlight),,,,
+reference,1,A,20.2400000000016,0.8,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,20.2400000000016,0.6,Agent,0,Zach Star is balancing Lily Triangle. (Agent highlight),,,,
+reference,1,A,20.4700000000016,0.4,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,20.4700000000016,0.6,Agent,1,Zach Star is being stopped by Melissa Oval. (Agent highlight),,,,
+reference,1,A,20.7000000000016,0.8,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,20.7000000000016,0.6,Agent,0,Lily Triangle is balancing Zach Star. (Agent highlight),,,,
+reference,1,A,20.9300000000017,0.6,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,20.9300000000017,0.6,Patient,0,Zach Star is shaking Lily Triangle. (Patient highlight),,,,
+reference,1,A,21.1600000000017,0.6,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,21.1600000000017,0.6,Agent,0,Melissa Oval is rolling Lily Triangle. (Agent highlight),,,,
+reference,1,A,21.3900000000017,0.2,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,21.3900000000017,0.6,Agent,0,Kyle Square is stopping Lily Triangle. (Agent highlight),,,,
+reference,1,A,21.6200000000017,0.2,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,21.6200000000017,0.6,Patient,1,Kyle Square is being rolled by Zach Star. (Patient highlight),,,,
+reference,1,A,21.8500000000017,0.6,Patient,0,Lily Triangle is balancing Kyle Square. (Patient highlight),,,,
+reference,1,A,22.0800000000017,0.6,Patient,0,Melissa Oval is shaking Lily Triangle. (Patient highlight),,,,
+reference,1,A,22.3100000000018,0.4,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,22.3100000000018,0.6,Patient,0,Melissa Oval is bouncing Lily Triangle. (Patient highlight),,,,
+reference,1,A,22.5400000000018,0.2,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,22.5400000000018,0.6,Agent,1,Melissa Oval is being bounced by Lily Triangle. (Agent highlight),,,,
+reference,1,A,22.7700000000018,0.2,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,22.7700000000018,0.6,Agent,0,Zach Star is bouncing Melissa Oval. (Agent highlight),,,,
+reference,1,A,23.0000000000018,0.6,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,23.0000000000018,0.6,Agent,1,Lily Triangle is being stopped by Zach Star. (Agent highlight),,,,
+reference,1,A,23.2300000000018,2.4,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,23.2300000000018,0.6,Patient,0,Lily Triangle is rolling Zach Star. (Patient highlight),,,,
+reference,1,A,23.4600000000019,1,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,23.4600000000019,0.6,Patient,0,Kyle Square is shaking Melissa Oval. (Patient highlight),,,,
+reference,1,A,23.6900000000019,0.8,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,23.6900000000019,0.6,Agent,0,Kyle Square is balancing Lily Triangle. (Agent highlight),,,,
+reference,1,A,23.9200000000019,0.8,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,23.9200000000019,0.6,Agent,0,Zach Star is rolling Melissa Oval. (Agent highlight),,,,
+reference,1,A,24.1500000000019,0.4,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,24.1500000000019,0.6,Patient,1,Zach Star is being shaken by Kyle Square. (Patient highlight),,,,
+reference,1,A,24.3800000000019,0.6,Agent,1,Lily Triangle is being shaken by Kyle Square. (Agent highlight),,,,
+reference,1,A,24.6100000000019,0.6,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,24.6100000000019,0.6,Agent,1,Melissa Oval is being balanced by Kyle Square. (Agent highlight),,,,
+reference,1,A,24.840000000002,0.8,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,24.840000000002,0.6,Agent,1,Zach Star is being shaken by Kyle Square. (Agent highlight),,,,
+reference,1,A,25.070000000002,0.2,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,25.070000000002,0.6,Patient,0,Lily Triangle is rolling Kyle Square. (Patient highlight),,,,
+reference,1,A,25.300000000002,0.4,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,25.300000000002,0.6,Agent,0,Melissa Oval is shaking Lily Triangle. (Agent highlight),,,,
+reference,1,A,25.530000000002,0.4,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,25.530000000002,0.6,Patient,1,Lily Triangle is being balanced by Melissa Oval. (Patient highlight),,,,
+reference,1,A,25.760000000002,1,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,25.760000000002,0.6,Patient,1,Zach Star is being balanced by Kyle Square. (Patient highlight),,,,
+reference,1,A,25.9900000000021,0.8,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,25.9900000000021,0.6,Agent,0,Melissa Oval is shaking Kyle Square. (Agent highlight),,,,
+reference,1,A,26.2200000000021,0.6,Patient,0,Kyle Square is stopping Melissa Oval. (Patient highlight),,,,
+reference,1,A,26.4500000000021,1.2,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,26.4500000000021,0.6,Agent,0,Kyle Square is bouncing Zach Star. (Agent highlight),,,,
+reference,1,A,26.6800000000021,0.2,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,26.6800000000021,0.6,Agent,0,Zach Star is shaking Melissa Oval. (Agent highlight),,,,
+reference,1,A,26.9100000000021,0.6,Patient,1,Kyle Square is being shaken by Lily Triangle. (Patient highlight),,,,
+reference,1,A,27.1400000000021,0.6,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,27.1400000000021,0.6,Agent,0,Melissa Oval is shaking Zach Star. (Agent highlight),,,,
+reference,1,A,27.3700000000022,0.2,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+reference,1,A,27.3700000000022,0.6,Patient,0,Kyle Square is rolling Melissa Oval. (Patient highlight),,,,
+reference,1,A,27.6000000000022,1,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
