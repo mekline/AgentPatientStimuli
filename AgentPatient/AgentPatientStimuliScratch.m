@@ -222,15 +222,15 @@ function AgentPatientStimuliScratch(subjID, order, run)
                 PTBhelper('waitFor',fixEndTime,kbIdx,escapeKey);
 
                 %Sentence
-                %PTBhelper('stimText', wPtr, sentence, sentFontSize);
-                IMAGE_DIR = fullfile(pwd, 'images');
-                image = ['AgentPatientStimuli_image' char(all_materials.ItemNumber(eventNum)) '.jpg'];
-                image = fullfile(IMAGE_DIR, image);
-                %PTBhelper('stimImage', wPtr, image);
-                global foo;
-                foo = Screen('MakeTexture', wPtr, double(imread([image '.jpg'], 'JPG')));
-                sentEndTime = fixEndTime + SENT_DUR;
-                PTBhelper('waitFor',sentEndTime,kbIdx,escapeKey);
+                PTBhelper('stimText', wPtr, sentence, sentFontSize);
+%                 IMAGE_DIR = fullfile(pwd, 'images');
+%                 image = ['AgentPatientStimuli_image' char(all_materials.ItemNumber(eventNum)) '.jpg'];
+%                 image = fullfile(IMAGE_DIR, image);
+%                 %PTBhelper('stimImage', wPtr, image);
+%                 global foo;
+%                 foo = Screen('MakeTexture', wPtr, double(imread([image '.jpg'], 'JPG')));
+                 sentEndTime = fixEndTime + SENT_DUR;
+                 PTBhelper('waitFor',sentEndTime,kbIdx,escapeKey);
 
                 %Blank ITI
                 PTBhelper('stimText', wPtr, ' ', sentFontSize);

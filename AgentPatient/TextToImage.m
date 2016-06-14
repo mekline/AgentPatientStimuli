@@ -2,11 +2,11 @@ function TextToImage(order, run)
 %Takes in text and turns it into a jpeg file in images
     
     %Reads in materials file
-    ORDER_DIR = fullfile(pwd, 'orders');
-    order_filename = ['AgentPatientStimuli_Order' order num2str(run) '.csv'];
+    ORDER_DIR = fullfile(pwd, 'reference_data');
+    order_filename = ['AgentPatientStimuli_reference_' order num2str(run) '_data.csv'];
     order_filename = fullfile(ORDER_DIR, order_filename);
     all_materials = readtable(order_filename);
-    sentences = all_materials.ProgressiveActive;
+    sentences = all_materials.Sentence;
     agentNames = all_materials.AgentName;
     patientNames = all_materials.PatientName;
     agentShapes = all_materials.AgentShape;
@@ -22,6 +22,7 @@ function TextToImage(order, run)
         text = sentences{i};
         agent = [agentNames{i} ' ' agentShapes{i}];
         patient = [patientNames{i} ' ' patientShapes{i}];
+        %spaces don't work out uniformly, so adjust for each name
         switch agent
             case 'Melissa Oval'
                 adjustment = 5;
