@@ -30,8 +30,8 @@ function TextToImage(order, run)
             patient = [patientNames{i} ' ' patientShapes{i}];
 
             %Spaces don't work out uniformly, so adjust for each name
-            %Will want to switch for the one being highlighted, not nec. agent
-    %         switch agent
+            %Will want to switch for the one being highlighted
+    %         switch person
     %             case 'Melissa Oval'
     %                 adjustment = 5;
     %             case 'Lily Triangle'
@@ -42,8 +42,8 @@ function TextToImage(order, run)
     %                 adjustment = 4;
     %         end
 
-            %Makes a text object with as many spaces as there are in agent
-            highlight_box = blanks(length(agent)-adjustment);
+            %Makes a text object with as many spaces as there are in person
+            highlight_box = blanks(length(person)-adjustment);
 
 
             %Sets up image and overlays text
