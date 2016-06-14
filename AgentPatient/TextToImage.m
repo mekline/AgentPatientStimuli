@@ -51,7 +51,7 @@ function TextToImage(order, run)
             position = [250 1000];
             position_highlight = [275 1000];
 
-            RGB = insertText(I,position,text,'FontSize',110,'BoxOpacity',0,'Font','Courier');
+            RGB = insertText(I,position,text,'FontSize',110,'BoxOpacity',0,'FontName','FixedWidth');
             RGB = insertText(RGB,position_highlight,highlight_box,'FontSize',150,'BoxOpacity',.4,'Font','Courier');
 
             %Sets up file to save; numbers indicate index at which stimulus
