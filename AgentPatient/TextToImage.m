@@ -1,5 +1,8 @@
 function TextToImage(order, run)
 %Takes in text and turns it into a jpeg file in images
+
+    %Constants
+    FONT_SIZE = 110;
     
     %Reads in materials file
     ORDER_DIR = fullfile(pwd, 'reference_data');
@@ -28,6 +31,14 @@ function TextToImage(order, run)
             flip = flips{i};
             agent = [agentNames{i} ' ' agentShapes{i}];
             patient = [patientNames{i} ' ' patientShapes{i}];
+            
+            %Determine person to be highlighted
+            switch condition
+                case 'Agent'
+                    person = agent;
+                case 'Patient
+                    person = patient;
+            end
 
             %Spaces don't work out uniformly, so adjust for each name
             %Will want to switch for the one being highlighted
@@ -41,17 +52,50 @@ function TextToImage(order, run)
     %             case 'Zach Star'
     %                 adjustment = 4;
     %         end
+    
+            %Determine whether person comes 1st or 2nd in sentence
+            if (strcmp(char(condition), 'Agent') xor flip == 1)
+                position = 1;
+            else
+                position = 2;
+            end
+            
+            %Determine where highlight starts and ends, based on position
+            switch position
+                case 1
+                    %Determine where to start the highlight
+                    highlight_start = 275;
+                    %Make a string with as many spaces as there are in person
+                    highlight_box = blanks(length(person)-adjustment);
+                case 2
+                    %uhhh
 
-            %Makes a text object with as many spaces as there are in person
-            highlight_box = blanks(length(person)-adjustment);
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+            
+            
 
 
             %Sets up image and overlays text
             I = imread('blank-white-rectangle.png');
             position = [250 1000];
-            position_highlight = [275 1000];
+            position_highlight = [highlight_start 1000];
 
-            RGB = insertText(I,position,text,'FontSize',110,'BoxOpacity',0,'FontName','FixedWidth');
+            RGB = insertText(I,position,text,'FontSize',FONT_SIZE,'BoxOpacity',0,'FontName','FixedWidth');
             RGB = insertText(RGB,position_highlight,highlight_box,'FontSize',150,'BoxOpacity',.4,'Font','Courier');
 
             %Sets up file to save; numbers indicate index at which stimulus
