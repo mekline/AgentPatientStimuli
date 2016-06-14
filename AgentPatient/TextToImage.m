@@ -20,17 +20,32 @@ function TextToImage(order, run)
     for i=1:numSentences
         
         text = sentences{i};
-        agent = [agentNames{i} agentShapes{i}];
-        patient = [patientNames{i} patientShapes{i}];
-        text_none = blanks(ceil(length(agent)));
+        agent = [agentNames{i} ' ' agentShapes{i}];
+        patient = [patientNames{i} ' ' patientShapes{i}];
+        switch agent
+            case 'Melissa Oval'
+                adjustment = 5;
+                highlight_start = 275; 
+            case 'Lily Triangle'
+                adjustment = 5;
+                highlight_start = 275; 
+            case 'Kyle Square'
+                adjustment = 4;
+                highlight_start = 275; 
+            case 'Zach Star'
+                adjustment = 4;
+                highlight_start = 275; 
+        end
+        text_none = blanks(length(agent)-adjustment);
         
         if ~strcmp(text,'N/A')
             %Sets up image and overlays text
             I = imread('blank-white-rectangle.png');
             position = [250 1000];
+            position_highlight = [highlight_start 1000];
 
-            RGB = insertText(I,position,text,'FontSize',130,'BoxOpacity',0,'Font','Courier');
-            RGB = insertText(RGB,position,text_none,'FontSize',150,'BoxOpacity',.4,'Font','Courier');
+            RGB = insertText(I,position,text,'FontSize',110,'BoxOpacity',0,'Font','Courier');
+            RGB = insertText(RGB,position_highlight,text_none,'FontSize',150,'BoxOpacity',.4,'Font','Courier');
 
             %Sets up file to save; numbers indicate index at which stimulus
             %was presented
