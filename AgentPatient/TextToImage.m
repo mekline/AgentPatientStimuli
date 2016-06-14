@@ -1,34 +1,69 @@
-function TextToImage()
+function TextToImage(order, run)
 %Takes in text and turns it into a jpeg file in images
     
     %Reads in materials file
-    materials_filename = 'AgentPatientStimuli_materials.csv';
-    all_materials = readtable(materials_filename);
-    sentences = all_materials.ProgressiveSentence;
+    ORDER_DIR = fullfile(pwd, 'reference_data');
+    order_filename = ['AgentPatientStimuli_reference_' order num2str(run) '_data.csv'];
+    order_filename = fullfile(ORDER_DIR, order_filename);
+    all_materials = readtable(order_filename);
+    sentences = all_materials.Sentence;
+    agentNames = all_materials.AgentName;
+    patientNames = all_materials.PatientName;
+    agentShapes = all_materials.AgentShape;
+    patientShapes = all_materials.PatientShape;
     numSentences = length(sentences);
     
     %Save file in image folder
-    IMAGE_DIR = fullfile(pwd, 'images');
+    IMAGE_DIR = fullfile(pwd, 'debug images');
     
-    
+    item_index = 1;
     for i=1:numSentences
         
-        %Sets up image and overlays text
-        I = imread('blank-white-rectangle.png');
-        position = [250 1000];
         text = sentences{i};
-        RGB = insertText(I,position,text,'FontSize',150,'BoxOpacity',0);
+        agent = [agentNames{i} ' ' agentShapes{i}];
+        patient = [patientNames{i} ' ' patientShapes{i}];
+        %spaces don't work out uniformly, so adjust for each name
+        switch agent
+            case 'Melissa Oval'
+                adjustment = 5;
+                highlight_start = 275; 
+            case 'Lily Triangle'
+                adjustment = 5;
+                highlight_start = 275; 
+            case 'Kyle Square'
+                adjustment = 4;
+                highlight_start = 275; 
+            case 'Zach Star'
+                adjustment = 4;
+                highlight_start = 275; 
+        end
+        text_none = blanks(length(agent)-adjustment);
         
-        %Sets up file to save
-        fileToSave = ['AgentPatientStimuli_image' num2str(i) '.jpg'];
-        fileToSave = fullfile(IMAGE_DIR, fileToSave);
+        if ~strcmp(text,'N/A')
+            %Sets up image and overlays text
+            I = imread('blank-white-rectangle.png');
+            position = [250 1000];
+            position_highlight = [highlight_start 1000];
+
+            RGB = insertText(I,position,text,'FontSize',110,'BoxOpacity',0,'Font','Courier');
+            RGB = insertText(RGB,position_highlight,text_none,'FontSize',150,'BoxOpacity',.4,'Font','Courier');
+
+            %Sets up file to save; numbers indicate index at which stimulus
+            %was presented
+            fileToSave = ['AgentPatientStimuli_image' num2str(item_index) '.jpg'];
+            fileToSave = fullfile(IMAGE_DIR, fileToSave);
+
+            %Displays text image
+            %figure
+            %imshow(RGB)
+
+            %Saves text image
+            imwrite(RGB,fileToSave,'jpg')
+            
+            %Increments counter
+            item_index = item_index + 1;
+        end
         
-        %Displays text image
-        %figure
-        %imshow(RGB)
-        
-        %Saves text image
-        imwrite(RGB,fileToSave,'jpg')
     end
     
     
