@@ -7,6 +7,7 @@ function TextToImage(order, run)
     order_filename = fullfile(ORDER_DIR, order_filename);
     all_materials = readtable(order_filename);
     sentences = all_materials.Sentence;
+    conditions = all_materials.Condition;
     agentNames = all_materials.AgentName;
     patientNames = all_materials.PatientName;
     agentShapes = all_materials.AgentShape;
@@ -17,10 +18,11 @@ function TextToImage(order, run)
     IMAGE_DIR = fullfile(pwd, 'debug images');
     
     item_index = 1;
-    %for i=1:numSentences
-    for i=(numSentences-1):numSentences
+    
+    for i=1:numSentences
         
         text = sentences{i};
+        condition = conditions{i};
         agent = [agentNames{i} ' ' agentShapes{i}];
         patient = [patientNames{i} ' ' patientShapes{i}];
         %spaces don't work out uniformly, so adjust for each name
@@ -35,37 +37,33 @@ function TextToImage(order, run)
                 adjustment = 4;
         end
         text_none = blanks(length(agent)-adjustment);
-        
-        null = ['start' char(all_materials.Condition{i}) 'end']
-        if ~strcmp(char(all_materials.Condition{i}),'NULL   ')
-            'cat'
-%             %Sets up image and overlays text
-%             I = imread('blank-white-rectangle.png');
-%             position = [250 1000];
-%             position_highlight = [275 1000];
-% 
-%             RGB = insertText(I,position,text,'FontSize',110,'BoxOpacity',0,'Font','Courier');
-%             RGB = insertText(RGB,position_highlight,text_none,'FontSize',150,'BoxOpacity',.4,'Font','Courier');
-% 
-%             %Sets up file to save; numbers indicate index at which stimulus
-%             %was presented
-%             fileToSave = ['AgentPatientStimuli_image' num2str(item_index) '.jpg'];
-%             fileToSave = fullfile(IMAGE_DIR, fileToSave);
-% 
-%             %Displays text image
-%             %figure
-%             %imshow(RGB)
-% 
-%             %Saves text image
-%             imwrite(RGB,fileToSave,'jpg')
-%             
-%             %Increments counter
-%             item_index = item_index + 1;
+
+        if ~strcmp(char(condition),'NULL ')
+            %Sets up image and overlays text
+            I = imread('blank-white-rectangle.png');
+            position = [250 1000];
+            position_highlight = [275 1000];
+
+            RGB = insertText(I,position,text,'FontSize',110,'BoxOpacity',0,'Font','Courier');
+            RGB = insertText(RGB,position_highlight,text_none,'FontSize',150,'BoxOpacity',.4,'Font','Courier');
+
+            %Sets up file to save; numbers indicate index at which stimulus
+            %was presented
+            fileToSave = ['AgentPatientStimuli_image' num2str(item_index) '.jpg'];
+            fileToSave = fullfile(IMAGE_DIR, fileToSave);
+
+            %Displays text image
+            %figure
+            %imshow(RGB)
+
+            %Saves text image
+            imwrite(RGB,fileToSave,'jpg')
+            
+            %Increments counter
+            item_index = item_index + 1;
         end
         
     end
-    
-    
 
     
 end

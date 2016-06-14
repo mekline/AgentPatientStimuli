@@ -7,6 +7,8 @@ function TextToImage(order, run)
     order_filename = fullfile(ORDER_DIR, order_filename);
     all_materials = readtable(order_filename);
     sentences = all_materials.Sentence;
+    conditions = all_materials.Condition;
+    flips = all_materials.Flip;
     agentNames = all_materials.AgentName;
     patientNames = all_materials.PatientName;
     agentShapes = all_materials.AgentShape;
@@ -17,10 +19,11 @@ function TextToImage(order, run)
     IMAGE_DIR = fullfile(pwd, 'debug images');
     
     item_index = 1;
-    %for i=1:numSentences
+    
     for i=1:numSentences
         
         text = sentences{i};
+        condition = conditions{i};
         agent = [agentNames{i} ' ' agentShapes{i}];
         patient = [patientNames{i} ' ' patientShapes{i}];
         %spaces don't work out uniformly, so adjust for each name
@@ -36,7 +39,7 @@ function TextToImage(order, run)
         end
         text_none = blanks(length(agent)-adjustment);
 
-        if ~strcmp(char(all_materials.Condition{i}),'NULL ')
+        if ~strcmp(char(condition),'NULL ')
             %Sets up image and overlays text
             I = imread('blank-white-rectangle.png');
             position = [250 1000];
@@ -62,8 +65,6 @@ function TextToImage(order, run)
         end
         
     end
-    
-    
 
     
 end
