@@ -60,9 +60,9 @@ function TextToImage(order, run)
             
             %Determine whether person comes 1st or 2nd in sentence
             if xor(strcmp(char(condition), 'Agent'), strcmp(flip, num2str(1)))
-                position = 1
+                position = 1;
             else
-                position = 2
+                position = 2;
             end
             
             %Determine where highlight starts and ends, based on position
