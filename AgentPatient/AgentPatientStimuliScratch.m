@@ -207,9 +207,9 @@ function AgentPatientStimuliScratch(subjID, order, run)
             else %If there's a sentence to be presented (i.e., not NULL)
                 
                 if char(all_materials.Flip(item_index)) == '0'
-                    sentence = char([char(all_materials.ProgressiveActive(item_index)) ' (' char(all_materials.Condition(item_index)) ' highlight)']);
+                    sentence = char(all_materials.ProgressiveActive(item_index));
                 elseif char(all_materials.Flip(item_index)) == '1'
-                    sentence = char([char(all_materials.ProgressivePassive(item_index)) ' (' char(all_materials.Condition(item_index)) ' highlight)']);
+                    sentence = char(all_materials.ProgressivePassive(item_index));
                 end
                 
                 %Save Sentence, Onset, Duration to results file

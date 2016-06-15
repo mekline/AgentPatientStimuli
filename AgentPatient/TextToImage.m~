@@ -28,7 +28,7 @@ function TextToImage(order, run)
         if ~strcmp(char(condition),'NULL ')
             %Extract info for the item we're currently on
             text = sentences{i};
-            flip = flips{i};
+            gloflip = flips{i};
             agent = [agentNames{i} ' ' agentShapes{i}];
             patient = [patientNames{i} ' ' patientShapes{i}];
             
@@ -57,9 +57,13 @@ function TextToImage(order, run)
                     adjustment = 1;
             end
     
+            condition
+            flip
+            cond_is_agent = strcmp(char(condition), 'Agent')
+            flip_is_1 = flip == 1
             
             %Determine whether person comes 1st or 2nd in sentence
-            if xor(strcmp(char(condition), 'Agent'), strcmp(flip, num2str(1)))
+            if xor(strcmp(char(condition), 'Agent'), flip == 1)
                 position = 1
             else
                 position = 2
