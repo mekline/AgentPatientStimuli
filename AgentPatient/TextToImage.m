@@ -72,7 +72,7 @@ function TextToImage(order, run)
                     highlight_start = 275;
 
                 case 2
-                    highlight_start = 800; %temporary
+                    highlight_start = 2000; %temporary
             end
             
             %Make a string with as many spaces as there are characters in person
