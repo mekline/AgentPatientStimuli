@@ -3,7 +3,7 @@ function TextToImage(order, run)
 
     %Constants
     FONT_SIZE = 90;
-    EMS_TO_PIXELS = FONT_SIZE*.59;
+    EMS_TO_PIXELS = FONT_SIZE*.6;
     
     %Reads in materials file
     ORDER_DIR = fullfile(pwd, 'reference_data');
@@ -43,7 +43,7 @@ function TextToImage(order, run)
 
             %Spaces don't work out uniformly, so adjust for each name
             %Will want to switch for the one being highlighted
-            %TWo adjustment options, one for 1st position in sentence and one for 2nd
+            %TWo adjustment options, one for 1st position and one for 2n
             switch person
                 case 'Melissa Oval'
                     %adjustment = 5;
@@ -75,14 +75,14 @@ function TextToImage(order, run)
             switch position
                 case 1
                     %Determine where to start the highlight
-                    highlight_start = 275-adjustment1;
+                    highlight_start = 275;
 
                 case 2
                     highlight_start = 275 + EMS_TO_PIXELS*(length(sentences{i})-length(person)-adjustment2) %temporary
             end
             
             %Make a string with as many spaces as there are characters in person
-            highlight_box = blanks(length(person)-1);
+            highlight_box = blanks(length(person)-adjustment1);
 
             %Sets up image and overlays text
             I = imread('blank-white-rectangle.png');
