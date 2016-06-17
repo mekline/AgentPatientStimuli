@@ -20,7 +20,8 @@ function TextToImage(order, run)
     numSentences = length(sentences);
     
     %Save file in image folder
-    IMAGE_DIR = fullfile(pwd, 'debug images');
+    IMAGE_DIR = fullfile(pwd, 'images');
+    IMAGE_DIR = fullfile(IMAGE_DIR, ['Images' order num2str(run)]);
     
     item_index = 1;
     
@@ -78,7 +79,7 @@ function TextToImage(order, run)
                     highlight_start = 275-adjustment1;
 
                 case 2
-                    highlight_start = 275 + EMS_TO_PIXELS*(length(sentences{i})-length(person)-adjustment2) %temporary
+                    highlight_start = 275 + EMS_TO_PIXELS*(length(sentences{i})-length(person)-adjustment2);
             end
             
             %Make a string with as many spaces as there are characters in person
