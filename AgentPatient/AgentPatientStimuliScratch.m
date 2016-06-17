@@ -11,7 +11,7 @@ function AgentPatientStimuliScratch(subjID, order, run)
     
     %% Make sure we don't accidentally overwrite a data file
     %This is where the data file will go
-    DATA_DIR = fullfile(pwd, 'reference_data');
+    DATA_DIR = fullfile(pwd, 'data');
     %This is what we'll call the data file we're making
     fileToSave = ['AgentPatientStimuli_' subjID '_' order num2str(run) '_data.csv'];
     %The file should be in the DATA_DIR folder
@@ -58,8 +58,8 @@ function AgentPatientStimuliScratch(subjID, order, run)
     numEvents = height(all_materials); %the number of trials and fixations
     
     %% Make the experiment run faster if subjID is 'debug'
-    if strcmpi(subjID, 'reference')
-        scale = 0.02;
+    if strcmpi(subjID, 'debug')
+        scale = 0.1;
         FIX_DUR = FIX_DUR * scale;
         SENT_DUR = SENT_DUR * scale;
         ITI = ITI * scale;
