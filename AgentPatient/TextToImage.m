@@ -17,11 +17,12 @@ function TextToImage(order, run)
     patientNames = all_materials.PatientName;
     agentShapes = all_materials.AgentShape;
     patientShapes = all_materials.PatientShape;
+    itemNumbers = all_materials.ItemNumber;
     numSentences = length(sentences);
+
     
     %Save file in image folder
     IMAGE_DIR = fullfile(pwd, 'images');
-    IMAGE_DIR = fullfile(IMAGE_DIR, ['Images' order num2str(run)]);
     
     item_index = 1;
     
@@ -33,6 +34,7 @@ function TextToImage(order, run)
             flip = flips{i};
             agent = [agentNames{i} ' ' agentShapes{i}];
             patient = [patientNames{i} ' ' patientShapes{i}];
+            itemNumber = itemNumbers{i};
             
             %Determine person to be highlighted
             switch condition
@@ -40,6 +42,14 @@ function TextToImage(order, run)
                     person = agent;
                 case 'Patient'
                     person = patient;
+            end
+            
+            %Determine flip (for file naming purposes)
+            switch flip
+                case '0'
+                    flip_word = 'active';
+                case '1'
+                    flip_word = 'passive';
             end
 
             %Spaces don't work out uniformly, so adjust for each name
@@ -49,19 +59,15 @@ function TextToImage(order, run)
                 case 'Melissa Oval'
                     %adjustment = 5;
                     adjustment1 = 2;
-                    adjustment2 = 0;
                 case 'Lily Triangle'
                     %adjustment = 5;
                     adjustment1 = 0;
-                    adjustment2 = 0;
                 case 'Kyle Square'
                     %adjustment = 4;
                     adjustment1 = 1;
-                    adjustment2 = 0;
                 case 'Zach Star'
                     %adjustment = 4;
                     adjustment1 = 1;
-                    adjustment2 = 0;
             end
     
             
@@ -79,7 +85,7 @@ function TextToImage(order, run)
                     highlight_start = 275-adjustment1;
 
                 case 2
-                    highlight_start = 275 + EMS_TO_PIXELS*(length(sentences{i})-length(person)-adjustment2);
+                    highlight_start = 275 + EMS_TO_PIXELS*(length(text)-length(person));
             end
             
             %Make a string with as many spaces as there are characters in person
@@ -95,7 +101,7 @@ function TextToImage(order, run)
 
             %Sets up file to save; numbers indicate index at which stimulus
             %was presented
-            fileToSave = ['AgentPatientStimuli_image' num2str(item_index) '.jpg'];
+            fileToSave = [condition '_' flip_word '_' itemNumber '.jpg'];
             fileToSave = fullfile(IMAGE_DIR, fileToSave);
 
             %Displays text image
