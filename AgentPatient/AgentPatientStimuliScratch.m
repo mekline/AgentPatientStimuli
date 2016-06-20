@@ -168,14 +168,15 @@ function AgentPatientStimuliScratch(subjID, image_type, order, run)
             %Determine visual flip
             switch all_materials.Flip(eventNum)
                 case '0'
-                    flip_word = flip_word_0
+                    flip_word = flip_word_0;
                 case '1'
-                    flip_word = flip_word_1
+                    flip_word = flip_word_1;
             end
             
             jpg_name = [char(condition) '_' char(flip_word) '_' char(all_materials.ItemNumber) '.jpg'];
             
-            img_files{eventNum} = fullfile(IMAGE_DIR, [jpg name]);
+            img_files{all_materials.ItemNumber} = fullfile(IMAGE_DIR, [jpg name]);
+        end
     end    
     
 	%% Set up screen and keyboard for Psychtoolbox
@@ -214,9 +215,7 @@ function AgentPatientStimuliScratch(subjID, image_type, order, run)
     %Present each block
     try
         for eventNum = 1:numEvents
-            
-            
-            
+   
             %Fixation
             if strcmp(condition, 'NULL ')
                 %Show fixation cross
@@ -262,23 +261,9 @@ function AgentPatientStimuliScratch(subjID, image_type, order, run)
                 PTBhelper('waitFor',fixEndTime,kbIdx,escapeKey);
 
                 %Sentence
-                PTBhelper('stimText', wPtr, sentence, sentFontSize);
-                %For sentence images:
-%                 IMAGE_DIR = fullfile(pwd, 'images');
-%                 image = [char(condition) '_' char(flip_word_sentence) '_' char(all_materials.ItemNumber) '.jpg'];
-%                 image = fullfile(IMAGE_DIR, image);
-
-                %For visuals:
-%                 VISUAL_DIR = fullfile(pwd, 'stills');
-%                 VISUAL_DIR = fullfile(VISUAL_DIR, [condition
-%                 visual = [
-%                 visual = fullfile(VISUAL_DIR, visual);
-
-%                 %PTBhelper('stimImage', wPtr, image);
-%                 global foo;
-%                 foo = Screen('MakeTexture', wPtr, double(imread([image '.jpg'], 'JPG')));
-                 sentEndTime = fixEndTime + duration;
-                 PTBhelper('waitFor',sentEndTime,kbIdx,escapeKey);
+                PTBhelper('stimImage', wPtr, item_index, imgStims);
+                sentEndTime = fixEndTime + duration;
+                PTBhelper('waitFor',sentEndTime,kbIdx,escapeKey);
 
                 %Blank ITI
                 PTBhelper('stimText', wPtr, ' ', sentFontSize);
