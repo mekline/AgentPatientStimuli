@@ -185,6 +185,16 @@ function AgentPatientStimuliScratch(subjID, order, run)
             condition = all_materials.Condition(eventNum);
             duration = all_materials.Duration(eventNum);
             
+            %Determine visual flip
+            switch all_materials.Flip
+                case '0'
+                    flip_word_sentence = 'active';
+                    flip_word_visual = 'orig';
+                case '1'
+                    flip_word_sentence = 'passive';
+                    flip_word_visual = 'flipped';
+            end
+            
             %Fixation
             if strcmp(condition, 'NULL ')
                 %Show fixation cross
@@ -231,9 +241,17 @@ function AgentPatientStimuliScratch(subjID, order, run)
 
                 %Sentence
                 PTBhelper('stimText', wPtr, sentence, sentFontSize);
+                %For sentence images:
 %                 IMAGE_DIR = fullfile(pwd, 'images');
-%                 image = ['AgentPatientStimuli_image' char(all_materials.ItemNumber(eventNum)) '.jpg'];
+%                 image = [char(condition) '_' char(flip_word_sentence) '_' char(all_materials.ItemNumber) '.jpg'];
 %                 image = fullfile(IMAGE_DIR, image);
+
+                %For visuals:
+%                 VISUAL_DIR = fullfile(pwd, 'stills');
+%                 VISUAL_DIR = fullfile(VISUAL_DIR, [condition
+%                 visual = [
+%                 visual = fullfile(VISUAL_DIR, visual);
+
 %                 %PTBhelper('stimImage', wPtr, image);
 %                 global foo;
 %                 foo = Screen('MakeTexture', wPtr, double(imread([image '.jpg'], 'JPG')));

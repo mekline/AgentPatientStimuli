@@ -46,8 +46,8 @@ function DisplayImageTest
         image = 'AgentPatientStimuli_image1.jpg';
         image = fullfile(IMAGE_DIR, image);
         PTBhelper('stimImage', wPtr, image);
-        global foo;
-        foo = Screen('MakeTexture', wPtr, double(imread(image, 'JPG')));
+        %global foo;
+        %foo = Screen('MakeTexture', wPtr, double(imread(image, 'JPG')));
         imgEndTime = fixEndTime + IMG_DUR;
         PTBhelper('waitFor',imgEndTime,kbIdx,escapeKey);
 
