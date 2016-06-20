@@ -158,14 +158,24 @@ function AgentPatientStimuliScratch(subjID, image_type, order, run)
     
     %% Set up cells containing image file data
     img_files = cell(1:120);
-    
-    
     IMAGE_DIR = fullfile(pwd, 'images', image_type);
-    jpg_name = [char(condition) '_' char(flip_word_sentence) '_' char(all_materials.ItemNumber) '.jpg'];
-
-    for i=1:numEvents
-        if ~strcmp(char(all_materials.Condition{i}), 'NULL ') %if this trial isn't a fixation
-            img_files{i} = fullfile(IMAGE_DIR, [jpg name]);
+    
+    for eventNum=1:numEvents
+        condition = all_materials.Condition(eventNum);
+        duration = all_materials.Duration(eventNum);
+        if ~strcmp(char(condition), 'NULL ') %if this trial isn't a fixation
+            
+            %Determine visual flip
+            switch all_materials.Flip(eventNum)
+                case '0'
+                    flip_word = flip_word_0
+                case '1'
+                    flip_word = flip_word_1
+            end
+            
+            jpg_name = [char(condition) '_' char(flip_word) '_' char(all_materials.ItemNumber) '.jpg'];
+            
+            img_files{eventNum} = fullfile(IMAGE_DIR, [jpg name]);
     end    
     
 	%% Set up screen and keyboard for Psychtoolbox
@@ -204,16 +214,8 @@ function AgentPatientStimuliScratch(subjID, image_type, order, run)
     %Present each block
     try
         for eventNum = 1:numEvents
-            condition = all_materials.Condition(eventNum);
-            duration = all_materials.Duration(eventNum);
             
-            %Determine visual flip
-            switch all_materials.Flip
-                case '0'
-                    flip_word = flip_word_0
-                case '1'
-                    flip_word = flip_word_1
-            end
+            
             
             %Fixation
             if strcmp(condition, 'NULL ')

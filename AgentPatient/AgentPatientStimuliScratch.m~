@@ -40,7 +40,8 @@ function AgentPatientStimuliScratch(subjID, image_type, order, run)
             flip_word_2 = 'passive';
         case 'stills'
             flip_word_1 = 'orig';
-            flip
+            flip_word_2 = 'flipped';
+    end
 
     %% Set up orders
     
@@ -156,14 +157,17 @@ function AgentPatientStimuliScratch(subjID, image_type, order, run)
     end
     
     %% Set up cells containing image file data
+    %Determine visual flip
+
+            
     img_files = cell(1:120);
     
-    
     IMAGE_DIR = fullfile(pwd, 'images', image_type);
-    jpg_name = [char(condition) '_' char(flip_word_sentence) '_' char(all_materials.ItemNumber) '.jpg'];
+    jpg_name = [char(condition) '_' char(flip_word) '_' char(all_materials.ItemNumber) '.jpg'];
 
     for i=1:numEvents
         if ~strcmp(char(all_materials.Condition{i}), 'NULL ') %if this trial isn't a fixation
+            
             img_files{i} = fullfile(IMAGE_DIR, [jpg name]);
     end    
     
@@ -206,17 +210,6 @@ function AgentPatientStimuliScratch(subjID, image_type, order, run)
             condition = all_materials.Condition(eventNum);
             duration = all_materials.Duration(eventNum);
             
-            %Determine visual flip
-            switch all_materials.Flip
-                case '0'
-                    flip_word = flip_word_0
-                    flip_word_sentence = 'active';
-                    flip_word_visual = 'orig';
-                case '1'
-                    flip_word = flip_word_1
-                    flip_word_sentence = 'passive';
-                    flip_word_visual = 'flipped';
-            end
             
             %Fixation
             if strcmp(condition, 'NULL ')
