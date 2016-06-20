@@ -11,9 +11,9 @@ function DisplayImageTest
     screenNum = max(Screen('Screens'));  %Highest screen number is most likely correct display
     windowInfo = PTBhelper('initialize',screenNum);
 	wPtr = windowInfo{1}; %pointer to window on screen that's being referenced
-%     rect = windowInfo{2}; %dimensions of the window
-%         winWidth = rect(3);
-%         winHeight = rect(4);
+    rect = windowInfo{2}; %dimensions of the window
+        winWidth = rect(3);
+        winHeight = rect(4);
     oldEnableFlag = windowInfo{4};
     HideCursor;
     PTBhelper('stimImage',wPtr,'WHITE');
@@ -45,7 +45,11 @@ function DisplayImageTest
         IMAGE_DIR = fullfile(pwd, 'debug images');
         image = 'AgentPatientStimuli_image1.jpg';
         image = fullfile(IMAGE_DIR, image);
-        PTBhelper('stimImage', wPtr, image);
+        image = imread(image, 'JPG');
+        image = imresize(image, [winHeight, NaN]);
+        imgStim = cell(1,1)
+        imgStim{1} = Screen('MakeTexture', wPtr, double(image));
+        PTBhelper('stimImage', wPtr, 1, imgStim);
         %global foo;
         %foo = Screen('MakeTexture', wPtr, double(imread(image, 'JPG')));
         imgEndTime = fixEndTime + IMG_DUR;
