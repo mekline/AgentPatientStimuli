@@ -1,10 +1,17 @@
-function DisplayImageTest
+function DisplayImageTest(image_type)
     %% Set experiment constants
 
     %Timing (in seconds)              
     FIX_DUR     = 0.3; %Length of trial-initial fixation
     IMG_DUR   = 2.0; %Amount of time image is shown for
     ITI         = 0.2; %Inter-trial interval
+    
+    switch image_type
+        case 'sentences'
+        
+        case 'stills'
+            
+    end
     
 	%% Set up screen and keyboard for Psychtoolbox
     %Screen
@@ -29,6 +36,12 @@ function DisplayImageTest
     sentFontSize = 40;      %stimuli sentences
     fixFontSize = 40;       %fixation cross
     
+    %% Load up files into cells
+    img_files = fullfile(pwd, 'images');
+    img_files = fullfile(img_files, image_type);
+    
+    
+    
     %% Present the experiment
 	% Wait indefinitely until trigger
     PTBhelper('stimText',wPtr,'Waiting for trigger...',sentFontSize);
@@ -42,12 +55,12 @@ function DisplayImageTest
     try           
         
         %Image
-        IMAGE_DIR = fullfile(pwd, 'debug images');
-        image = 'AgentPatientStimuli_image1.jpg';
+        IMAGE_DIR = img_files;
+        image = 'Agent_passive_1.jpg';
         image = fullfile(IMAGE_DIR, image);
         image = imread(image, 'JPG');
         image = imresize(image, [winHeight, NaN]);
-        imgStim = cell(1,1)
+        imgStim = cell(1,1);
         imgStim{1} = Screen('MakeTexture', wPtr, double(image));
         PTBhelper('stimImage', wPtr, 1, imgStim);
         %global foo;
