@@ -22,7 +22,7 @@ function TextToImage(order, run)
 
     
     %Save file in image folder
-    IMAGE_DIR = fullfile(pwd, 'images');
+    IMAGE_DIR = fullfile(pwd, 'images', 'sentences');
     
     item_index = 1;
     
@@ -97,11 +97,12 @@ function TextToImage(order, run)
             position_highlight = [highlight_start 1000];
 
             RGB = insertText(I,position_text,text,'FontSize',FONT_SIZE,'BoxOpacity',0,'Font','Courier');
-            RGB = insertText(RGB,position_highlight,highlight_box,'FontSize',FONT_SIZE,'BoxOpacity',.4,'Font','Courier');
+%           RGB = insertText(RGB,position_highlight,highlight_box,'FontSize',FONT_SIZE,'BoxOpacity',.4,'Font','Courier');
 
             %Sets up file to save; numbers indicate index at which stimulus
             %was presented
-            fileToSave = [condition '_' flip_word '_' itemNumber '.jpg'];
+%           fileToSave = [condition '_' flip_word '_' itemNumber '.jpg'];
+            fileToSave = ['Base_' flip_word '_' itemNumber '.jpg'];
             fileToSave = fullfile(IMAGE_DIR, fileToSave);
 
             %Displays text image
@@ -109,7 +110,10 @@ function TextToImage(order, run)
             %imshow(RGB)
 
             %Saves text image
-            imwrite(RGB,fileToSave,'jpg')
+%           imwrite(RGB,fileToSave,'jpg')
+            if strcmp(condition, 'Agent')
+                imwrite(RGB,fileToSave,'jpg')
+            end
 
             %Increments counter
             item_index = item_index + 1;
