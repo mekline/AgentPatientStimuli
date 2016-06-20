@@ -40,8 +40,7 @@ function AgentPatientStimuliScratch(subjID, image_type, order, run)
             flip_word_2 = 'passive';
         case 'stills'
             flip_word_1 = 'orig';
-            flip_word_2 = 'flipped';
-    end
+            flip
 
     %% Set up orders
     
@@ -211,8 +210,12 @@ function AgentPatientStimuliScratch(subjID, image_type, order, run)
             switch all_materials.Flip
                 case '0'
                     flip_word = flip_word_0
+                    flip_word_sentence = 'active';
+                    flip_word_visual = 'orig';
                 case '1'
                     flip_word = flip_word_1
+                    flip_word_sentence = 'passive';
+                    flip_word_visual = 'flipped';
             end
             
             %Fixation
