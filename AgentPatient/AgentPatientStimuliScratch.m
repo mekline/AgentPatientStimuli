@@ -180,6 +180,8 @@ function AgentPatientStimuliScratch(subjID, image_type, order, run)
     %Initialize the cells and IMAGE_DIR
     img_files = cell(1,120);
     img_stims = cell(1,120);
+    base_files = cell(1,120);
+    base_stims = cell(1,120);
     IMAGE_DIR = fullfile(pwd, 'images', image_type); %the folder we're taking images from
     
     index = 1;
@@ -199,17 +201,24 @@ function AgentPatientStimuliScratch(subjID, image_type, order, run)
             end
             
             %what is the name of the image we want
-            jpg_name = [char(condition) '_' flip_word '_' char(all_materials.ItemNumber{eventNum}) '.jpg'];
+            img_name = [char(condition) '_' flip_word '_' char(all_materials.ItemNumber{eventNum}) '.jpg'];
+            base_name = ['Base_' flip_word '_' char(all_materials.ItemNumber{eventNum}) '.jpg'];
             
             %put it into a cell with the other image files
-            img_files{1,index} = fullfile(IMAGE_DIR, jpg_name);
+            img_files{1,index} = fullfile(IMAGE_DIR, img_name);
+            base_files{1,index} = fullfile(IMAGE_DIR, base_name);
             
             image = img_files{index};
             image = imread(image);
             image = imresize(image, [winHeight, NaN]);
             
+            base = base_files{index};
+            base = imread(base);
+            base = imresize(base, [winHeight, NaN]);
+            
             %make it a texture so PTBHelper will like it
             img_stims{index} = Screen('MakeTexture', wPtr, double(image));
+            base_stims{index} = Screen('MakeTexture', wPtr, double(base));
             
         index = index+1;
         end
@@ -285,7 +294,6 @@ function AgentPatientStimuliScratch(subjID, image_type, order, run)
                 PTBhelper('stimImage', wPtr, item_index, img_stims);
                 sentEndTime = fixEndTime + duration;
                 PTBhelper('waitFor',sentEndTime,kbIdx,escapeKey);
-                img_files{item_index} 
 
                 %Blank ITI
                 PTBhelper('stimText', wPtr, ' ', sentFontSize);
