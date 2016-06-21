@@ -195,7 +195,7 @@ function AgentPatientStimuliScratch(subjID, image_type, order, run)
                 case '0'
                     flip_word = flip_word_0;
                 case '1'
-                    flip_word = flip_word_0;
+                    flip_word = flip_word_1;
             end
             
             %what is the name of the image we want
@@ -214,6 +214,7 @@ function AgentPatientStimuliScratch(subjID, image_type, order, run)
         index = index+1;
         end
     end    
+  
         
     %% Set display options
     %Font sizes
@@ -257,7 +258,7 @@ function AgentPatientStimuliScratch(subjID, image_type, order, run)
                 
                 %Update loop variables
                 onset = fixEndTime;
-                
+               
             else %If there's a sentence to be presented (i.e., not NULL)
                 if char(all_materials.Flip(item_index)) == '0'
                     sentence = char(all_materials.ProgressiveActive(item_index));
@@ -274,7 +275,6 @@ function AgentPatientStimuliScratch(subjID, image_type, order, run)
                 results.Onset{eventNum} = onset - runOnset;
                 results.Duration{eventNum} = all_materials.Duration(eventNum);
                 
-                
                 %Show sentence trial
                 %Trial-initial fixation
                 PTBhelper('stimText', wPtr, '+', fixFontSize);
@@ -285,18 +285,18 @@ function AgentPatientStimuliScratch(subjID, image_type, order, run)
                 PTBhelper('stimImage', wPtr, item_index, img_stims);
                 sentEndTime = fixEndTime + duration;
                 PTBhelper('waitFor',sentEndTime,kbIdx,escapeKey);
+                img_files{item_index} 
 
                 %Blank ITI
                 PTBhelper('stimText', wPtr, ' ', sentFontSize);
                 blankEndTime = sentEndTime + ITI;
                 PTBhelper('waitFor',blankEndTime,kbIdx,escapeKey);
                 onset = sentEndTime;
+                
+                %Update loop variables
+                item_index = item_index + 1;
+                
             end
-            
-            %Update loop variables
-            item_index = item_index + 1;
-                            
-
 
         end
 
