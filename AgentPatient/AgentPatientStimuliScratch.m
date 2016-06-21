@@ -32,6 +32,7 @@ function AgentPatientStimuliScratch(subjID, image_type, order, run)
     FIX_DUR     = 0.3; %Length of trial-initial fixation
     SENT_DUR    = 6.0; %Amount of time sentence is shown for
     ITI         = 0.2; %Inter-trial interval
+    BLINK_DUR = 0.2; %Length of one blink on or off
     
     %Image type
     switch image_type
@@ -291,9 +292,15 @@ function AgentPatientStimuliScratch(subjID, image_type, order, run)
                 PTBhelper('waitFor',fixEndTime,kbIdx,escapeKey);
 
                 %Sentence
-                PTBhelper('stimImage', wPtr, item_index, img_stims);
+                %PTBhelper('stimImage', wPtr, item_index, img_stims);
                 sentEndTime = fixEndTime + duration;
-                PTBhelper('waitFor',sentEndTime,kbIdx,escapeKey);
+                %PTBhelper('waitFor',sentEndTime,kbIdx,escapeKey);
+                while GetSecs < sentEndTime
+                    PTBhelper('stimImage', wPtr, item_index, img_stims);
+                    WaitSecs(BLINK_DUR);
+                    PTBhelper('stimImage', wPtr, item_index, base_stims);
+                    WaitSecs(BLINK_DUR);
+                end
 
                 %Blank ITI
                 PTBhelper('stimText', wPtr, ' ', sentFontSize);
@@ -351,4 +358,16 @@ function [wPtr, rect] = openDebugWindow(screenNum, rect)
     Screen('Preference', 'SkipSyncTests', 1);
     [wPtr,rect] = Screen('OpenWindow',screenNum,1,rect,[],[],[],[],[],kPsychGUIWindow,[]);
 end
+
+%% Blink
+% function blink(endTime)
+%     while GetSecs < endTime
+%         PTBhelper('stimImage', wPtr, item_index, img_stims);
+%         WaitSecs(0.2);
+%         PTBhelper('stimImage', wPtr, item_index, base_stims);
+%         WaitSecs(0.2);
+%     end
+% end
+        
+
 
