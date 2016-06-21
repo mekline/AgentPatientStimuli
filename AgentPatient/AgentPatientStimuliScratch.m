@@ -36,6 +36,7 @@ function AgentPatientStimuliScratch(subjID, image_type, order, run)
     %Image type
     switch image_type
         case 'sentences'
+            %all_materials.Flip is just 0 or 1; this is what it means in each case
             flip_word_1 = 'active';
             flip_word_2 = 'passive';
         case 'stills'
@@ -157,25 +158,34 @@ function AgentPatientStimuliScratch(subjID, image_type, order, run)
     end
     
     %% Set up cells containing image file data
-    img_files = cell(1:120);
+    img_files = cell(1:12);
+    img_stims = cell(1:12);
     IMAGE_DIR = fullfile(pwd, 'images', image_type);
     
     for eventNum=1:numEvents
         condition = all_materials.Condition(eventNum);
         duration = all_materials.Duration(eventNum);
+        flip = all_materials.Flip{eventNum};
         if ~strcmp(char(condition), 'NULL ') %if this trial isn't a fixation
             
             %Determine visual flip
-            switch all_materials.Flip(eventNum)
+            switch flip
                 case '0'
                     flip_word = flip_word_0;
                 case '1'
                     flip_word = flip_word_1;
             end
             
-            jpg_name = [char(condition) '_' char(flip_word) '_' char(all_materials.ItemNumber) '.jpg'];
+            %what is the name of the image we want
+            jpg_name = [char(condition) '_' flip_word '_' char(all_materials.ItemNumber{eventNum}) '.jpg'];
             
-            img_files{all_materials.ItemNumber} = fullfile(IMAGE_DIR, [jpg name]);
+            %put it into a cell of files
+            img_files{all_materials.ItemNumber(eventNum)} = fullfile(IMAGE_DIR, jpg_name);
+            
+            %make it a texture so PTBHelper will like it
+            img_stims{all_materials.ItemNumber(eventNum)} = Screen('MakeTexture', wPtr, double(imread(img_files{all_materials.ItemNumber(eventNum)})));
+            
+            
         end
     end    
     
@@ -261,7 +271,7 @@ function AgentPatientStimuliScratch(subjID, image_type, order, run)
                 PTBhelper('waitFor',fixEndTime,kbIdx,escapeKey);
 
                 %Sentence
-                PTBhelper('stimImage', wPtr, item_index, imgStims);
+                PTBhelper('stimImage', wPtr, item_index, img_stims);
                 sentEndTime = fixEndTime + duration;
                 PTBhelper('waitFor',sentEndTime,kbIdx,escapeKey);
 
