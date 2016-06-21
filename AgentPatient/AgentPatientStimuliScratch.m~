@@ -270,18 +270,18 @@ function AgentPatientStimuliScratch(subjID, image_type, order, run)
                 onset = fixEndTime;
                
             else %If there's a sentence to be presented (i.e., not NULL)
-                if char(all_materials.Flip(eventNum)) == '0'
-                    sentence = char(all_materials.ProgressiveActive(eventNum));
-                elseif char(all_materials.Flip(eventNum)) == '1'
-                    sentence = char(all_materials.ProgressivePassive(eventNum));
+                if char(all_materials.Flip(item_index)) == '0'
+                    sentence = char(all_materials.ProgressiveActive(item_index));
+                elseif char(all_materials.Flip(item_index)) == '1'
+                    sentence = char(all_materials.ProgressivePassive(item_index));
                 end
                 
                 %Save Sentence, Onset, Duration to results file
                 results.Sentence{eventNum} = sentence;
-                results.AgentName{eventNum} = char(all_materials.AgentName(eventNum));
-                results.AgentShape{eventNum} = char(all_materials.AgentShape(eventNum));
-                results.PatientName{eventNum} = char(all_materials.PatientName(eventNum));
-                results.PatientShape{eventNum} = char(all_materials.PatientShape(eventNum));
+                results.AgentName{eventNum} = char(all_materials.AgentName(item_index));
+                results.AgentShape{eventNum} = char(all_materials.AgentShape(item_index));
+                results.PatientName{eventNum} = char(all_materials.PatientName(item_index));
+                results.PatientShape{eventNum} = char(all_materials.PatientShape(item_index));
                 results.Onset{eventNum} = onset - runOnset;
                 results.Duration{eventNum} = all_materials.Duration(eventNum);
                 
@@ -312,6 +312,7 @@ function AgentPatientStimuliScratch(subjID, image_type, order, run)
                 item_index = item_index + 1;
                 
             end
+            sentence_index = sentence_index + 1;
         end
 
         ran_completely = true;
