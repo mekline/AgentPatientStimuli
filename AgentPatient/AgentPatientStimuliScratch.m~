@@ -37,11 +37,11 @@ function AgentPatientStimuliScratch(subjID, image_type, order, run)
     switch image_type
         case 'sentences'
             %all_materials.Flip is just 0 or 1; this is what it means in each case
-            flip_word_0 = 'active';
-            flip_word_1 = 'passive';
+            flip_word_1 = 'active';
+            flip_word_2 = 'passive';
         case 'stills'
-            flip_word_0 = 'orig';
-            flip_word_1 = 'flipped';
+            flip_word_1 = 'orig';
+            flip_word_2 = 'flipped';
     end
 
     %% Set up orders
@@ -163,9 +163,9 @@ function AgentPatientStimuliScratch(subjID, image_type, order, run)
     screenNum = max(Screen('Screens'));  %Highest screen number is most likely correct display
     windowInfo = PTBhelper('initialize',screenNum);
 	wPtr = windowInfo{1}; %pointer to window on screen that's being referenced
-     rect = windowInfo{2}; %dimensions of the window
-         winWidth = rect(3);
-         winHeight = rect(4);
+%     rect = windowInfo{2}; %dimensions of the window
+%         winWidth = rect(3);
+%         winHeight = rect(4);
     oldEnableFlag = windowInfo{4};
     HideCursor;
     PTBhelper('stimImage',wPtr,'WHITE');
@@ -178,40 +178,35 @@ function AgentPatientStimuliScratch(subjID, image_type, order, run)
     
     %% Set up cells containing image file data
     %Initialize the cells and IMAGE_DIR
-    img_files = cell(1,120);
-    img_stims = cell(1,120);
-    IMAGE_DIR = fullfile(pwd, 'images', image_type); %the folder we're taking images from
-    
-    index = 1;
+    img_files = cell(1,120)%;
+    img_stims = cell(1,120)%;
+    IMAGE_DIR = fullfile(pwd, 'images', image_type)%; %the folder we're taking images from
     
     for eventNum=1:numEvents
         condition = all_materials.Condition(eventNum);
         duration = all_materials.Duration(eventNum);
         flip = all_materials.Flip{eventNum};
-   
         if ~strcmp(char(condition), 'NULL ') %if this trial isn't a fixation
+            
             %Determine flip
             switch flip
                 case '0'
                     flip_word = flip_word_0;
                 case '1'
-                    flip_word = flip_word_0;
+                    flip_word = flip_word_1;
             end
             
             %what is the name of the image we want
             jpg_name = [char(condition) '_' flip_word '_' char(all_materials.ItemNumber{eventNum}) '.jpg'];
             
             %put it into a cell with the other image files
-            img_files{1,index} = fullfile(IMAGE_DIR, jpg_name);
+            img_files{1,str2num(all_materials.ItemNumber{eventNum})} = fullfile(IMAGE_DIR, jpg_name)%;
             
-            image = img_files{index};
-            image = imread(image);
-            image = imresize(image, [winHeight, NaN]);
-            
+            img_files{all_materials.ItemNumber{eventNum}}
             %make it a texture so PTBHelper will like it
-            img_stims{index} = Screen('MakeTexture', wPtr, double(image));
+            img_stims{all_materials.ItemNumber{eventNum}} = Screen('MakeTexture', wPtr, double(imread(img_files{all_materials.ItemNumber{eventNum}})));
             
-        index = index+1;
+            
         end
     end    
         
@@ -232,14 +227,9 @@ function AgentPatientStimuliScratch(subjID, image_type, order, run)
     %Present each block
     try
         for eventNum = 1:numEvents
-            
-            condition = all_materials.Condition(eventNum);
-            duration = all_materials.Duration(eventNum);
-            flip = all_materials.Flip{eventNum};
    
             %Fixation
             if strcmp(condition, 'NULL ')
-
                 %Show fixation cross
                 PTBhelper('stimText', wPtr, '+', fixFontSize);
                 fixEndTime = onset + duration;
@@ -259,6 +249,7 @@ function AgentPatientStimuliScratch(subjID, image_type, order, run)
                 onset = fixEndTime;
                 
             else %If there's a sentence to be presented (i.e., not NULL)
+                
                 if char(all_materials.Flip(item_index)) == '0'
                     sentence = char(all_materials.ProgressiveActive(item_index));
                 elseif char(all_materials.Flip(item_index)) == '1'
