@@ -32,9 +32,10 @@ function AgentPatientStimuliScratch(subjID, image_type, order, run)
     FIX_DUR     = 0.3; %Length of trial-initial fixation
     SENT_DUR    = 6.0; %Amount of time sentence is shown for
     ITI         = 0.2; %Inter-trial interval
-    BLINK_DUR = 0.2; %Length of one blink on or off
+    BLINK_DUR   = 0.2; %Length of one blink on or off
+    SCREEN_ADJUST = 1.2; %factor to adjust aspect ratio by
     
-    %Image type
+    %Based on image type (sentences or stills), decide what Flip means
     switch image_type
         case 'sentences'
             %all_materials.Flip is just 0 or 1; this is what it means in each case
@@ -61,13 +62,13 @@ function AgentPatientStimuliScratch(subjID, image_type, order, run)
     %--nsearch 10000 (how many orderings to try)
     
     %This has all the info
-    ORDER_DIR = fullfile(pwd, 'orders');
+    ORDER_DIR = fullfile(pwd, 'orders'); %folder containing all orders
     
-    order_filename = ['AgentPatientStimuli_Order' order num2str(run) '.csv'];
-    order_filename = fullfile(ORDER_DIR, order_filename);
-    all_materials = readtable(order_filename); %the order for this run
+    order_filename = ['AgentPatientStimuli_Order' order num2str(run) '.csv']; %order for this run
+    order_filename = fullfile(ORDER_DIR, order_filename); %full path for that order
+    all_materials = readtable(order_filename); %order stored as a table
     
-    numEvents = height(all_materials); %the number of trials and fixations
+    numEvents = height(all_materials); %the total number of trials and fixations
     
     %% Make the experiment run faster if subjID is 'debug'
     if strcmpi(subjID, 'debug')
@@ -164,9 +165,9 @@ function AgentPatientStimuliScratch(subjID, image_type, order, run)
     screenNum = max(Screen('Screens'));  %Highest screen number is most likely correct display
     windowInfo = PTBhelper('initialize',screenNum);
 	wPtr = windowInfo{1}; %pointer to window on screen that's being referenced
-     rect = windowInfo{2}; %dimensions of the window
-         winWidth = rect(3);
-         winHeight = rect(4);
+    rect = windowInfo{2}; %dimensions of the window
+        winWidth = rect(3);
+        winHeight = rect(4)*SCREEN_ADJUST;
     oldEnableFlag = windowInfo{4};
     HideCursor;
     PTBhelper('stimImage',wPtr,'WHITE');
@@ -179,13 +180,18 @@ function AgentPatientStimuliScratch(subjID, image_type, order, run)
     
     %% Set up cells containing image file data
     %Initialize the cells and IMAGE_DIR
+    
+    %images with highlight
     img_files = cell(1,120);
     img_stims = cell(1,120);
+    
+    %images with no highlight
     base_files = cell(1,120);
     base_stims = cell(1,120);
+    
     IMAGE_DIR = fullfile(pwd, 'images', image_type); %the folder we're taking images from
     
-    index = 1;
+    index = 1; %counter
     
     for eventNum=1:numEvents
         condition = all_materials.Condition(eventNum);
@@ -209,10 +215,12 @@ function AgentPatientStimuliScratch(subjID, image_type, order, run)
             img_files{1,index} = fullfile(IMAGE_DIR, img_name);
             base_files{1,index} = fullfile(IMAGE_DIR, base_name);
             
+            %read in the image file we want and resize it
             image = img_files{index};
             image = imread(image);
             image = imresize(image, [winHeight, NaN]);
             
+            %read in the base file we want and resize it
             base = base_files{index};
             base = imread(base);
             base = imresize(base, [winHeight, NaN]);
@@ -221,7 +229,7 @@ function AgentPatientStimuliScratch(subjID, image_type, order, run)
             img_stims{index} = Screen('MakeTexture', wPtr, double(image));
             base_stims{index} = Screen('MakeTexture', wPtr, double(base));
             
-        index = index+1;
+        index = index+1; %increment counter
         end
     end    
   
@@ -291,10 +299,8 @@ function AgentPatientStimuliScratch(subjID, image_type, order, run)
                 fixEndTime = onset + FIX_DUR;
                 PTBhelper('waitFor',fixEndTime,kbIdx,escapeKey);
 
-                %Sentence
-                %PTBhelper('stimImage', wPtr, item_index, img_stims);
+                %Blink sentence until sentEndTime
                 sentEndTime = fixEndTime + duration;
-                %PTBhelper('waitFor',sentEndTime,kbIdx,escapeKey);
                 while GetSecs < sentEndTime
                     PTBhelper('stimImage', wPtr, item_index, img_stims);
                     WaitSecs(BLINK_DUR);
@@ -358,15 +364,6 @@ function [wPtr, rect] = openDebugWindow(screenNum, rect)
     [wPtr,rect] = Screen('OpenWindow',screenNum,1,rect,[],[],[],[],[],kPsychGUIWindow,[]);
 end
 
-%% Blink
-% function blink(endTime)
-%     while GetSecs < endTime
-%         PTBhelper('stimImage', wPtr, item_index, img_stims);
-%         WaitSecs(0.2);
-%         PTBhelper('stimImage', wPtr, item_index, base_stims);
-%         WaitSecs(0.2);
-%     end
-% end
         
 
 
