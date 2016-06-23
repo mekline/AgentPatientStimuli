@@ -13,7 +13,7 @@ function AgentPatientStimuliScratch(subjID, image_type, order, run)
     %This is where the data file will go
     DATA_DIR = fullfile(pwd, 'data');
     %This is what we'll call the data file we're making
-    fileToSave = ['AgentPatientStimuli_' subjID '_' order num2str(run) '_data.csv'];
+    fileToSave = ['AgentPatientStimuli_' image_type '_' subjID '_' order num2str(run) '_data.csv'];
     %The file should be in the DATA_DIR folder
     fileToSave = fullfile(DATA_DIR, fileToSave);
     
