@@ -1,7 +1,10 @@
 %AgentPatientStimuli.m
 % 
 % DESCRIPTION
-% 
+% Subjects view stimuli - either pictures or sentences ? about one shape
+% performing an action on another (e.g., 'Melissa Oval is being bounced by
+% Kyle Square'). Sometimes the agent is highlighted; other times the
+% patient is highlighted.
 % 
 % 
 % Function call: AgentPatientStimuli(subjID, image_type, order, run)
@@ -21,8 +24,10 @@
 %   -.csv file with information on what was presented when to whom for how
 %   long (data/AgentPatientStimuli_subjID_image_type_order_run_data.csv)
 % 
-% 
-% 
+% ADJUSTMENTS:
+% To change font size, go to Set display options.
+% If the aspect ratio is off, change SCREEN_ADJUST in Set experiment
+% constants until it looks better.
 
 function AgentPatientStimuli(subjID, image_type, order, run)
     %% Make sure inputs are valid
