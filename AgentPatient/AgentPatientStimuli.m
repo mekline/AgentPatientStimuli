@@ -1,6 +1,6 @@
 %AgentPatienStimuli
 
-function AgentPatientStimuliScratch(subjID, image_type, order, run)
+function AgentPatientStimuli(subjID, image_type, order, run)
     %% Make sure inputs are valid
     %Raise an error if subjID is not a string
     assert(ischar(subjID), 'subjID must be a string');
