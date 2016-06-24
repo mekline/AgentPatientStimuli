@@ -35,7 +35,7 @@ function AgentPatientStimuli(subjID, image_type, order, run)
     assert(ischar(subjID), 'subjID must be a string');
 
     %image_type is 'sentences' or 'stills'
-    assert(strcmp(image_type, 'sentences') | strcmp(image_type, 'stills'), 'image_type must be sentences or stills');
+    assert(strcmp(image_type, 'sentences') | strcmp(image_type, 'stills'), 'image_type must be ''sentences'' or ''stills''');
     
     %order is a letter A-E
     assert(ismember(order, ['A','B','C','D','E']), 'order must be a letter A-E');
