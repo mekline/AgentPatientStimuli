@@ -32,16 +32,16 @@
 function AgentPatientStimuli(subjID, image_type, order, run)
     %% Make sure inputs are valid and raise an error otherwise
     %subjID is a string
-    assert(ischar(subjID), 'subjID must be a string');
+    assert(ischar(subjID), 'subjID (first argument) must be a string');
 
     %image_type is 'sentences' or 'stills'
-    assert(strcmp(image_type, 'sentences') | strcmp(image_type, 'stills'), 'image_type must be ''sentences'' or ''stills''');
+    assert(strcmp(image_type, 'sentences') | strcmp(image_type, 'stills'), 'image_type (second argument) must be ''sentences'' or ''stills''');
     
     %order is a letter A-E
-    assert(ismember(order, ['A','B','C','D','E']), 'order must be a letter A-E');
+    assert(ismember(order, ['A','B','C','D','E']), 'order (third argument) must be a letter A-E');
 
     %run is 1 or 2
-    assert(ismember(run, 1:2), 'run must be 1 for the first run and 2 for the second');
+    assert(ismember(run, 1:2), 'run (fourth argument) must be 1 for the first run and 2 for the second');
     
     %% Make sure we don't accidentally overwrite a data file
     %This is where the data file will go
@@ -374,6 +374,10 @@ function AgentPatientStimuli(subjID, image_type, order, run)
     
     %Restore the old level.
     Screen('Preference','SuppressAllWarnings',oldEnableFlag);
+    
+    other_run = 3 - run;
+    disp(['Run ' order num2str(run) ' finished; data for this run saved to ' fileToSave])
+    disp(['Make sure to run ' order num2str(other_run) ' during this scanning session as well.'])
     
 end
 
