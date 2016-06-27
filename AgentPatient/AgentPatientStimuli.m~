@@ -378,8 +378,8 @@ function AgentPatientStimuli(subjID, image_type, order, run)
     other_run = 3 - run;
     disp(['Run ' order num2str(run) ' finished; data for this run saved to ' fileToSave])
     other_run_data = ['AgentPatientStimuli_' subjID '_' image_type '_' order num2str(other_run) '_data.csv'];
-    other_run_data = fullfile(pwd, 'data', other_run_data);
-    if exist(other_run_data,'file') == 0
+    other_run_data = fullfile(pwd, 'data', other_run_data)
+    if exist(['AgentPatientStimuli_' subjID '_' image_type '_' order num2str(other_run) '_data.csv'],'file') == 0
         disp(['Make sure to run ' order num2str(other_run) ' during this scanning session as well.'])
     end
     
