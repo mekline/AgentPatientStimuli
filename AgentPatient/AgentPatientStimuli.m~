@@ -41,7 +41,7 @@ function AgentPatientStimuli(subjID, image_type, order, run)
     assert(ismember(order, ['A','B','C','D','E']), sprintf('order (third argument) must be a letter A-E enclosed in quotes\nExample of correct format: AgentPatientStimuli(''myID'',''sentences'',''A'',1)'));
 
     %run is 1 or 2
-    assert(ismember(run, 1:2), sprintf('run (fourth argument) must be 1 for the first run and 2 for the second\nExample of correct format: AgentPatientStimuli(''myID'',''sentences'',''A'',1)'));
+    assert(ismember(run, 1:2), sprintf('Run (fourth argument) must be 1 for the first run and 2 for the second\nExample of correct format: AgentPatientStimuli(''myID'',''sentences'',''A'',1)'));
     
     %% Make sure we don't accidentally overwrite a data file
     %This is where the data file will go
