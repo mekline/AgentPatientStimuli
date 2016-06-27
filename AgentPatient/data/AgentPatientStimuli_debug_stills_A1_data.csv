@@ -1,0 +1,217 @@
+SubjID,Run,Order,ItemNumber,Onset,Duration,Condition,Flip,Sentence,AgentName,AgentShape,PatientName,PatientShape
+debug,1,A,52,0,0.12,Agent,1,Kyle Square is being rolled by Melissa Oval.,Melissa,Oval,Kyle,Square
+debug,1,A,30,0.12599999998929,0.12,Agent,1,Melissa Oval is being balanced by Lily Triangle.,Lily,Triangle,Melissa,Oval
+debug,1,A,N/A,0.25199999997858,0.12,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,55,0.371999999973923,0.12,Patient,0,Melissa Oval is shaking Kyle Square.,Melissa,Oval,Kyle,Square
+debug,1,A,27,0.497999999963213,0.12,Agent,1,Melissa Oval is being shaken by Lily Triangle.,Lily,Triangle,Melissa,Oval
+debug,1,A,N/A,0.623999999952503,0.12,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,16,0.743999999947846,0.12,Agent,1,Kyle Square is being stopped by Lily Triangle.,Lily,Triangle,Kyle,Square
+debug,1,A,N/A,0.869999999937136,0.2,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,20,1.06999999994878,0.12,Patient,0,Lily Triangle is bouncing Zach Star.,Lily,Triangle,Zach,Star
+debug,1,A,N/A,1.19599999993807,0.16,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,13,1.35599999991246,0.12,Patient,0,Kyle Square is balancing Lily Triangle.,Kyle,Square,Lily,Triangle
+debug,1,A,N/A,1.48199999990175,0.16,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,43,1.64199999987613,0.12,Agent,1,Kyle Square is being balanced by Zach Star.,Zach,Star,Kyle,Square
+debug,1,A,N/A,1.76799999986542,0.36,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,8,2.12799999985145,0.12,Agent,1,Zach Star is being rolled by Kyle Square.,Kyle,Square,Zach,Star
+debug,1,A,N/A,2.25399999984074,0.12,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,19,2.37399999983609,0.12,Patient,0,Lily Triangle is bouncing Kyle Square.,Lily,Triangle,Kyle,Square
+debug,1,A,30,2.49999999982538,0.12,Patient,1,Melissa Oval is being balanced by Lily Triangle.,Lily,Triangle,Melissa,Oval
+debug,1,A,48,2.62599999981467,0.12,Patient,1,Zach Star is being stopped by Melissa Oval.,Melissa,Oval,Zach,Star
+debug,1,A,54,2.75199999980396,0.12,Agent,1,Zach Star is being rolled by Melissa Oval.,Melissa,Oval,Zach,Star
+debug,1,A,N/A,2.87799999979325,0.32,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,2,3.19799999980023,0.12,Agent,0,Kyle Square is stopping Zach Star.,Kyle,Square,Zach,Star
+debug,1,A,N/A,3.32399999978952,0.08,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,9,3.40399999980582,0.12,Agent,0,Kyle Square is rolling Melissa Oval.,Kyle,Square,Melissa,Oval
+debug,1,A,N/A,3.52999999979511,0.12,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,58,3.64999999979045,0.12,Agent,1,Kyle Square is being balanced by Melissa Oval.,Melissa,Oval,Kyle,Square
+debug,1,A,N/A,3.77599999977974,0.04,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,24,3.81599999975879,0.12,Patient,0,Lily Triangle is rolling Melissa Oval.,Lily,Triangle,Melissa,Oval
+debug,1,A,N/A,3.94199999974808,0.16,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,7,4.10199999972247,0.12,Patient,0,Kyle Square is rolling Lily Triangle.,Kyle,Square,Lily,Triangle
+debug,1,A,N/A,4.22799999971176,0.4,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,59,4.62799999973504,0.12,Agent,1,Lily Triangle is being balanced by Melissa Oval.,Melissa,Oval,Lily,Triangle
+debug,1,A,44,4.75399999972433,0.12,Patient,0,Zach Star is balancing Lily Triangle.,Zach,Star,Lily,Triangle
+debug,1,A,N/A,4.87999999971362,0.08,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,21,4.95999999972992,0.12,Patient,1,Melissa Oval is being bounced by Lily Triangle.,Lily,Triangle,Melissa,Oval
+debug,1,A,N/A,5.08599999971921,0.28,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,31,5.36599999974715,0.12,Agent,1,Kyle Square is being stopped by Zach Star.,Zach,Star,Kyle,Square
+debug,1,A,N/A,5.49199999973644,0.08,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,51,5.57199999975273,0.12,Agent,0,Melissa Oval is bouncing Zach Star.,Melissa,Oval,Zach,Star
+debug,1,A,N/A,5.69799999974202,0.24,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,32,5.93799999973271,0.12,Patient,1,Lily Triangle is being stopped by Zach Star.,Zach,Star,Lily,Triangle
+debug,1,A,N/A,6.063999999722,0.12,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,4,6.18399999971734,0.12,Agent,0,Kyle Square is bouncing Lily Triangle.,Kyle,Square,Lily,Triangle
+debug,1,A,N/A,6.30999999970663,0.04,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,27,6.34999999968568,0.12,Patient,1,Melissa Oval is being shaken by Lily Triangle.,Lily,Triangle,Melissa,Oval
+debug,1,A,N/A,6.47599999967497,0.08,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,35,6.55599999969127,0.12,Agent,1,Lily Triangle is being bounced by Zach Star.,Zach,Star,Lily,Triangle
+debug,1,A,N/A,6.68199999968056,0.12,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,12,6.8019999996759,0.12,Agent,0,Kyle Square is shaking Melissa Oval.,Kyle,Square,Melissa,Oval
+debug,1,A,N/A,6.92799999966519,0.16,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,35,7.08799999963958,0.12,Patient,1,Lily Triangle is being bounced by Zach Star.,Zach,Star,Lily,Triangle
+debug,1,A,33,7.21399999962887,0.12,Patient,1,Melissa Oval is being stopped by Zach Star.,Zach,Star,Melissa,Oval
+debug,1,A,N/A,7.33999999961816,0.04,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,24,7.3799999995972,0.12,Agent,0,Lily Triangle is rolling Melissa Oval.,Lily,Triangle,Melissa,Oval
+debug,1,A,40,7.50599999958649,0.12,Patient,1,Kyle Square is being shaken by Zach Star.,Zach,Star,Kyle,Square
+debug,1,A,N/A,7.63199999957578,0.04,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,53,7.67199999955483,0.12,Patient,0,Melissa Oval is rolling Lily Triangle.,Melissa,Oval,Lily,Triangle
+debug,1,A,N/A,7.79799999954412,0.12,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,17,7.91799999953946,0.12,Patient,0,Lily Triangle is stopping Zach Star.,Lily,Triangle,Zach,Star
+debug,1,A,39,8.04399999952875,0.12,Patient,0,Zach Star is rolling Melissa Oval.,Zach,Star,Melissa,Oval
+debug,1,A,N/A,8.16999999951804,0.12,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,54,8.28999999951338,0.12,Patient,1,Zach Star is being rolled by Melissa Oval.,Melissa,Oval,Zach,Star
+debug,1,A,18,8.41599999950267,0.12,Patient,1,Melissa Oval is being stopped by Lily Triangle.,Lily,Triangle,Melissa,Oval
+debug,1,A,N/A,8.54199999949196,0.08,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,3,8.62199999950826,0.12,Agent,0,Kyle Square is stopping Melissa Oval.,Kyle,Square,Melissa,Oval
+debug,1,A,N/A,8.74799999949755,0.4,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,29,9.14799999952083,0.12,Patient,0,Lily Triangle is balancing Zach Star.,Lily,Triangle,Zach,Star
+debug,1,A,N/A,9.27399999951012,0.12,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,34,9.39399999950547,0.12,Agent,1,Kyle Square is being bounced by Zach Star.,Zach,Star,Kyle,Square
+debug,1,A,N/A,9.51999999949476,0.08,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,20,9.59999999951106,0.12,Agent,0,Lily Triangle is bouncing Zach Star.,Lily,Triangle,Zach,Star
+debug,1,A,N/A,9.72599999950035,0.24,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,22,9.96599999949103,0.12,Agent,0,Lily Triangle is rolling Kyle Square.,Lily,Triangle,Kyle,Square
+debug,1,A,N/A,10.0919999994803,0.08,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,60,10.1719999994966,0.12,Agent,1,Zach Star is being balanced by Melissa Oval.,Melissa,Oval,Zach,Star
+debug,1,A,38,10.2979999994859,0.12,Agent,0,Zach Star is rolling Lily Triangle.,Zach,Star,Lily,Triangle
+debug,1,A,N/A,10.4239999994752,0.36,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,4,10.7839999994612,0.12,Patient,0,Kyle Square is bouncing Lily Triangle.,Kyle,Square,Lily,Triangle
+debug,1,A,N/A,10.9099999994505,0.04,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,37,10.9499999994296,0.12,Agent,1,Kyle Square is being rolled by Zach Star.,Zach,Star,Kyle,Square
+debug,1,A,N/A,11.0759999994189,0.04,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,5,11.1159999993979,0.12,Patient,0,Kyle Square is bouncing Zach Star.,Kyle,Square,Zach,Star
+debug,1,A,N/A,11.2419999993872,0.28,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,25,11.5219999994151,0.12,Agent,1,Kyle Square is being shaken by Lily Triangle.,Lily,Triangle,Kyle,Square
+debug,1,A,N/A,11.6479999994044,0.08,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,43,11.7279999994207,0.12,Patient,1,Kyle Square is being balanced by Zach Star.,Zach,Star,Kyle,Square
+debug,1,A,N/A,11.85399999941,0.2,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,26,12.0539999994216,0.12,Patient,1,Zach Star is being shaken by Lily Triangle.,Lily,Triangle,Zach,Star
+debug,1,A,N/A,12.1799999994109,0.08,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,8,12.2599999994272,0.12,Patient,1,Zach Star is being rolled by Kyle Square.,Kyle,Square,Zach,Star
+debug,1,A,N/A,12.3859999994165,0.08,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,15,12.4659999994328,0.12,Patient,1,Melissa Oval is being balanced by Kyle Square.,Kyle,Square,Melissa,Oval
+debug,1,A,N/A,12.5919999994221,0.24,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,18,12.8319999994128,0.12,Agent,1,Melissa Oval is being stopped by Lily Triangle.,Lily,Triangle,Melissa,Oval
+debug,1,A,N/A,12.9579999994021,0.08,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,49,13.0379999994184,0.12,Agent,1,Kyle Square is being bounced by Melissa Oval.,Melissa,Oval,Kyle,Square
+debug,1,A,N/A,13.1639999994077,0.12,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,10,13.283999999403,0.12,Patient,1,Lily Triangle is being shaken by Kyle Square.,Kyle,Square,Lily,Triangle
+debug,1,A,45,13.4099999993923,0.12,Agent,1,Melissa Oval is being balanced by Zach Star.,Zach,Star,Melissa,Oval
+debug,1,A,N/A,13.5359999993816,0.2,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,6,13.7359999993932,0.12,Patient,0,Kyle Square is bouncing Melissa Oval.,Kyle,Square,Melissa,Oval
+debug,1,A,31,13.8619999993825,0.12,Patient,1,Kyle Square is being stopped by Zach Star.,Zach,Star,Kyle,Square
+debug,1,A,N/A,13.9879999993718,0.36,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,7,14.3479999993579,0.12,Agent,0,Kyle Square is rolling Lily Triangle.,Kyle,Square,Lily,Triangle
+debug,1,A,38,14.4739999993471,0.12,Patient,0,Zach Star is rolling Lily Triangle.,Zach,Star,Lily,Triangle
+debug,1,A,N/A,14.5999999993364,0.12,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,40,14.7199999993318,0.12,Agent,1,Kyle Square is being shaken by Zach Star.,Zach,Star,Kyle,Square
+debug,1,A,19,14.8459999993211,0.12,Agent,0,Lily Triangle is bouncing Kyle Square.,Lily,Triangle,Kyle,Square
+debug,1,A,N/A,14.9719999993104,0.16,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,46,15.1319999992847,0.12,Patient,1,Kyle Square is being stopped by Melissa Oval.,Melissa,Oval,Kyle,Square
+debug,1,A,N/A,15.257999999274,0.2,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,46,15.4579999992857,0.12,Agent,1,Kyle Square is being stopped by Melissa Oval.,Melissa,Oval,Kyle,Square
+debug,1,A,N/A,15.583999999275,0.12,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,50,15.7039999992703,0.12,Agent,0,Melissa Oval is bouncing Lily Triangle.,Melissa,Oval,Lily,Triangle
+debug,1,A,52,15.8299999992596,0.12,Patient,1,Kyle Square is being rolled by Melissa Oval.,Melissa,Oval,Kyle,Square
+debug,1,A,N/A,15.9559999992489,0.2,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,42,16.1559999992605,0.12,Patient,0,Zach Star is shaking Melissa Oval.,Zach,Star,Melissa,Oval
+debug,1,A,N/A,16.2819999992498,0.16,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,36,16.4419999992242,0.12,Patient,0,Zach Star is bouncing Melissa Oval.,Zach,Star,Melissa,Oval
+debug,1,A,N/A,16.5679999992135,0.04,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,26,16.6079999991925,0.12,Agent,1,Zach Star is being shaken by Lily Triangle.,Lily,Triangle,Zach,Star
+debug,1,A,N/A,16.7339999991818,0.16,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,60,16.8939999991562,0.12,Patient,1,Zach Star is being balanced by Melissa Oval.,Melissa,Oval,Zach,Star
+debug,1,A,N/A,17.0199999991455,0.16,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,1,17.1799999991199,0.12,Patient,0,Kyle Square is stopping Lily Triangle.,Kyle,Square,Lily,Triangle
+debug,1,A,N/A,17.3059999991092,0.08,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,51,17.3859999991255,0.12,Patient,0,Melissa Oval is bouncing Zach Star.,Melissa,Oval,Zach,Star
+debug,1,A,N/A,17.5119999991148,0.28,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,2,17.7919999991427,0.12,Patient,0,Kyle Square is stopping Zach Star.,Kyle,Square,Zach,Star
+debug,1,A,N/A,17.917999999132,0.08,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,57,17.9979999991483,0.12,Patient,0,Melissa Oval is shaking Zach Star.,Melissa,Oval,Zach,Star
+debug,1,A,N/A,18.1239999991376,0.04,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,6,18.1639999991166,0.12,Agent,0,Kyle Square is bouncing Melissa Oval.,Kyle,Square,Melissa,Oval
+debug,1,A,N/A,18.2899999991059,0.12,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,45,18.4099999991013,0.12,Patient,1,Melissa Oval is being balanced by Zach Star.,Zach,Star,Melissa,Oval
+debug,1,A,N/A,18.5359999990906,0.72,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,17,19.2559999990626,0.12,Agent,0,Lily Triangle is stopping Zach Star.,Lily,Triangle,Zach,Star
+debug,1,A,N/A,19.3819999990519,0.12,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,41,19.5019999990473,0.12,Agent,0,Zach Star is shaking Lily Triangle.,Zach,Star,Lily,Triangle
+debug,1,A,N/A,19.6279999990365,0.28,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,49,19.9079999990645,0.12,Patient,1,Kyle Square is being bounced by Melissa Oval.,Melissa,Oval,Kyle,Square
+debug,1,A,23,20.0339999990538,0.12,Agent,0,Lily Triangle is rolling Zach Star.,Lily,Triangle,Zach,Star
+debug,1,A,16,20.1599999990431,0.12,Patient,1,Kyle Square is being stopped by Lily Triangle.,Lily,Triangle,Kyle,Square
+debug,1,A,N/A,20.2859999990324,0.12,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,28,20.4059999990277,0.12,Agent,0,Lily Triangle is balancing Kyle Square.,Lily,Triangle,Kyle,Square
+debug,1,A,N/A,20.531999999017,0.08,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,47,20.6119999990333,0.12,Agent,1,Lily Triangle is being stopped by Melissa Oval.,Melissa,Oval,Lily,Triangle
+debug,1,A,N/A,20.7379999990226,0.24,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,47,20.9779999990133,0.12,Patient,1,Lily Triangle is being stopped by Melissa Oval.,Melissa,Oval,Lily,Triangle
+debug,1,A,N/A,21.1039999990026,0.16,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,34,21.2639999989769,0.12,Patient,1,Kyle Square is being bounced by Zach Star.,Zach,Star,Kyle,Square
+debug,1,A,N/A,21.3899999989662,0.08,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,14,21.4699999989825,0.12,Agent,1,Zach Star is being balanced by Kyle Square.,Kyle,Square,Zach,Star
+debug,1,A,33,21.5959999989718,0.12,Agent,1,Melissa Oval is being stopped by Zach Star.,Zach,Star,Melissa,Oval
+debug,1,A,N/A,21.7219999989611,0.08,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,58,21.8019999989774,0.12,Patient,1,Kyle Square is being balanced by Melissa Oval.,Melissa,Oval,Kyle,Square
+debug,1,A,N/A,21.9279999989667,0.16,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,44,22.0879999989411,0.12,Agent,0,Zach Star is balancing Lily Triangle.,Zach,Star,Lily,Triangle
+debug,1,A,N/A,22.2139999989304,0.08,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,48,22.2939999989467,0.12,Agent,1,Zach Star is being stopped by Melissa Oval.,Melissa,Oval,Zach,Star
+debug,1,A,N/A,22.419999998936,0.16,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,29,22.5799999989104,0.12,Agent,0,Lily Triangle is balancing Zach Star.,Lily,Triangle,Zach,Star
+debug,1,A,N/A,22.7059999988996,0.12,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,41,22.825999998895,0.12,Patient,0,Zach Star is shaking Lily Triangle.,Zach,Star,Lily,Triangle
+debug,1,A,N/A,22.9519999988843,0.12,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,53,23.0719999988796,0.12,Agent,0,Melissa Oval is rolling Lily Triangle.,Melissa,Oval,Lily,Triangle
+debug,1,A,N/A,23.1979999988689,0.04,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,1,23.237999998848,0.12,Agent,0,Kyle Square is stopping Lily Triangle.,Kyle,Square,Lily,Triangle
+debug,1,A,N/A,23.3639999988372,0.04,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,37,23.4039999988163,0.12,Patient,1,Kyle Square is being rolled by Zach Star.,Zach,Star,Kyle,Square
+debug,1,A,28,23.5299999988056,0.12,Patient,0,Lily Triangle is balancing Kyle Square.,Lily,Triangle,Kyle,Square
+debug,1,A,56,23.6559999987949,0.12,Patient,0,Melissa Oval is shaking Lily Triangle.,Melissa,Oval,Lily,Triangle
+debug,1,A,N/A,23.7819999987842,0.08,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,50,23.8619999988005,0.12,Patient,0,Melissa Oval is bouncing Lily Triangle.,Melissa,Oval,Lily,Triangle
+debug,1,A,N/A,23.9879999987897,0.04,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,21,24.0279999987688,0.12,Agent,1,Melissa Oval is being bounced by Lily Triangle.,Lily,Triangle,Melissa,Oval
+debug,1,A,N/A,24.1539999987581,0.04,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,36,24.1939999987371,0.12,Agent,0,Zach Star is bouncing Melissa Oval.,Zach,Star,Melissa,Oval
+debug,1,A,N/A,24.3199999987264,0.12,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,32,24.4399999987218,0.12,Agent,1,Lily Triangle is being stopped by Zach Star.,Zach,Star,Lily,Triangle
+debug,1,A,N/A,24.565999998711,0.48,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,23,25.0459999986924,0.12,Patient,0,Lily Triangle is rolling Zach Star.,Lily,Triangle,Zach,Star
+debug,1,A,N/A,25.1719999986817,0.2,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,12,25.3719999986934,0.12,Patient,0,Kyle Square is shaking Melissa Oval.,Kyle,Square,Melissa,Oval
+debug,1,A,N/A,25.4979999986826,0.16,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,13,25.657999998657,0.12,Agent,0,Kyle Square is balancing Lily Triangle.,Kyle,Square,Lily,Triangle
+debug,1,A,N/A,25.7839999986463,0.16,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,39,25.9439999986207,0.12,Agent,0,Zach Star is rolling Melissa Oval.,Zach,Star,Melissa,Oval
+debug,1,A,N/A,26.06999999861,0.08,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,11,26.1499999986263,0.12,Patient,1,Zach Star is being shaken by Kyle Square.,Kyle,Square,Zach,Star
+debug,1,A,10,26.2759999986156,0.12,Agent,1,Lily Triangle is being shaken by Kyle Square.,Kyle,Square,Lily,Triangle
+debug,1,A,N/A,26.4019999986049,0.12,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,15,26.5219999986002,0.12,Agent,1,Melissa Oval is being balanced by Kyle Square.,Kyle,Square,Melissa,Oval
+debug,1,A,N/A,26.6479999985895,0.16,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,11,26.8079999985639,0.12,Agent,1,Zach Star is being shaken by Kyle Square.,Kyle,Square,Zach,Star
+debug,1,A,N/A,26.9339999985532,0.04,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,22,26.9739999985322,0.12,Patient,0,Lily Triangle is rolling Kyle Square.,Lily,Triangle,Kyle,Square
+debug,1,A,N/A,27.0999999985215,0.08,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,56,27.1799999985378,0.12,Agent,0,Melissa Oval is shaking Lily Triangle.,Melissa,Oval,Lily,Triangle
+debug,1,A,N/A,27.3059999985271,0.08,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,59,27.3859999985434,0.12,Patient,1,Lily Triangle is being balanced by Melissa Oval.,Melissa,Oval,Lily,Triangle
+debug,1,A,N/A,27.5119999985327,0.2,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,14,27.7119999985443,0.12,Patient,1,Zach Star is being balanced by Kyle Square.,Kyle,Square,Zach,Star
+debug,1,A,N/A,27.8379999985336,0.16,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,55,27.997999998508,0.12,Agent,0,Melissa Oval is shaking Kyle Square.,Melissa,Oval,Kyle,Square
+debug,1,A,3,28.1239999984973,0.12,Patient,0,Kyle Square is stopping Melissa Oval.,Kyle,Square,Melissa,Oval
+debug,1,A,N/A,28.2499999984866,0.24,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,5,28.4899999984773,0.12,Agent,0,Kyle Square is bouncing Zach Star.,Kyle,Square,Zach,Star
+debug,1,A,N/A,28.6159999984666,0.04,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,42,28.6559999984456,0.12,Agent,0,Zach Star is shaking Melissa Oval.,Zach,Star,Melissa,Oval
+debug,1,A,25,28.7819999984349,0.12,Patient,1,Kyle Square is being shaken by Lily Triangle.,Lily,Triangle,Kyle,Square
+debug,1,A,N/A,28.9079999984242,0.12,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,57,29.0279999984195,0.12,Agent,0,Melissa Oval is shaking Zach Star.,Melissa,Oval,Zach,Star
+debug,1,A,N/A,29.1539999984088,0.04,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
+debug,1,A,9,29.1939999983879,0.12,Patient,0,Kyle Square is rolling Melissa Oval.,Kyle,Square,Melissa,Oval
+debug,1,A,N/A,29.3199999983772,0.2,NULL ,N/A,N/A,N/A,N/A,N/A,N/A
