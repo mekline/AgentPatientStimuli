@@ -1,0 +1,2 @@
+text_file = open("APS_test_2.rtf", "a")
+text_file.write("Test test test")
