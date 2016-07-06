@@ -54,7 +54,7 @@ function mturk_csv_generator(order)
                 img_name = [char(condition) '_' flip_word '_' char(all_materials.ItemNumber{eventNum}) '.jpg'];
 
                 %put it into a cell with the other image filenames
-                img_files{1,index} = fullfile(IMAGE_DIR, img_name);
+                img_files{1,index} = char(['http://tedlab.mit.edu/~mekline/AP062016/' img_name]);
 
                 %read in the image name
                 image_name = img_files{index};
