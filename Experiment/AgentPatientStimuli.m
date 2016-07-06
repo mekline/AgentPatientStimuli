@@ -9,9 +9,10 @@
 % 
 % Function call: AgentPatientStimuli(subjID, image_type, order, run)
 % 
-% RUNTIME: 720 sec (12 min, 360 TRs)
-%          runs 10 times faster with subjID 'debug' (but blinks at same
+% RUNTIME: 1450 sec (24 min 10 sec, 2900 TRs)
+%          -runs 10 times faster with subjID 'debug' (but blinks at same
 %          rate)
+%          -actually takes about 1475 sec due to lag
 % 
 % INPUTS:
 %   -subjID: subject ID string (use same subjID for runs 1 and 2)
