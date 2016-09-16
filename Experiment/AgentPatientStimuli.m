@@ -64,7 +64,7 @@ function AgentPatientStimuli(subjID, image_type, order, run)
     %% Set experiment constants
 
     %Timing (in seconds)              
-    FIX_DUR     = 0.3; %Length of trial-initial fixation
+    FIX_DUR     = 0.8; %Length of trial-initial fixation
     SENT_DUR    = 6.0; %Amount of time sentence is shown for
     ITI         = 0.2; %Inter-trial interval
     BLINK_DUR   = 0.2; %Length of one blink on or off
