@@ -174,7 +174,7 @@ function AgentPatientStimuli(subjID, image_type, order, run)
      
      %Set up the data that we want to save
      resultsHdr = {'SubjID',        'Run',       'Order',   'ItemNumber'   'IntendedOnset', ...
-                   'Onset', 'IntendedDuration', 'Duration',      'Condition', 'Flip',   'Sentence', ...
+                   'Onset', 'IntendedDuration', 'Duration',      'Condition', 'Flip', 'FlipMeaning',  'Sentence', ...
                    'AgentName',     'AgentShape',          'PatientName'...
                    'PatientShape', 'BaseFilename', 'BlinkFilename'};
  	
@@ -269,6 +269,7 @@ function AgentPatientStimuli(subjID, image_type, order, run)
         
         results.BlinkFilename{eventNum} = char(image);
         results.BaseFilename{eventNum} = char(base);
+        results.FlipMeaning{eventNum} = char(flip_word);
         index = index+1; %increment counter
         end
     end    
