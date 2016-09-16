@@ -173,10 +173,10 @@ function AgentPatientStimuli(subjID, image_type, order, run)
     end
      
      %Set up the data that we want to save
-     resultsHdr = {'SubjID',        'Run',       'Order',   'ItemNumber'   'Onset', ...
-                   'Duration',      'Condition', 'Flip',    'Sentence', ...
-                   'AgentName',     'AgentShape',           'PatientName'...
-                   'PatientShape'};
+     resultsHdr = {'SubjID',        'Run',       'Order',   'ItemNumber'   'IntendedOnset', ...
+                   'Onset', 'IntendedDuration', 'Duration',      'Condition', 'Flip',   'Sentence', ...
+                   'AgentName',     'AgentShape',          'PatientName'...
+                   'PatientShape', 'BaseFilename', 'BlinkFilename'};
  	
      %Set up results, the table that will hold this data
      results = cell(numEvents, length(resultsHdr));
@@ -193,6 +193,8 @@ function AgentPatientStimuli(subjID, image_type, order, run)
         results.Condition{eventNum} = char(all_materials.Condition(eventNum));
         results.Flip{eventNum} = char(all_materials.Flip(eventNum));
         results.ItemNumber{eventNum} = char(all_materials.ItemNumber(eventNum));
+        results.IntendedOnset{eventNum} = char(all_materials.Onset(eventNum));
+        results.IntendedDuration{eventNum} = char(all_materials.Duration(eventNum));
     end
     
 
@@ -264,7 +266,9 @@ function AgentPatientStimuli(subjID, image_type, order, run)
             %make it a texture so PTBHelper will like it
             img_stims{index} = Screen('MakeTexture', wPtr, double(image));
             base_stims{index} = Screen('MakeTexture', wPtr, double(base));
-            
+        
+        results.BlinkFilename{eventNum} = char(image);
+        results.BaseFilename{eventNum} = char(base);
         index = index+1; %increment counter
         end
     end    
