@@ -236,7 +236,7 @@ function AgentPatientStimuli(subjID, image_type, order, run)
         duration = all_materials.Duration(eventNum);
         flip = all_materials.Flip{eventNum};
    
-        if ~strcmp(char(condition), 'NULL ') %if this trial isn't a fixation
+        if ~strcmp(char(condition), '0') %if this trial isn't a fixation
             %Determine flip
             switch flip
                 case '0'
