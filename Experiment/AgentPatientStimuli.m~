@@ -113,8 +113,8 @@ function AgentPatientStimuli(subjID, image_type, order, run)
         SENT_DUR = SENT_DUR * scale;
         ITI = ITI * scale;
         
-        all_materials.IntendedOnset = all_materials.IntendedOnset * scale;
-        all_materials.IntendedDuration = all_materials.IntendedDuration * scale;
+        all_materials.IntendedOnset = all_materials.In * scale;
+        all_materials.Duration = all_materials.Duration * scale;
     end
     
     %% Read in the stimuli materials
@@ -125,7 +125,7 @@ function AgentPatientStimuli(subjID, image_type, order, run)
     
     %Below are descriptions of the important variables in the file:
     
-    %IntendedOnset: onset time scheduled by Optseq (different from actual onset
+    %Onset: onset time scheduled by Optseq (different from actual onset
     %stored in results data file)
     
     %Duration: how long to show the item
