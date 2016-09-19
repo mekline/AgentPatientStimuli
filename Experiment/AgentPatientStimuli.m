@@ -174,7 +174,7 @@ function AgentPatientStimuli(subjID, image_type, order, run)
      
      %Set up the data that we want to save
      resultsHdr = {'SubjID',        'Run',       'Order',   'ItemNumber'   'IntendedOnset', ...
-                   'Onset', 'IntendedDuration', 'Duration',      'Condition', 'Flip', 'FlipMeaning',  'Sentence', ...
+                   'ActualOnset', 'IntendedDuration', 'ActualDuration',      'Condition', 'Flip', 'FlipMeaning',  'Sentence', ...
                    'AgentName',     'AgentShape',          'PatientName'...
                    'PatientShape', 'BaseFilename', 'BlinkFilename'};
  	
@@ -233,7 +233,7 @@ function AgentPatientStimuli(subjID, image_type, order, run)
     
     for eventNum=1:numEvents
         condition = all_materials.Condition(eventNum);
-        duration = all_materials.Duration(eventNum);
+        intendedDuration = all_materials.IntendedDuration(eventNum);
         flip = all_materials.Flip{eventNum};
    
         if ~strcmp(char(condition), '0') %if this trial isn't a fixation
@@ -286,7 +286,7 @@ function AgentPatientStimuli(subjID, image_type, order, run)
     PTBhelper('waitFor','TRIGGER',kbIdx,escapeKey);
     
     runOnset = GetSecs; %remains the same
-    onset = runOnset;   %updates for each trial
+    actualOnset = runOnset;   %updates for each trial
     item_index = 1;
     
     %Present each block
@@ -294,7 +294,7 @@ function AgentPatientStimuli(subjID, image_type, order, run)
         for eventNum = 1:numEvents
             
             condition = all_materials.Condition(eventNum);
-            duration = all_materials.Duration(eventNum);
+            intendedDuration = all_materials.IntendedDuration(eventNum);
             flip = all_materials.Flip{eventNum};
    
             %Fixation
@@ -302,7 +302,7 @@ function AgentPatientStimuli(subjID, image_type, order, run)
 
                 %Show fixation cross
                 PTBhelper('stimText', wPtr, '+', fixFontSize);
-                fixEndTime = onset + duration;
+                fixEndTime = actualOnset + intendedDuration;
                 PTBhelper('waitFor',fixEndTime,kbIdx,escapeKey);
                 
                 %Save data
@@ -312,11 +312,12 @@ function AgentPatientStimuli(subjID, image_type, order, run)
                 results.AgentShape{eventNum} = 'NA';
                 results.PatientName{eventNum} = 'NA';
                 results.PatientShape{eventNum} = 'NA';
-                results.Onset{eventNum} = onset - runOnset;
-                results.Duration{eventNum} = duration;
+                results.ActualOnset{eventNum} = onset - runOnset;
+                actualDuration = 2; %Change this using arithmetic
+                results.ActualDuration{eventNum} = actualDuration;
                 
                 %Update loop variables
-                onset = fixEndTime;
+                actualOnset = fixEndTime;
                
             else %If there's a sentence to be presented (i.e., not NULL)
                 if char(all_materials.Flip(eventNum)) == '0'
@@ -325,23 +326,23 @@ function AgentPatientStimuli(subjID, image_type, order, run)
                     sentence = char(all_materials.ProgressivePassive(eventNum));
                 end
                 
-                %Save Sentence, Onset, Duration to results file
+                %Save Sentence, actualOnset,actualDuration to results file
                 results.Sentence{eventNum} = sentence;
                 results.AgentName{eventNum} = char(all_materials.AgentName(eventNum));
                 results.AgentShape{eventNum} = char(all_materials.AgentShape(eventNum));
                 results.PatientName{eventNum} = char(all_materials.PatientName(eventNum));
                 results.PatientShape{eventNum} = char(all_materials.PatientShape(eventNum));
-                results.Onset{eventNum} = onset - runOnset; %actual onset
-                results.Duration{eventNum} = all_materials.Duration(eventNum); %intended duration
+                results.ActualOnset{eventNum} = onset - runOnset;
+                results.ActualDuration{eventNum} = actualDuration;
                 
                 %Show sentence trial
                 %Trial-initial fixation
                 PTBhelper('stimText', wPtr, '+', fixFontSize);
-                fixEndTime = onset + FIX_DUR;
+                fixEndTime = actualOnset + FIX_DUR;
                 PTBhelper('waitFor',fixEndTime,kbIdx,escapeKey);
 
                 %Blink sentence until sentEndTime
-                sentEndTime = fixEndTime + duration;
+                sentEndTime = fixEndTime + intendedDuration;
                 while GetSecs < sentEndTime
                     PTBhelper('stimImage', wPtr, item_index, img_stims);
                     WaitSecs(BLINK_DUR);
@@ -353,7 +354,7 @@ function AgentPatientStimuli(subjID, image_type, order, run)
                 PTBhelper('stimText', wPtr, ' ', sentFontSize);
                 blankEndTime = sentEndTime + ITI;
                 PTBhelper('waitFor',blankEndTime,kbIdx,escapeKey);
-                onset = sentEndTime;
+                actualOnset = sentEndTime;
                 
                 %Update loop variables
                 item_index = item_index + 1;
