@@ -307,11 +307,11 @@ function AgentPatientStimuli(subjID, image_type, order, run)
                 
                 %Save data
                 
-                results.Sentence{eventNum} = 'N/A';
-                results.AgentName{eventNum} = 'N/A';
-                results.AgentShape{eventNum} = 'N/A';
-                results.PatientName{eventNum} = 'N/A';
-                results.PatientShape{eventNum} = 'N/A';
+                results.Sentence{eventNum} = 'NA';
+                results.AgentName{eventNum} = 'NA';
+                results.AgentShape{eventNum} = 'NA';
+                results.PatientName{eventNum} = 'NA';
+                results.PatientShape{eventNum} = 'NA';
                 results.Onset{eventNum} = onset - runOnset;
                 results.Duration{eventNum} = duration;
                 
@@ -331,8 +331,8 @@ function AgentPatientStimuli(subjID, image_type, order, run)
                 results.AgentShape{eventNum} = char(all_materials.AgentShape(eventNum));
                 results.PatientName{eventNum} = char(all_materials.PatientName(eventNum));
                 results.PatientShape{eventNum} = char(all_materials.PatientShape(eventNum));
-                results.Onset{eventNum} = onset - runOnset;
-                results.Duration{eventNum} = all_materials.Duration(eventNum);
+                results.Onset{eventNum} = onset - runOnset; %actual onset
+                results.Duration{eventNum} = all_materials.Duration(eventNum); %intended duration
                 
                 %Show sentence trial
                 %Trial-initial fixation
