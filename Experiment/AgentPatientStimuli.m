@@ -100,7 +100,7 @@ function AgentPatientStimuli(subjID, image_type, order, run)
     %This has all the info
     ORDER_DIR = fullfile(pwd, 'orders'); %folder containing all orders
     
-    order_filename = ['AgentPatientStimuli_Order' order num2str(run) '.csv']; %order for this run
+    order_filename = ['AgentPatientStimuli_Order' order num2str(run) '_vers2.csv']; %order for this run
     order_filename = fullfile(ORDER_DIR, order_filename); %full path for that order
     all_materials = readtable(order_filename); %order stored as a table
     
@@ -193,8 +193,8 @@ function AgentPatientStimuli(subjID, image_type, order, run)
         results.Condition{eventNum} = char(all_materials.Condition(eventNum));
         results.Flip{eventNum} = char(all_materials.Flip(eventNum));
         results.ItemNumber{eventNum} = char(all_materials.ItemNumber(eventNum));
-        results.IntendedOnset{eventNum} = char(all_materials.Onset(eventNum));
-        results.IntendedDuration{eventNum} = char(all_materials.Duration(eventNum));
+        results.IntendedOnset{eventNum} = char(all_materials.IntendedOnset(eventNum));
+        results.IntendedDuration{eventNum} = char(all_materials.IntendedDuration(eventNum));
     end
     
 
@@ -312,8 +312,8 @@ function AgentPatientStimuli(subjID, image_type, order, run)
                 results.AgentShape{eventNum} = 'NA';
                 results.PatientName{eventNum} = 'NA';
                 results.PatientShape{eventNum} = 'NA';
-                results.ActualOnset{eventNum} = onset - runOnset;
-                actualDuration = 2; %Change this using arithmetic
+                results.ActualOnset{eventNum} = actualOnset - runOnset;
+                actualDuration = GetSecs-actualOnset;
                 results.ActualDuration{eventNum} = actualDuration;
                 
                 %Update loop variables
@@ -332,7 +332,7 @@ function AgentPatientStimuli(subjID, image_type, order, run)
                 results.AgentShape{eventNum} = char(all_materials.AgentShape(eventNum));
                 results.PatientName{eventNum} = char(all_materials.PatientName(eventNum));
                 results.PatientShape{eventNum} = char(all_materials.PatientShape(eventNum));
-                results.ActualOnset{eventNum} = onset - runOnset;
+                results.ActualOnset{eventNum} = actualOnset - runOnset;
                 results.ActualDuration{eventNum} = actualDuration;
                 
                 %Show sentence trial
