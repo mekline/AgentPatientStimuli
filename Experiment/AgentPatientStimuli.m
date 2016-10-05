@@ -267,8 +267,8 @@ function AgentPatientStimuli(subjID, image_type, order, run)
             img_stims{index} = Screen('MakeTexture', wPtr, double(image));
             base_stims{index} = Screen('MakeTexture', wPtr, double(base));
         
-        results.BlinkFilename{eventNum} = char(image);
-        results.BaseFilename{eventNum} = char(base);
+        results.BlinkFilename{eventNum} = char(img_name);
+        results.BaseFilename{eventNum} = char(base_name);
         results.FlipMeaning{eventNum} = char(flip_word);
         index = index+1; %increment counter
         end
@@ -313,7 +313,7 @@ function AgentPatientStimuli(subjID, image_type, order, run)
                 results.PatientName{eventNum} = 'NA';
                 results.PatientShape{eventNum} = 'NA';
                 results.ActualOnset{eventNum} = actualOnset - runOnset;
-                actualDuration = GetSecs-actualOnset;
+                actualDuration = GetSecs - actualOnset;
                 results.ActualDuration{eventNum} = actualDuration;
                 
                 %Update loop variables
@@ -333,7 +333,7 @@ function AgentPatientStimuli(subjID, image_type, order, run)
                 results.PatientName{eventNum} = char(all_materials.PatientName(eventNum));
                 results.PatientShape{eventNum} = char(all_materials.PatientShape(eventNum));
                 results.ActualOnset{eventNum} = actualOnset - runOnset;
-                results.ActualDuration{eventNum} = actualDuration;
+                results.ActualDuration{eventNum} = GetSecs - actualOnset;
                 
                 %Show sentence trial
                 %Trial-initial fixation

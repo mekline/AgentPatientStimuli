@@ -1,0 +1,166 @@
+  0    ,2    ,2, 1    ,   Passive
+  2    ,2    ,2, 1    ,   Passive
+  4    ,1    ,2, 1    ,    Active
+  6    ,0    ,2, 1    ,      NULL 
+  8    ,2    ,2, 1    ,   Passive
+ 10    ,2    ,2, 1    ,   Passive
+ 12    ,0    ,4, 1    ,      NULL 
+ 16    ,1    ,2, 1    ,    Active
+ 18    ,2    ,2, 1    ,   Passive
+ 20    ,0    ,2, 1    ,        NULL 
+ 22    ,2    ,2, 1    ,   Passive
+ 24    ,2    ,2, 1    ,   Passive
+ 26    ,2    ,2, 1    ,   Passive
+ 28    ,2    ,2, 1    ,   Passive
+ 30    ,1    ,2, 1    ,    Active
+ 32    ,1    ,2, 1    ,    Active
+ 34    ,0    ,2, 1    ,        NULL 
+ 36    ,2    ,2, 1    ,   Passive
+ 38    ,0    ,2, 1    ,        NULL 
+ 40    ,1    ,2, 1    ,    Active
+ 42    ,1    ,2, 1    ,    Active
+ 44    ,0    ,2, 1    ,        NULL 
+ 46    ,1    ,2, 1    ,    Active
+ 48    ,1    ,2, 1    ,    Active
+ 50    ,0    ,4, 1    ,        NULL 
+ 54    ,2    ,2, 1    ,   Passive
+ 56    ,2    ,2, 1    ,   Passive
+ 58    ,2    ,2, 1    ,   Passive
+ 60    ,1    ,2, 1    ,    Active
+ 62    ,1    ,2, 1    ,    Active
+ 64    ,0    ,2, 1    ,        NULL 
+ 66    ,1    ,2, 1    ,    Active
+ 68    ,1    ,2, 1    ,    Active
+ 70    ,2    ,2, 1    ,   Passive
+ 72    ,1    ,2, 1    ,    Active
+ 74    ,0    ,2, 1    ,        NULL 
+ 76    ,2    ,2, 1    ,   Passive
+ 78    ,2    ,2, 1    ,   Passive
+ 80    ,1    ,2, 1    ,    Active
+ 82    ,0    ,2, 1    ,        NULL 
+ 84    ,1    ,2, 1    ,    Active
+ 86    ,1    ,2, 1    ,    Active
+ 88    ,2    ,2, 1    ,   Passive
+ 90    ,0    ,4, 1    ,        NULL 
+ 94    ,1    ,2, 1    ,    Active
+ 96    ,0    ,2, 1    ,        NULL 
+ 98    ,2    ,2, 1    ,   Passive
+100    ,2    ,2, 1    ,   Passive
+102    ,1    ,2, 1    ,    Active
+104    ,0    ,6, 1    ,        NULL 
+110    ,1    ,2, 1    ,    Active
+112    ,1    ,2, 1    ,    Active
+114    ,1    ,2, 1    ,    Active
+116    ,2    ,2, 1    ,   Passive
+118    ,1    ,2, 1    ,    Active
+120    ,0    ,4, 1    ,        NULL 
+124    ,1    ,2, 1    ,    Active
+126    ,0    ,2, 1    ,        NULL 
+128    ,1    ,2, 1    ,    Active
+130    ,0    ,6, 1    ,        NULL 
+136    ,2    ,2, 1    ,   Passive
+138    ,2    ,2, 1    ,   Passive
+140    ,0    ,2, 1    ,        NULL 
+142    ,2    ,2, 1    ,   Passive
+144    ,1    ,2, 1    ,    Active
+146    ,1    ,2, 1    ,    Active
+148    ,0    ,2, 1    ,        NULL 
+150    ,1    ,2, 1    ,    Active
+152    ,0    ,2, 1    ,        NULL 
+154    ,2    ,2, 1    ,   Passive
+156    ,0    ,2, 1    ,        NULL 
+158    ,1    ,2, 1    ,    Active
+160    ,2    ,2, 1    ,   Passive
+162    ,1    ,2, 1    ,    Active
+164    ,2    ,2, 1    ,   Passive
+166    ,0    ,2, 1    ,        NULL 
+168    ,1    ,2, 1    ,    Active
+170    ,0    ,4, 1    ,        NULL 
+174    ,2    ,2, 1    ,   Passive
+176    ,2    ,2, 1    ,   Passive
+178    ,1    ,2, 1    ,    Active
+180    ,1    ,2, 1    ,    Active
+182    ,0    ,2, 1    ,        NULL 
+184    ,2    ,2, 1    ,   Passive
+186    ,2    ,2, 1    ,   Passive
+188    ,2    ,2, 1    ,   Passive
+190    ,1    ,2, 1    ,    Active
+192    ,0    ,2, 1    ,        NULL 
+194    ,2    ,2, 1    ,   Passive
+196    ,1    ,2, 1    ,    Active
+198    ,2    ,2, 1    ,   Passive
+200    ,1    ,2, 1    ,    Active
+202    ,2    ,2, 1    ,   Passive
+204    ,1    ,2, 1    ,    Active
+206    ,2    ,2, 1    ,   Passive
+208    ,0    ,2, 1    ,        NULL 
+210    ,2    ,2, 1    ,   Passive
+212    ,1    ,2, 1    ,    Active
+214    ,0    ,2, 1    ,        NULL 
+216    ,1    ,2, 1    ,    Active
+218    ,2    ,2, 1    ,   Passive
+220    ,1    ,2, 1    ,    Active
+222    ,2    ,2, 1    ,   Passive
+224    ,0    ,4, 1    ,        NULL 
+228    ,1    ,2, 1    ,    Active
+230    ,0    ,2, 1    ,        NULL 
+232    ,2    ,2, 1    ,   Passive
+234    ,0    ,4, 1    ,        NULL 
+238    ,1    ,2, 1    ,    Active
+240    ,1    ,2, 1    ,    Active
+242    ,2    ,2, 1    ,   Passive
+244    ,0    ,2, 1    ,        NULL 
+246    ,1    ,2, 1    ,    Active
+248    ,0    ,2, 1    ,        NULL 
+250    ,2    ,2, 1    ,   Passive
+252    ,1    ,2, 1    ,    Active
+254    ,0    ,2, 1    ,        NULL 
+256    ,2    ,2, 1    ,   Passive
+258    ,0    ,2, 1    ,        NULL 
+260    ,1    ,2, 1    ,    Active
+262    ,2    ,2, 1    ,   Passive
+264    ,1    ,2, 1    ,    Active
+266    ,0    ,4, 1    ,        NULL 
+270    ,1    ,2, 1    ,    Active
+272    ,2    ,2, 1    ,   Passive
+274    ,1    ,2, 1    ,    Active
+276    ,0    ,2, 1    ,        NULL 
+278    ,2    ,2, 1    ,   Passive
+280    ,2    ,2, 1    ,   Passive
+282    ,1    ,2, 1    ,    Active
+284    ,2    ,2, 1    ,   Passive
+286    ,0    ,2, 1    ,        NULL 
+288    ,2    ,2, 1    ,   Passive
+290    ,0    ,2, 1    ,        NULL 
+292    ,2    ,2, 1    ,   Passive
+294    ,2    ,2, 1    ,   Passive
+296    ,2    ,2, 1    ,   Passive
+298    ,2    ,2, 1    ,   Passive
+300    ,0    ,2, 1    ,        NULL 
+302    ,2    ,2, 1    ,   Passive
+304    ,0    ,2, 1    ,        NULL 
+306    ,1    ,2, 1    ,    Active
+308    ,2    ,2, 1    ,   Passive
+310    ,2    ,2, 1    ,   Passive
+312    ,0    ,2, 1    ,        NULL 
+314    ,2    ,2, 1    ,   Passive
+316    ,0    ,2, 1    ,        NULL 
+318    ,1    ,2, 1    ,    Active
+320    ,1    ,2, 1    ,    Active
+322    ,1    ,2, 1    ,    Active
+324    ,1    ,2, 1    ,    Active
+326    ,1    ,2, 1    ,    Active
+328    ,1    ,2, 1    ,    Active
+330    ,0    ,2, 1    ,        NULL 
+332    ,1    ,2, 1    ,    Active
+334    ,2    ,2, 1    ,   Passive
+336    ,0    ,2, 1    ,        NULL 
+338    ,1    ,2, 1    ,    Active
+340    ,0    ,2, 1    ,        NULL 
+342    ,2    ,2, 1    ,   Passive
+344    ,0    ,4, 1    ,        NULL 
+348    ,1    ,2, 1    ,    Active
+350    ,2    ,2, 1    ,   Passive
+352    ,2    ,2, 1    ,   Passive
+354    ,0    ,4, 1    ,        NULL 
+358    ,1    ,2, 1    ,    Active
