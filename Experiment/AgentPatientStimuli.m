@@ -64,8 +64,7 @@ function AgentPatientStimuli(subjID, image_type, order, run)
     %% Set experiment constants
 
     %Timing (in seconds)              
-    FIX_DUR     = 0.8; %Length of trial-initial fixation
-    SENT_DUR    = 6.0; %Amount of time sentence is shown for
+    FIX_DUR     = 0.0; %Length of trial-initial fixation
     ITI         = 0.2; %Inter-trial interval
     BLINK_DUR   = 0.2; %Length of one blink on or off
     SCREEN_ADJUST = 1.2; %factor to adjust aspect ratio by
@@ -110,7 +109,6 @@ function AgentPatientStimuli(subjID, image_type, order, run)
     if strcmpi(subjID, 'debug')
         scale = 0.1;
         FIX_DUR = FIX_DUR * scale;
-        SENT_DUR = SENT_DUR * scale;
         ITI = ITI * scale;
         
         all_materials.IntendedOnset = all_materials.IntendedOnset * scale;
@@ -155,7 +153,7 @@ function AgentPatientStimuli(subjID, image_type, order, run)
     MATERIALS_DIR = fullfile(pwd, 'materials'); %where to put the saved materials
     mat_filename = ['AgentPatientStimuli_' subjID '_' order '_materials.mat']; %materials to save
     mat_filename = fullfile(MATERIALS_DIR, mat_filename);
-    save(mat_filename, 'all_materials');
+    save(mat_filename, 'all_materials'); %save all_materials as mat_filename
     
     %Load the all_materials table from the mat file
     %If the mat file doesn't exist, make sure the user entered the correct
@@ -193,8 +191,8 @@ function AgentPatientStimuli(subjID, image_type, order, run)
         results.Condition{eventNum} = char(all_materials.Condition(eventNum));
         results.Flip{eventNum} = char(all_materials.Flip(eventNum));
         results.ItemNumber{eventNum} = char(all_materials.ItemNumber(eventNum));
-        results.IntendedOnset{eventNum} = char(all_materials.IntendedOnset(eventNum));
-        results.IntendedDuration{eventNum} = char(all_materials.IntendedDuration(eventNum));
+        results.IntendedOnset{eventNum} = all_materials.IntendedOnset(eventNum);
+        results.IntendedDuration{eventNum} = all_materials.IntendedDuration(eventNum);
     end
     
 
@@ -333,7 +331,6 @@ function AgentPatientStimuli(subjID, image_type, order, run)
                 results.PatientName{eventNum} = char(all_materials.PatientName(eventNum));
                 results.PatientShape{eventNum} = char(all_materials.PatientShape(eventNum));
                 results.ActualOnset{eventNum} = actualOnset - runOnset;
-                results.ActualDuration{eventNum} = GetSecs - actualOnset;
                 
                 %Show sentence trial
                 %Trial-initial fixation
@@ -354,6 +351,9 @@ function AgentPatientStimuli(subjID, image_type, order, run)
                 PTBhelper('stimText', wPtr, ' ', sentFontSize);
                 blankEndTime = sentEndTime + ITI;
                 PTBhelper('waitFor',blankEndTime,kbIdx,escapeKey);
+                %store ActualDuration
+                results.ActualDuration{eventNum} = GetSecs - actualOnset;
+                %update actualOnset
                 actualOnset = sentEndTime;
                 
                 %Update loop variables
