@@ -104,7 +104,7 @@ function AgentPatientStimuli(subjID, image_type, order, run)
     order_filename = fullfile(ORDER_DIR, order_filename); %full path for that order
     all_materials = readtable(order_filename); %order stored as a table
     
-    numEvents = height(all_materials); %the total number of trials and fixations
+    numEvents = height(all_materials) %the total number of trials and fixations
     
     %% Make the experiment run faster if subjID is 'debug'
     if strcmpi(subjID, 'debug')
@@ -227,8 +227,7 @@ function AgentPatientStimuli(subjID, image_type, order, run)
     base_stims = cell(1,120);
     
     IMAGE_DIR = fullfile(pwd, 'images', image_type); %the folder we're taking images from
-    
-    numEvents = 6 %delete later
+
     index = 1; %counter
     for eventNum=1:numEvents
         condition = all_materials.Condition(eventNum);
@@ -299,12 +298,15 @@ function AgentPatientStimuli(subjID, image_type, order, run)
             flip = all_materials.Flip{eventNum};
    
             %Fixation
-            if strcmp(condition, 'NULL ')
+            if strcmp(condition, '0')
 
                 %Show fixation cross
                 PTBhelper('stimText', wPtr, '+', fixFontSize);
+                crossShown = 1
                 fixEndTime = actualOnset + intendedDuration;
+                fixEndTimeCalculated = 1
                 PTBhelper('waitFor',fixEndTime,kbIdx,escapeKey);
+                gottenPastWaitFor = 1
                 
                 %Save data
                 
