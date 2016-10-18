@@ -210,10 +210,9 @@ function AgentPatientStimuli(subjID, image_type, order, run)
     PTBhelper('stimText',wPtr,'Loading experiment\n\n(Don''t start yet!)',30);
     
     %Keyboard
-    keyboardInfo = [];
     keyboardInfo = PTBhelper('getKeyboardIndex');
-    kbIdx = [];
-    escapeKey = keyboardInfo{1};
+    kbIdx = keyboardInfo{1};
+    escapeKey = keyboardInfo{2};
     
     %% Set up cells containing image file data
     %Initialize the cells and IMAGE_DIR
@@ -228,9 +227,10 @@ function AgentPatientStimuli(subjID, image_type, order, run)
     
     IMAGE_DIR = fullfile(pwd, 'images', image_type); %the folder we're taking images from
     
-    numEvents = 6 %delete later
     index = 1; %counter
+    numEvents = 1 %Delete later
     for eventNum=1:numEvents
+        loop_start_time = GetSecs;
         condition = all_materials.Condition(eventNum);
         intendedDuration = all_materials.IntendedDuration(eventNum);
         flip = all_materials.Flip{eventNum};
@@ -243,7 +243,7 @@ function AgentPatientStimuli(subjID, image_type, order, run)
                 case '1'
                     flip_word = flip_word_1;
             end
-
+            after_determining_flip = GetSecs - loop_start_time
             %what is the name of the image we want
             img_name = [char(condition) '_' flip_word '_' char(all_materials.ItemNumber{eventNum}) '.jpg'];
             base_name = ['Base_' flip_word '_' char(all_materials.ItemNumber{eventNum}) '.jpg'];
@@ -253,16 +253,17 @@ function AgentPatientStimuli(subjID, image_type, order, run)
             base_files{1,index} = fullfile(IMAGE_DIR, base_name);
             
             %read in the image file we want and resize it
-
+            resize_start_time = GetSecs;
             image = img_files{index};
-            image = imread(image); %Taking a long time
-            image = imresize(image, [winHeight, NaN]); %Taking a long time
+            image = imread(image);
+            image = imresize(image, [winHeight, NaN]);
             
             %read in the base file we want and resize it
             base = base_files{index};
-            base = imread(base); %Taking a long time
-            base = imresize(base, [winHeight, NaN]); %Taking a long time
+            base = imread(base);
+            base = imresize(base, [winHeight, NaN]);
             
+            resize_total_time = GetS
             
             %make it a texture so PTBHelper will like it
             img_stims{index} = Screen('MakeTexture', wPtr, double(image));
