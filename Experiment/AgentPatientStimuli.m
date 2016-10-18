@@ -302,11 +302,8 @@ function AgentPatientStimuli(subjID, image_type, order, run)
 
                 %Show fixation cross
                 PTBhelper('stimText', wPtr, '+', fixFontSize);
-                crossShown = 1
                 fixEndTime = actualOnset + intendedDuration;
-                fixEndTimeCalculated = 1
                 PTBhelper('waitFor',fixEndTime,kbIdx,escapeKey);
-                gottenPastWaitFor = 1
                 
                 %Save data
                 
