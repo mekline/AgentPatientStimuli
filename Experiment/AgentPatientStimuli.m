@@ -341,7 +341,7 @@ function AgentPatientStimuli(subjID, image_type, order, run)
 
                 %Blink sentence until !!ALMOST!! sentEndTime
                 sentEndTime = runOnset + intendedOffset;
-                while GetSecs < (sentEndTime-3*BLINK_DUR)
+                while GetSecs < (sentEndTime-3*BLINK_DUR) %Any fewer than this tends to lead to long bleedovers that have to be corrected/uneven trial lengths
                     PTBhelper('stimImage', wPtr, item_index, img_stims);
                     WaitSecs(BLINK_DUR);
                     PTBhelper('stimImage', wPtr, item_index, base_stims);
