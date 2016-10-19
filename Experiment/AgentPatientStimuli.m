@@ -32,6 +32,7 @@
 
 function AgentPatientStimuli(subjID, image_type, order, run)
     start_time = GetSecs;
+    
     %% Make sure inputs are valid and raise an error otherwise
     %subjID is a string
     assert(ischar(subjID), 'subjID (first argument) must be a string');
@@ -104,7 +105,7 @@ function AgentPatientStimuli(subjID, image_type, order, run)
     order_filename = fullfile(ORDER_DIR, order_filename); %full path for that order
     all_materials = readtable(order_filename); %order stored as a table
     
-    numEvents = height(all_materials) %the total number of trials and fixations
+    numEvents = height(all_materials); %the total number of trials and fixations
     
     %% Make the experiment run faster if subjID is 'debug'
     if strcmpi(subjID, 'debug')
@@ -187,7 +188,7 @@ function AgentPatientStimuli(subjID, image_type, order, run)
     results.Order(:) = {order};
     %eventually change these to just 1 entry
     
-    %Fill in Condition and Flip in the results file, one by one
+    %Fill in Condition anxd Flip in the results file, one by one
     for eventNum=1:numEvents
         results.Condition{eventNum} = char(all_materials.Condition(eventNum));
         results.Flip{eventNum} = char(all_materials.Flip(eventNum));
@@ -207,7 +208,8 @@ function AgentPatientStimuli(subjID, image_type, order, run)
     oldEnableFlag = windowInfo{4};
     HideCursor;
     PTBhelper('stimImage',wPtr,'WHITE');
-    PTBhelper('stimText',wPtr,'Loading experiment\n\n(Don''t start yet!)',30);
+    PTBhelper('stimText',wPtr,'Loading images\n\n(Don''t start yet!)',30);
+    
     
     %Keyboard
     keyboardInfo = [];
@@ -252,27 +254,30 @@ function AgentPatientStimuli(subjID, image_type, order, run)
             base_files{1,index} = fullfile(IMAGE_DIR, base_name);
             
             %read in the image file we want and resize it
-
             image = img_files{index};
-            image = imread(image); %Taking a long time
+            image = imread(image,'jpg'); %Taking a long time
+            fclose('all');
             image = imresize(image, [winHeight, NaN]); %Taking a long time
             
             %read in the base file we want and resize it
             base = base_files{index};
-            base = imread(base); %Taking a long time
+            base = imread(base,'jpg'); %Taking a long time
+            fclose('all');
             base = imresize(base, [winHeight, NaN]); %Taking a long time
-            
             
             %make it a texture so PTBHelper will like it
             img_stims{index} = Screen('MakeTexture', wPtr, double(image));
             base_stims{index} = Screen('MakeTexture', wPtr, double(base));
-            
+
         
         results.BlinkFilename{eventNum} = char(img_name);
         results.BaseFilename{eventNum} = char(base_name);
         results.FlipMeaning{eventNum} = char(flip_word);
         results.Trial{eventNum} = index;
         index = index+1; %increment counter
+        
+        PTBhelper('stimText',wPtr,['Loading images\n\n(Don''t start yet!)\n' num2str(index) '/120'],30);
+ 
         end
     end    
   
@@ -287,22 +292,27 @@ function AgentPatientStimuli(subjID, image_type, order, run)
     PTBhelper('waitFor','TRIGGER',kbIdx,escapeKey);
     
     runOnset = GetSecs; %remains the same
-    actualOnset = runOnset;   %updates for each trial
+    %%MK actualOnset = runOnset;   %updates for each trial
     item_index = 1;
+    
     %Present each block
     try
         for eventNum = 1:numEvents
             
             condition = all_materials.Condition(eventNum);
+            intendedOnset = all_materials.IntendedOnset(eventNum);
             intendedDuration = all_materials.IntendedDuration(eventNum);
+            intendedOffset = intendedOnset + intendedDuration;
             flip = all_materials.Flip{eventNum};
+            
+            actualOnset = GetSecs-runOnset; %What time is it right now?
    
-            %Fixation
+            %If it's fixation
             if strcmp(condition, '0')
 
                 %Show fixation cross
                 PTBhelper('stimText', wPtr, '+', fixFontSize);
-                fixEndTime = actualOnset + intendedDuration;
+                fixEndTime = runOnset + intendedOffset;
                 PTBhelper('waitFor',fixEndTime,kbIdx,escapeKey);
                 
                 %Save data
@@ -312,12 +322,9 @@ function AgentPatientStimuli(subjID, image_type, order, run)
                 results.AgentShape{eventNum} = 'NA';
                 results.PatientName{eventNum} = 'NA';
                 results.PatientShape{eventNum} = 'NA';
-                results.ActualOnset{eventNum} = actualOnset - runOnset;
-                actualDuration = GetSecs - actualOnset;
-                results.ActualDuration{eventNum} = actualDuration;
                 
                 %Update loop variables
-                actualOnset = fixEndTime;
+                %%MKactualOnset = fixEndTime;
                
             else %If there's a sentence to be presented (i.e., not NULL)
                 if char(all_materials.Flip(eventNum)) == '0'
@@ -326,42 +333,52 @@ function AgentPatientStimuli(subjID, image_type, order, run)
                     sentence = char(all_materials.ProgressivePassive(eventNum));
                 end
                 
-                %Save Sentence, actualOnset,actualDuration to results file
-                results.Sentence{eventNum} = sentence;
-                results.AgentName{eventNum} = char(all_materials.AgentName(eventNum));
-                results.AgentShape{eventNum} = char(all_materials.AgentShape(eventNum));
-                results.PatientName{eventNum} = char(all_materials.PatientName(eventNum));
-                results.PatientShape{eventNum} = char(all_materials.PatientShape(eventNum));
-                results.ActualOnset{eventNum} = actualOnset - runOnset;
-                
                 %Show sentence trial
                 %Trial-initial fixation
-                PTBhelper('stimText', wPtr, '+', fixFontSize);
-                fixEndTime = actualOnset + FIX_DUR;
-                PTBhelper('waitFor',fixEndTime,kbIdx,escapeKey);
+                %PTBhelper('stimText', wPtr, '+', fixFontSize);
+                %fixEndTime = actualOnset + FIX_DUR;
+                %PTBhelper('waitFor',fixEndTime,kbIdx,escapeKey);
 
-                %Blink sentence until sentEndTime
-                sentEndTime = fixEndTime + intendedDuration;
-                while GetSecs < sentEndTime
+                %Blink sentence until !!ALMOST!! sentEndTime
+                sentEndTime = runOnset + intendedOffset;
+                while GetSecs < (sentEndTime-3*BLINK_DUR)
                     PTBhelper('stimImage', wPtr, item_index, img_stims);
                     WaitSecs(BLINK_DUR);
                     PTBhelper('stimImage', wPtr, item_index, base_stims);
                     WaitSecs(BLINK_DUR);
                 end
+                
+                %Catch up to the end of the trial.
+                PTBhelper('waitFor',sentEndTime,kbIdx,escapeKey);
+                
 
                 %Blank ITI
-                PTBhelper('stimText', wPtr, ' ', sentFontSize);
-                blankEndTime = sentEndTime + ITI;
-                PTBhelper('waitFor',blankEndTime,kbIdx,escapeKey);
+                %PTBhelper('stimText', wPtr, ' ', sentFontSize);
+                %blankEndTime = sentEndTime + ITI;
+                %PTBhelper('waitFor',blankEndTime,kbIdx,escapeKey);
                 %store ActualDuration
-                results.ActualDuration{eventNum} = GetSecs - actualOnset;
+                %%MKresults.ActualDuration{eventNum} = GetSecs - actualOnset;
                 %update actualOnset
-                actualOnset = sentEndTime;
+                %%MKactualOnset = sentEndTime;
                 
-                %Update loop variables
-                item_index = item_index + 1;
+                %Save Sentence, agent info to results
+                results.Sentence{eventNum} = sentence;
+                results.AgentName{eventNum} = char(all_materials.AgentName(eventNum));
+                results.AgentShape{eventNum} = char(all_materials.AgentShape(eventNum));
+                results.PatientName{eventNum} = char(all_materials.PatientName(eventNum));
+                results.PatientShape{eventNum} = char(all_materials.PatientShape(eventNum));
+                %%MKresults.ActualOnset{eventNum} = actualOnset;
+                
+            %Update loop variables
+            item_index = item_index + 1;
                 
             end
+            
+            %%MK Save actual onset and duration back to the results file!
+            results.ActualOnset{eventNum} = actualOnset;
+            actualDuration = GetSecs - (actualOnset + runOnset);
+            results.ActualDuration{eventNum} = actualDuration;
+            
         end
 
         ran_completely = true;
