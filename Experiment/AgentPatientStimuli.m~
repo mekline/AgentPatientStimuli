@@ -31,12 +31,8 @@
 % constants until it looks better.
 
 function AgentPatientStimuli(subjID, image_type, order, run)
-<<<<<<< HEAD
-
-=======
     start_time = GetSecs;
     
->>>>>>> origin/master
     %% Make sure inputs are valid and raise an error otherwise
     %subjID is a string
     assert(ischar(subjID), 'subjID (first argument) must be a string');
@@ -258,17 +254,6 @@ function AgentPatientStimuli(subjID, image_type, order, run)
             base_files{1,index} = fullfile(IMAGE_DIR, base_name);
             
             %read in the image file we want and resize it
-<<<<<<< HEAD
-            
-            image = img_files{index};
-            image = imread(image); %Taking a long time
-            %image = imresize(image, [winHeight, NaN]); %Taking a long time
-            
-            %read in the base file we want and resize it
-            base = base_files{index};
-            base = imread(base); %Taking a long time
-            %base = imresize(base, [winHeight, NaN]); %Taking a long time
-=======
             image = img_files{index};
             image = imread(image,'jpg'); %Taking a long time
             fclose('all');
@@ -279,7 +264,6 @@ function AgentPatientStimuli(subjID, image_type, order, run)
             base = imread(base,'jpg'); %Taking a long time
             fclose('all');
             base = imresize(base, [winHeight, NaN]); %Taking a long time
->>>>>>> origin/master
             
             %make it a texture so PTBHelper will like it
             img_stims{index} = Screen('MakeTexture', wPtr, double(image));
@@ -318,9 +302,8 @@ function AgentPatientStimuli(subjID, image_type, order, run)
             condition = all_materials.Condition(eventNum);
             intendedOnset = all_materials.IntendedOnset(eventNum);
             intendedDuration = all_materials.IntendedDuration(eventNum);
-            intendedOffset = intendedOnset + intendedDuration;
+            intended
             flip = all_materials.Flip{eventNum};
-            
             actualOnset = GetSecs-runOnset; %What time is it right now?
    
             %If it's fixation
@@ -328,7 +311,7 @@ function AgentPatientStimuli(subjID, image_type, order, run)
 
                 %Show fixation cross
                 PTBhelper('stimText', wPtr, '+', fixFontSize);
-                fixEndTime = runOnset + intendedOffset;
+                fixEndTime = runOnset+ actualOnset + intendedDuration;
                 PTBhelper('waitFor',fixEndTime,kbIdx,escapeKey);
                 
                 %Save data
@@ -355,18 +338,14 @@ function AgentPatientStimuli(subjID, image_type, order, run)
                 %fixEndTime = actualOnset + FIX_DUR;
                 %PTBhelper('waitFor',fixEndTime,kbIdx,escapeKey);
 
-                %Blink sentence until !!ALMOST!! sentEndTime
-                sentEndTime = runOnset + intendedOffset;
-                while GetSecs < (sentEndTime-3*BLINK_DUR) %Any fewer than this tends to lead to long bleedovers that have to be corrected/uneven trial lengths
+                %Blink sentence until sentEndTime
+                sentEndTime = runOnset + actualOnset + intendedDuration;
+                while GetSecs < sentEndTime
                     PTBhelper('stimImage', wPtr, item_index, img_stims);
                     WaitSecs(BLINK_DUR);
                     PTBhelper('stimImage', wPtr, item_index, base_stims);
                     WaitSecs(BLINK_DUR);
                 end
-                
-                %Catch up to the end of the trial.
-                PTBhelper('waitFor',sentEndTime,kbIdx,escapeKey);
-                
 
                 %Blank ITI
                 %PTBhelper('stimText', wPtr, ' ', sentFontSize);
