@@ -31,7 +31,7 @@
 % constants until it looks better.
 
 function AgentPatientStimuli(subjID, image_type, order, run)
-    start_time = GetSecs;
+
     %% Make sure inputs are valid and raise an error otherwise
     %subjID is a string
     assert(ischar(subjID), 'subjID (first argument) must be a string');
@@ -252,15 +252,15 @@ function AgentPatientStimuli(subjID, image_type, order, run)
             base_files{1,index} = fullfile(IMAGE_DIR, base_name);
             
             %read in the image file we want and resize it
-
+            
             image = img_files{index};
             image = imread(image); %Taking a long time
-            image = imresize(image, [winHeight, NaN]); %Taking a long time
+            %image = imresize(image, [winHeight, NaN]); %Taking a long time
             
             %read in the base file we want and resize it
             base = base_files{index};
             base = imread(base); %Taking a long time
-            base = imresize(base, [winHeight, NaN]); %Taking a long time
+            %base = imresize(base, [winHeight, NaN]); %Taking a long time
             
             
             %make it a texture so PTBHelper will like it

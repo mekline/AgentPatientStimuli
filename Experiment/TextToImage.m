@@ -7,12 +7,11 @@ function TextToImage(order, run)
     
     %PsychToolbox to get winHeight
     screenNum = max(Screen('Screens'));  %Highest screen number is most likely correct display
-    SCREEN_ADJUST = 1.2;
     windowInfo = PTBhelper('initialize',screenNum);
 	wPtr = windowInfo{1}; %pointer to window on screen that's being referenced
     rect = windowInfo{2}; %dimensions of the window
         winWidth = rect(3);
-        winHeight = rect(4)*1.2;
+        winHeight = rect(4)*SCREEN_ADJUST;
     
     %Reads in materials file
     ORDER_DIR = fullfile(pwd, 'reference_data');
