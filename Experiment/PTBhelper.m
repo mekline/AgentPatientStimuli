@@ -57,7 +57,7 @@ function out = PTBhelper(func,varargin)
 		Screen('Preference', 'SkipSyncTests', 1);%RLS
 		% Open screen.
         %screenNum=1;
-		[wPtr,rect]=Screen('OpenWindow',screenNum,1);
+		[wPtr,rect]=Screen('OpenWindow',screenNum,1)
 		ifi = Screen('GetFlipInterval', wPtr);
 		%PsychSound
 		InitializePsychSound;

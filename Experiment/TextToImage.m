@@ -7,9 +7,12 @@ function TextToImage(order, run)
     
     %PsychToolbox to get winHeight
     screenNum = max(Screen('Screens'));  %Highest screen number is most likely correct display
-    windowInfo = PTBhelper('initialize',screenNum);
-	wPtr = windowInfo{1}; %pointer to window on screen that's being referenced
-    rect = windowInfo{2}; %dimensions of the window
+    SCREEN_ADJUST = 1.2;
+    %windowInfo = PTBhelper('initialize',screenNum);
+	%wPtr = windowInfo{1}; %pointer to window on screen that's being referenced
+    wPtr = 10;
+    %rect = windowInfo{2}; %dimensions of the window
+    rect = [0 0 1280 800];
         winWidth = rect(3);
         winHeight = rect(4)*SCREEN_ADJUST;
     
@@ -101,7 +104,7 @@ function TextToImage(order, run)
 
             %Sets up image and overlays text
             I = imread('blank-white-rectangle.png');
-            I = imresize(I, [winHeight, NaN])
+            %I = imresize(I, [winHeight, NaN]);
             position_text = [250 1000];
             position_highlight = [highlight_start 1000];
 
@@ -115,8 +118,8 @@ function TextToImage(order, run)
             fileToSave = fullfile(IMAGE_DIR, fileToSave);
 
             %Displays text image
-            %figure
-            %imshow(RGB)
+            figure
+            imshow(RGB)
 
             %Saves text image
 %           imwrite(RGB,fileToSave,'jpg')

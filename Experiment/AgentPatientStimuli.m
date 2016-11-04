@@ -31,12 +31,12 @@
 % constants until it looks better.
 
 function AgentPatientStimuli(subjID, image_type, order, run)
-<<<<<<< HEAD
 
-=======
+
+
     start_time = GetSecs;
     
->>>>>>> origin/master
+
     %% Make sure inputs are valid and raise an error otherwise
     %subjID is a string
     assert(ischar(subjID), 'subjID (first argument) must be a string');
@@ -235,6 +235,7 @@ function AgentPatientStimuli(subjID, image_type, order, run)
     IMAGE_DIR = fullfile(pwd, 'images', image_type); %the folder we're taking images from
 
     index = 1; %counter
+    load_start_time = GetSecs
     for eventNum=1:numEvents
         condition = all_materials.Condition(eventNum);
         intendedDuration = all_materials.IntendedDuration(eventNum);
@@ -257,8 +258,7 @@ function AgentPatientStimuli(subjID, image_type, order, run)
             img_files{1,index} = fullfile(IMAGE_DIR, img_name);
             base_files{1,index} = fullfile(IMAGE_DIR, base_name);
             
-            %read in the image file we want and resize it
-<<<<<<< HEAD
+            %read in the image file we want
             
             image = img_files{index};
             image = imread(image); %Taking a long time
@@ -268,18 +268,16 @@ function AgentPatientStimuli(subjID, image_type, order, run)
             base = base_files{index};
             base = imread(base); %Taking a long time
             %base = imresize(base, [winHeight, NaN]); %Taking a long time
-=======
             image = img_files{index};
             image = imread(image,'jpg'); %Taking a long time
             fclose('all');
-            image = imresize(image, [winHeight, NaN]); %Taking a long time
+            %image = imresize(image, [winHeight, NaN]); %Taking a long time
             
             %read in the base file we want and resize it
             base = base_files{index};
             base = imread(base,'jpg'); %Taking a long time
             fclose('all');
-            base = imresize(base, [winHeight, NaN]); %Taking a long time
->>>>>>> origin/master
+            %base = imresize(base, [winHeight, NaN]); %Taking a long time
             
             %make it a texture so PTBHelper will like it
             img_stims{index} = Screen('MakeTexture', wPtr, double(image));
@@ -295,7 +293,8 @@ function AgentPatientStimuli(subjID, image_type, order, run)
         PTBhelper('stimText',wPtr,['Loading images\n\n(Don''t start yet!)\n' num2str(index) '/120'],30);
  
         end
-    end    
+    end 
+    load_end_time = GetSecs
   
     %% Set display options
     %Font sizes
