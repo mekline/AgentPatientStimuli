@@ -236,7 +236,7 @@ function AgentPatientStimuli(subjID, image_type, order, run)
     IMAGE_DIR = fullfile(pwd, 'images', image_type); %the folder we're taking images from
 
     index = 1; %counter
-    load_start_time = GetSecs;
+    load_start_time = GetSecs
     for eventNum=1:numEvents
         condition = all_materials.Condition(eventNum);
         intendedDuration = all_materials.IntendedDuration(eventNum);
@@ -295,8 +295,8 @@ function AgentPatientStimuli(subjID, image_type, order, run)
  
         end
     end 
-    load_end_time = GetSecs;
-    load_time = load_end_time - load_start_time
+    load_end_time = GetSecs
+    load_time = load_end_time - load_sta
   
     %% Set display options
     %Font sizes
