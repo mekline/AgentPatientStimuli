@@ -70,7 +70,9 @@ function out = PTBhelper(func,varargin)
 	function [key, rt] = waitFor(t,kbIdx,escapeKey)
 		key=0;rt=0;init=0;
 		if isequal(t,'TRIGGER'), t=inf;init=1;end
-        trigger = [KbName('5%') KbName('=+') KbName('+') KbName('space')]; % What key triggers the script from the scanner.
+        trigger = [KbName('5%') KbName('=+') KbName('space')]; % What key triggers the script from the scanner.
+        leftshiftequals = [46 225]
+        rightshiftequals = [46 229]
         keyNames=KbName('KeyNames');
         startTime=GetSecs;
         pressed=0;
@@ -82,8 +84,13 @@ function out = PTBhelper(func,varargin)
                 rt=GetSecs-startTime;
                 %disp([key ' - ' rt]);
             end
-            if init==1 
+            if init==1
+                if find(keyCode==1) ~= 0
+                    findkeycode = find(keyCode==1)
+                end
                 if ismember(find(keyCode==1),trigger),break;end % break if trigger
+                if isequal(find(keyCode==1),leftshiftequals),break;end
+                if isequal(find(keyCode==1),rightshiftequals),break;end
             end
             if keyCode(KbName(escapeKey)) == 1 % press escape to exit experiment
                 Screen('CloseAll');
@@ -96,7 +103,7 @@ function out = PTBhelper(func,varargin)
 
 	% Subfunction: kbIdx = getKeyboardIndex()
 	%   Outputs: kbIdx = index of keyboard for capturing button box input
-	%            escapeKey = OS-dependant escape keyname
+	%            escapeKey = OS-dependent escape keyname
 	function [kbIdx,escapeKey] = getKeyboardIndex()
 		if IsWin, kbIdx = 0; escapeKey='ESCAPE';
 		elseif IsLinux, kbIdx = 0; escapeKey='esc';

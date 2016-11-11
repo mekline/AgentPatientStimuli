@@ -6,6 +6,7 @@
 % Kyle Square'). Sometimes the agent is highlighted; other times the
 % patient is highlighted.
 % 
+% Run PsychStartup; in command line, then call the function
 % 
 % Function call: AgentPatientStimuli(subjID, image_type, order, run)
 % 
@@ -112,7 +113,7 @@ function AgentPatientStimuli(subjID, image_type, order, run)
     
     %% Make the experiment run faster if subjID is 'debug'
     if strcmpi(subjID, 'debug')
-        scale = 0.1;
+        scale = 0.02;
         FIX_DUR = FIX_DUR * scale;
         BLINK_DUR = BLINK_DUR * scale;
         ITI = ITI * scale;
@@ -218,8 +219,8 @@ function AgentPatientStimuli(subjID, image_type, order, run)
     %Keyboard
     keyboardInfo = [];
     keyboardInfo = PTBhelper('getKeyboardIndex');
-    kbIdx = [];
-    escapeKey = keyboardInfo{1};
+    kbIdx = [keyboardInfo{1}];
+    escapeKey = keyboardInfo{2};
     
     %% Set up cells containing image file data
     %Initialize the cells and IMAGE_DIR
@@ -259,23 +260,20 @@ function AgentPatientStimuli(subjID, image_type, order, run)
             base_files{1,index} = fullfile(IMAGE_DIR, base_name);
             
             %read in the image file we want
+            %image = img_files{index};
+            %image = imread(image);
             
-            image = img_files{index};
-            image = imread(image); %Taking a long time
-            %image = imresize(image, [winHeight, NaN]); %Taking a long time
-            
-            %read in the base file we want and resize it
+            %read in the base file we want
             base = base_files{index};
-            base = imread(base); %Taking a long time
-            %base = imresize(base, [winHeight, NaN]); %Taking a long time
+            base = imread(base,'jpg');
             image = img_files{index};
-            image = imread(image,'jpg'); %Taking a long time
+            image = imread(image,'jpg');
             fclose('all');
-            %image = imresize(image, [winHeight, NaN]); %Taking a long time
+ 
             
-            %read in the base file we want and resize it
-            base = base_files{index};
-            base = imread(base,'jpg'); %Taking a long time
+            %read in the base file we want
+            %base = base_files{index};
+            %base = imread(base,'jpg'); %Taking a long time
             fclose('all');
             %base = imresize(base, [winHeight, NaN]); %Taking a long time
             
