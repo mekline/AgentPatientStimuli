@@ -219,7 +219,7 @@ function AgentPatientStimuli(subjID, image_type, order, run)
     %Keyboard
     keyboardInfo = [];
     keyboardInfo = PTBhelper('getKeyboardIndex');
-    kbIdx = [keyboardInfo{1}];
+    kbIdx = [keyboardInfo{1}]
     escapeKey = keyboardInfo{2};
     
     %% Set up cells containing image file data
